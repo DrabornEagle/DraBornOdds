@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "DraBornOdds",
+    "slug": "dkd-drabornodds",
+    "version": "0.1.0",
+    "scheme": "dkd-drabornodds",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B1020",
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "android": {
+      "package": "com.draborneagle.drabornodds"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "DraBornOdds Demo"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "dkd_mode": "demo",
+      "dkd_version": "DKD_draborneagle_v0.1"
+    }
+  }
+}

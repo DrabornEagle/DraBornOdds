@@ -1,0 +1,104 @@
+import type { dkd_Coupon, dkd_Market, dkd_MarketKey, dkd_Match, dkd_Period, dkd_Pick, dkd_Risk } from './dkd-types';
+
+export const dkd_risks: Record<dkd_Risk, { dkd_name: string; dkd_subtitle: string; dkd_color: string; dkd_target: number; dkd_icon: string }> = {
+  low: { dkd_name: 'Düşük risk', dkd_subtitle: 'Daha temkinli seçim', dkd_color: '#B6F36A', dkd_target: 0.78, dkd_icon: 'shield' },
+  balanced: { dkd_name: 'Dengeli', dkd_subtitle: 'Oran ve olasılık dengesi', dkd_color: '#6DBFFF', dkd_target: 0.60, dkd_icon: 'balance' },
+  high: { dkd_name: 'Yüksek getiri', dkd_subtitle: 'Daha fazla belirsizlik', dkd_color: '#C5A0FF', dkd_target: 0.43, dkd_icon: 'trend' },
+  ultra: { dkd_name: 'Ultra getiri', dkd_subtitle: 'En yüksek risk profili', dkd_color: '#FF8B78', dkd_target: 0.28, dkd_icon: 'bolt' },
+};
+
+export function dkd_poisson(dkd_lambda: number, dkd_goals: number): number {
+  let dkd_result = Math.exp(-dkd_lambda);
+  for (let dkd_i = 1; dkd_i <= dkd_goals; dkd_i++) dkd_result *= dkd_lambda / dkd_i;
+  return dkd_result;
+}
+
+export function dkd_model(dkd_homeXg: number, dkd_awayXg: number): Record<dkd_MarketKey, number> {
+  const dkd_values = { home: 0, draw: 0, away: 0, over: 0, under: 0, btts: 0, homeOrDraw: 0, awayOrDraw: 0 };
+  let dkd_mass = 0;
+  for (let dkd_h = 0; dkd_h <= 12; dkd_h++) {
+    for (let dkd_a = 0; dkd_a <= 12; dkd_a++) {
+      const dkd_p = dkd_poisson(dkd_homeXg, dkd_h) * dkd_poisson(dkd_awayXg, dkd_a);
+      dkd_mass += dkd_p;
+      dkd_values[dkd_h > dkd_a ? 'home' : dkd_h < dkd_a ? 'away' : 'draw'] += dkd_p;
+      dkd_values[dkd_h + dkd_a > 2 ? 'over' : 'under'] += dkd_p;
+      if (dkd_h > 0 && dkd_a > 0) dkd_values.btts += dkd_p;
+    }
+  }
+  for (const dkd_key of Object.keys(dkd_values) as dkd_MarketKey[]) dkd_values[dkd_key] /= dkd_mass;
+  dkd_values.homeOrDraw = dkd_values.home + dkd_values.draw;
+  dkd_values.awayOrDraw = dkd_values.away + dkd_values.draw;
+  return dkd_values;
+}
+
+export function dkd_getMarket(dkd_match: dkd_Match, dkd_key: dkd_MarketKey): dkd_Market {
+  const dkd_market = dkd_match.dkd_markets.find(dkd_item => dkd_item.dkd_key === dkd_key);
+  if (!dkd_market) throw new Error('Seçilen market bulunamadı.');
+  return dkd_market;
+}
+
+export function dkd_filterMatches(dkd_matches: dkd_Match[], dkd_period: dkd_Period, dkd_league = 'Tümü', dkd_query = '') {
+  const dkd_search = dkd_query.trim().toLocaleLowerCase('tr-TR');
+  return dkd_matches.filter(dkd_match =>
+    (dkd_period === 'week' || dkd_match.dkd_offset === (dkd_period === 'today' ? 0 : 1)) &&
+    (dkd_league === 'Tümü' || dkd_match.dkd_league === dkd_league) &&
+    (!dkd_search || `${dkd_match.dkd_home.dkd_name} ${dkd_match.dkd_away.dkd_name} ${dkd_match.dkd_league}`.toLocaleLowerCase('tr-TR').includes(dkd_search)),
+  );
+}
+
+export function dkd_validateStake(dkd_value: string | number): number {
+  if (typeof dkd_value === 'string' && !/^\d+(?:[.,]\d{1,2})?$/.test(dkd_value.trim())) throw new Error('Geçerli bir TL tutarı gir. Örnek: 100 veya 100,50.');
+  const dkd_amount = typeof dkd_value === 'number' ? dkd_value : Number(dkd_value.trim().replace(',', '.'));
+  if (!Number.isFinite(dkd_amount) || dkd_amount < 50 || dkd_amount > 100000 || Math.abs(Math.round(dkd_amount * 100) - dkd_amount * 100) > 1e-7) {
+    throw new Error('50–100.000 TL arasında, en fazla iki ondalık basamaklı bir tutar gir.');
+  }
+  return dkd_amount;
+}
+
+export function dkd_generate(dkd_matches: dkd_Match[], dkd_count: number, dkd_risk: dkd_Risk, dkd_seed = 0): dkd_Pick[] {
+  if (!Number.isInteger(dkd_count) || dkd_count < 1 || dkd_count > 6) throw new Error('1–6 maç seçebilirsin.');
+  if (dkd_matches.length < dkd_count) throw new Error(`Bu filtrede ${dkd_matches.length} maç var. Maç sayısını azalt veya tarih / lig filtresini değiştir.`);
+  const dkd_target = dkd_risks[dkd_risk].dkd_target;
+  const dkd_ranked = dkd_matches.map((dkd_match, dkd_index) => {
+    const dkd_market = [...dkd_match.dkd_markets].sort((dkd_a, dkd_b) => Math.abs(dkd_a.dkd_probability - dkd_target) - Math.abs(dkd_b.dkd_probability - dkd_target))[0]!;
+    const dkd_variation = dkd_seed ? (Math.sin((dkd_index + 1) * 12.9898 + dkd_seed * 78.233) + 1) * 0.075 : 0;
+    return { dkd_match, dkd_market, dkd_score: Math.abs(dkd_market.dkd_probability - dkd_target) + dkd_variation };
+  }).sort((dkd_a, dkd_b) => dkd_a.dkd_score - dkd_b.dkd_score);
+  return dkd_ranked.slice(0, dkd_count).map(dkd_item => ({ dkd_matchId: dkd_item.dkd_match.dkd_id, dkd_marketKey: dkd_item.dkd_market.dkd_key }));
+}
+
+export function dkd_summarize(dkd_picks: dkd_Pick[], dkd_matches: dkd_Match[], dkd_stake: number) {
+  dkd_validateStake(dkd_stake);
+  if (!dkd_picks.length || dkd_picks.length > 6) throw new Error('Kuponda 1–6 maç bulunmalı.');
+  if (new Set(dkd_picks.map(dkd_pick => dkd_pick.dkd_matchId)).size !== dkd_picks.length) throw new Error('Aynı maç kupona bir kez eklenebilir.');
+  const dkd_rows = dkd_picks.map(dkd_pick => {
+    const dkd_match = dkd_matches.find(dkd_item => dkd_item.dkd_id === dkd_pick.dkd_matchId);
+    if (!dkd_match) throw new Error('Maç verisi bulunamadı.');
+    return { dkd_match, dkd_market: dkd_getMarket(dkd_match, dkd_pick.dkd_marketKey) };
+  });
+  const dkd_odds = dkd_rows.reduce((dkd_total, dkd_row) => dkd_total * dkd_row.dkd_market.dkd_odds, 1);
+  const dkd_probability = dkd_rows.reduce((dkd_total, dkd_row) => dkd_total * dkd_row.dkd_market.dkd_probability, 1);
+  return {
+    dkd_rows, dkd_odds, dkd_probability,
+    dkd_lower: dkd_rows.reduce((dkd_total, dkd_row) => dkd_total * Math.max(0.01, dkd_row.dkd_market.dkd_probability - 0.07), 1),
+    dkd_upper: dkd_rows.reduce((dkd_total, dkd_row) => dkd_total * Math.min(0.99, dkd_row.dkd_market.dkd_probability + 0.07), 1),
+    dkd_gross: Math.round(dkd_odds * dkd_stake * 100) / 100,
+    dkd_net: Math.round((dkd_odds * dkd_stake - dkd_stake) * 100) / 100,
+  };
+}
+
+export function dkd_reason(dkd_match: dkd_Match, dkd_market: dkd_Market) {
+  const dkd_xg = `${dkd_match.dkd_xgHome.toFixed(2)} / ${dkd_match.dkd_xgAway.toFixed(2)}`;
+  const dkd_form = dkd_match.dkd_home.dkd_form.filter(dkd_result => dkd_result === 'G').length;
+  if (['over', 'under', 'btts'].includes(dkd_market.dkd_key)) return `Örnek beklenen gol değerleri ${dkd_xg}. Poisson gol dağılımında “${dkd_market.dkd_label}” olasılığı ${dkd_percent(dkd_market.dkd_probability)} olarak hesaplandı.`;
+  return `${dkd_match.dkd_home.dkd_name}, örnek son 5 maçında ${dkd_form} galibiyet aldı. Ev sahibi etkisiyle beklenen gol değerleri ${dkd_xg}. Bu dağılımda “${dkd_market.dkd_label}” olasılığı ${dkd_percent(dkd_market.dkd_probability)}.`;
+}
+
+export const dkd_money = (dkd_amount: number) => `${dkd_amount.toLocaleString('tr-TR', { minimumFractionDigits: 0, maximumFractionDigits: 2 })} TL`;
+export const dkd_decimal = (dkd_value: number) => dkd_value.toFixed(2).replace('.', ',');
+export const dkd_percent = (dkd_value: number) => `%${(dkd_value * 100).toFixed(1).replace('.', ',')}`;
+
+export function dkd_shareText(dkd_coupon: dkd_Coupon, dkd_matches: dkd_Match[]): string {
+  const dkd_summary = dkd_summarize(dkd_coupon.dkd_picks, dkd_matches, dkd_coupon.dkd_stake);
+  return `DraBornOdds • DEMO RAPOR\n${dkd_risks[dkd_coupon.dkd_risk].dkd_name} · ${dkd_coupon.dkd_picks.length} maç\n\n${dkd_summary.dkd_rows.map(dkd_row => `${dkd_row.dkd_match.dkd_home.dkd_name} – ${dkd_row.dkd_match.dkd_away.dkd_name}\n${dkd_row.dkd_market.dkd_label} · ${dkd_decimal(dkd_row.dkd_market.dkd_odds)}`).join('\n\n')}\n\nTutar: ${dkd_money(dkd_coupon.dkd_stake)}\nToplam oran: ${dkd_decimal(dkd_summary.dkd_odds)}\nOlası brüt dönüş: ${dkd_money(dkd_summary.dkd_gross)}\nÖrnek model olasılığı: ${dkd_percent(dkd_summary.dkd_probability)}\n\nTüm veriler kurgusaldır. Gerçek maç tahmini veya kazanç garantisi değildir. Birleşik olasılık bağımsızlık varsayımına dayanır. Para yatırılmaz ve bahis oynanmaz.`;
+}

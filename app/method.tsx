@@ -1,0 +1,16 @@
+import { dkd, dkd_colors } from '../src/dkd-ui';
+
+export default function dkd_MethodScreen(){
+  return <dkd.Page><dkd.Reveal><dkd.Badge dkd_color={dkd_colors.purple}>MODEL NOTLARI</dkd.Badge><dkd.Text dkd_size={29} dkd_bold dkd_style={{marginTop:10}}>Sayıların arkasında{'\n'}ne var?</dkd.Text><dkd.Text dkd_size={14} dkd_color={dkd_colors.muted} dkd_style={{marginTop:8}}>Şeffaf hesaplar. Açık sınırlar.</dkd.Text></dkd.Reveal>
+    {[
+      {dkd_title:'01 · Bu bir ürün demosu',dkd_color:dkd_colors.lime,dkd_body:'Takım adları tanıdık olsa da fikstür, saha, hava, geçmiş sonuçlar, form, eksikler ve oranlar kurgusaldır. Uygulama bu sürümde internetten spor verisi çekmez.'},
+      {dkd_title:'02 · Gol senaryosundan olasılığa',dkd_color:dkd_colors.blue,dkd_body:'Her takımın örnek hücum ve savunma katsayılarından beklenen gol değeri üretilir. Ev sahibine 1,12 katsayı ve örnek son 5 maçındaki galibiyet sayısı × 0,035 eklenir. Deplasman için 0,85 katsayısı uygulanır. Poisson dağılımında 0–12 gollü senaryolar hesaplanır ve toplam kütle 1 olacak şekilde normalize edilir.'},
+      {dkd_title:'03 · Neler hesapta yok?',dkd_color:dkd_colors.purple,dkd_body:'Hava, eksik oyuncular, dinlenme ve örnek geçmiş skorlar arayüzü denemen için gösterilir; mevcut modele dahil edilmez. Model gerçek veriyle eğitilmemiştir, geçmiş maçlarla doğrulanmış bir isabet oranı yoktur.'},
+      {dkd_title:'04 · Risk profili ne yapıyor?',dkd_color:dkd_colors.yellow,dkd_body:'Seçim motoru düşük risk için yaklaşık %78, dengeli için %60, yüksek getiri için %43 ve ultra getiri için %28 tek maç olasılığına yakın marketleri sıralar. Bunlar gerçekleşme garantisi değil, demo seçim hedefleridir. Düşük riskli birden çok seçimin birleşimi yine yüksek toplam risk taşıyabilir.'},
+      {dkd_title:'05 · Oran ve dönüş hesabı',dkd_color:dkd_colors.lime,dkd_body:'Örnek ondalık oran = 1 / (model olasılığı × 1,065), en az 1,05 olacak şekilde iki basamağa yuvarlanır. Gerçek bir bahis sağlayıcısının fiyatı değildir. Toplam oran, seçilen oranların çarpımıdır. Olası brüt dönüş = senaryo tutarı × toplam oran. Net fark hesaplanırken başlangıç tutarı çıkarılır.'},
+      {dkd_title:'06 · Birleşik olasılık',dkd_color:dkd_colors.coral,dkd_body:'Tüm seçimlerin olasılıkları birbiriyle çarpılır. Bu hesap bağımsızlık varsayar; aynı takımın farklı maçları ve ortak koşullar nedeniyle gerçekte sapabilir. Her seçim için ±7 yüzde puanlık duyarlılık aralığı da gösterilir. Bu aralık ölçülmüş bir güven aralığı değildir.'},
+      {dkd_title:'07 · Verilerin sende kalır',dkd_color:dkd_colors.blue,dkd_body:'Favoriler, kaydedilen raporlar ve tercihler cihazında tutulur. Hesap açılmaz, sunucuya veri gönderilmez. Kaydedilmemiş raporlar ve kupon taslağı uygulama yeniden açıldığında temizlenir. Profil ekranından tüm yerel demo kayıtlarını silebilirsin.'},
+    ].map(dkd_item=><dkd.Card key={dkd_item.dkd_title}><dkd.Text dkd_size={18} dkd_bold dkd_color={dkd_item.dkd_color}>{dkd_item.dkd_title}</dkd.Text><dkd.Text dkd_size={14} dkd_color={dkd_colors.muted} dkd_selectable>{dkd_item.dkd_body}</dkd.Text></dkd.Card>)}
+    <dkd.Notice dkd_text="DraBornOdds bu sürümde bir analiz ve arayüz demosudur. Para yatırma, bahis oynama veya gerçek kazanç işlevi bulunmaz."/>
+  </dkd.Page>;
+}
