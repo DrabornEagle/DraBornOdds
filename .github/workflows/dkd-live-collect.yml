@@ -1,0 +1,39 @@
+name: DraBornOdds live collectors
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,37 * * * *'
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: dkd-live-collect
+  cancel-in-progress: true
+jobs:
+  dkd-collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Collect public structured match data
+        run: node collectors/dkd_collect.mjs > dkd-collector-output.json
+      - name: Show source health without exposing secrets
+        run: jq '[.results[] | {source_id,status,http_status,matches:(.candidates|length),error}]' dkd-collector-output.json
+      - name: Request short-lived GitHub OIDC token
+        id: dkd_oidc
+        shell: bash
+        run: |
+          DBO_TOKEN_JSON="$(curl --fail --silent --show-error -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=drabornodds-supabase-ingest")"
+          echo "token=$(printf '%s' "$DBO_TOKEN_JSON" | jq -r .value)" >> "$GITHUB_OUTPUT"
+      - name: Ingest into isolated dbo_ Supabase tables
+        env:
+          DBO_OIDC_TOKEN: ${{ steps.dkd_oidc.outputs.token }}
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -X POST 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/dbo-ingest-odds' \
+            -H "Authorization: Bearer $DBO_OIDC_TOKEN" \
+            -H 'Content-Type: application/json' \
+            --data-binary @dkd-collector-output.json | jq .
