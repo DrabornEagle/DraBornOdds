@@ -48,7 +48,7 @@ Bir maç kuponda yalnızca bir kez yer alır. Aynı maçtan başka market seçil
 
 ## SDK 58 ve kurulum notu
 
-- Expo: **58.0.0-preview.2** (SDK 58 beta), React Native: **0.88.0-rc.0**, React: **19.2.3**.
+- Expo: **58.0.0-preview.2** (SDK 58 beta), React Native: **0.88.0-rc.0**, React: **19.2.3**, TypeScript: **6.0.3**.
 - Expo Go Android 58.0.0 / SDK 58 hedeflenmiştir. Eski SDK 55–57'ye düşürülmez.
 - Native paketler kurulu Expo paketinin `bundledNativeModules.json` eşlemesine göre seçildi; `package-lock.json` repoya dahildir.
 - SDK 58 beta / React Native RC nedeniyle bazı paketlerin peer aralıkları henüz RC sürümünü kapsamıyor. `.npmrc` içindeki `legacy-peer-deps=true` npm çözümleyicisinin bu metadata çakışmasını aşar; native sürümler ayrıca Expo ile kontrol edilir. `expo.install.exclude` veya runtime sürümünü gizleyen bir ayar yoktur.

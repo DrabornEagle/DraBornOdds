@@ -7,5 +7,6 @@
 - Android Hermes ve web paketlemeleri yerelde başarılı.
 - Kontrol tarayıcısının localhost erişimi ağ tarafından engellendi; görsel/tıklama tarayıcı kontrolü tamamlandı denmiyor. Gerçek web paketine karşı DOM senaryo testi eklendi.
 - GitHub Actions doğrulaması ve Termux ZIP kurulum komutu hazırlandı.
+- GitHub'ın çevrimiçi SDK kontrolünde belirtilen TypeScript 6.0.3 sürümüne geçildi; testler için Node tipleri açıkça tanımlandı.
 - Cihazda Expo Go testi kullanıcı telefonunda yapılmalı; README kontrol listesini içerir.
 - Sonraki kapsam, kullanıcı tasarımı onaylarsa gerçek veri + Supabase entegrasyonudur.
