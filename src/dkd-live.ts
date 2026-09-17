@@ -7,9 +7,7 @@ const dkd_palette=['#B6F36A','#6DBFFF','#C5A0FF','#FF8B78','#FFCE77','#73D3FF','
 type dkd_DbMatch={dbo_match_key:string;dbo_league:string;dbo_country:string|null;dbo_home_team:string;dbo_away_team:string;dbo_start_at:string;dbo_last_seen_at:string};
 type dkd_DbAnalysis={dbo_match_key:string;dbo_source_count:number;dbo_home_odds:number|null;dbo_draw_odds:number|null;dbo_away_odds:number|null;dbo_home_probability:number|null;dbo_draw_probability:number|null;dbo_away_probability:number|null;dbo_quality_score:number;dbo_explanation:string|null;dbo_updated_at:string};
 type dkd_DbSource={dbo_source_id:string;dbo_label:string;dbo_last_status:string;dbo_last_run_at:string|null;dbo_last_success_at:string|null;dbo_last_error:string|null;dbo_last_match_count:number};
-type dkd_TsdbTeam={idTeam?:string;strTeam?:string};
 type dkd_TsdbEvent={idEvent?:string;strLeague?:string;strCountry?:string;strHomeTeam?:string;strAwayTeam?:string;dateEvent?:string;strTime?:string;strTimestamp?:string};
-type dkd_TsdbTeams={teams?:dkd_TsdbTeam[]|null};
 type dkd_TsdbEvents={events?:dkd_TsdbEvent[]|null};
 
 async function dkd_request<T>(dkd_address:string,dkd_headers?:Record<string,string>,dkd_timeout=12000):Promise<T>{
@@ -27,7 +25,8 @@ function dkd_clock(dkd_iso:string){return new Intl.DateTimeFormat('tr-TR',{timeZ
 function dkd_number(dkd_value:number|null){return typeof dkd_value==='number'&&Number.isFinite(dkd_value)?dkd_value:0;}
 function dkd_errorText(dkd_failure:unknown){return dkd_failure instanceof Error?dkd_failure.message:'Bilinmeyen bağlantı hatası.';}
 function dkd_eventIso(dkd_event:dkd_TsdbEvent){let dkd_raw=dkd_event.strTimestamp?.trim();if(!dkd_raw&&dkd_event.dateEvent){const dkd_time=(dkd_event.strTime?.trim()||'12:00:00').replace(/Z$/i,'');dkd_raw=`${dkd_event.dateEvent}T${dkd_time}`;}if(!dkd_raw)return null;dkd_raw=dkd_raw.replace(' ','T');if(!/(?:Z|[+-]\d\d:?\d\d)$/i.test(dkd_raw))dkd_raw+='Z';const dkd_date=new Date(dkd_raw);return Number.isFinite(dkd_date.getTime())?dkd_date.toISOString():null;}
-function dkd_fixtureMatch(dkd_event:dkd_TsdbEvent):dkd_Match|null{const dkd_startAt=dkd_eventIso(dkd_event),dkd_homeName=dkd_event.strHomeTeam?.trim(),dkd_awayName=dkd_event.strAwayTeam?.trim();if(!dkd_startAt||!dkd_homeName||!dkd_awayName)return null;const dkd_league=dkd_event.strLeague?.trim()||'Turkish Super Lig',dkd_home=dkd_team(dkd_homeName),dkd_away=dkd_team(dkd_awayName);return{dkd_id:`tsdb_${dkd_event.idEvent||dkd_hash(`${dkd_homeName}_${dkd_awayName}_${dkd_startAt}`)}`,dkd_league,dkd_country:dkd_event.strCountry?.trim()||'Türkiye',dkd_color:dkd_palette[dkd_hash(dkd_league)%dkd_palette.length]!,dkd_home,dkd_away,dkd_offset:dkd_offset(dkd_startAt),dkd_time:dkd_clock(dkd_startAt),dkd_startAt,dkd_sourceCount:1,dkd_quality:.45,dkd_explanation:'Gerçek fikstür TheSportsDB üzerinden doğrulandı. Güvenilir 1X2 oranı gelene kadar analiz ve kupon seçimi açılmaz.',dkd_lastSeenAt:new Date().toISOString(),dkd_venue:'',dkd_temperature:0,dkd_weather:'',dkd_xgHome:0,dkd_xgAway:0,dkd_markets:[],dkd_history:[],dkd_absences:[0,0],dkd_rest:[0,0]};}
+function dkd_fixtureMatch(dkd_event:dkd_TsdbEvent):dkd_Match|null{const dkd_startAt=dkd_eventIso(dkd_event),dkd_homeName=dkd_event.strHomeTeam?.trim(),dkd_awayName=dkd_event.strAwayTeam?.trim();if(!dkd_startAt||!dkd_homeName||!dkd_awayName)return null;const dkd_league=dkd_event.strLeague?.trim()||'Turkish Super Lig',dkd_home=dkd_team(dkd_homeName),dkd_away=dkd_team(dkd_awayName);return{dkd_id:`tsdb_${dkd_event.idEvent||dkd_hash(`${dkd_homeName}_${dkd_awayName}_${dkd_startAt}`)}`,dkd_league,dkd_country:dkd_event.strCountry?.trim()||'Türkiye',dkd_color:dkd_palette[dkd_hash(dkd_league)%dkd_palette.length]!,dkd_home,dkd_away,dkd_offset:dkd_offset(dkd_startAt),dkd_time:dkd_clock(dkd_startAt),dkd_startAt,dkd_sourceCount:1,dkd_quality:.45,dkd_explanation:'Gerçek fikstür açık spor verisi kaynağından doğrulandı. Güvenilir 1X2 oranı gelene kadar analiz ve kupon seçimi açılmaz.',dkd_lastSeenAt:new Date().toISOString(),dkd_venue:'',dkd_temperature:0,dkd_weather:'',dkd_xgHome:0,dkd_xgAway:0,dkd_markets:[],dkd_history:[],dkd_absences:[0,0],dkd_rest:[0,0]};}
+function dkd_mergeKey(dkd_match:dkd_Match){const dkd_clean=(dkd_value:string)=>dkd_value.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');return`${dkd_dayKey(new Date(dkd_match.dkd_startAt))}_${dkd_clean(dkd_match.dkd_home.dkd_name)}_${dkd_clean(dkd_match.dkd_away.dkd_name)}`;}
 export const dkd_fixtureDay=()=>dkd_dayKey(new Date());
 export function dkd_dateFromIso(dkd_iso:string,dkd_long=false){const dkd_off=dkd_offset(dkd_iso);if(!dkd_long&&dkd_off===0)return'Bugün';if(!dkd_long&&dkd_off===1)return'Yarın';return new Intl.DateTimeFormat('tr-TR',{timeZone:'Europe/Istanbul',day:'numeric',month:'short',...(dkd_long?{weekday:'long' as const}:{})}).format(new Date(dkd_iso));}
 
@@ -44,23 +43,28 @@ async function dkd_fetchOddsBackend(){
   return{dkd_matches,dkd_sources};
 }
 
+async function dkd_fetchFixtureDays(dkd_start:number,dkd_count:number){const dkd_paths=Array.from({length:dkd_count},(dkd_unused,dkd_index)=>{const dkd_day=dkd_dayKey(new Date(Date.now()+(dkd_start+dkd_index)*86400000));return`eventsday.php?d=${dkd_day}&s=Soccer&l=4339`;});const dkd_responses=await Promise.allSettled(dkd_paths.map(dkd_path=>dkd_tsdbGet<dkd_TsdbEvents>(dkd_path)));return dkd_responses.flatMap(dkd_result=>dkd_result.status==='fulfilled'?(dkd_result.value.events||[]):[]);}
 async function dkd_fetchFixtureFallback(){
   const dkd_startedAt=new Date().toISOString();
-  const dkd_teamsPayload=await dkd_tsdbGet<dkd_TsdbTeams>('search_all_teams.php?l=Turkish_Super_Lig');
-  const dkd_teamIds=(dkd_teamsPayload.teams||[]).map(dkd_team=>dkd_team.idTeam).filter((dkd_id):dkd_id is string=>!!dkd_id).slice(0,10);
-  const dkd_responses=await Promise.allSettled(dkd_teamIds.map(dkd_id=>dkd_tsdbGet<dkd_TsdbEvents>(`eventsnext.php?id=${encodeURIComponent(dkd_id)}`)));
-  const dkd_events=dkd_responses.flatMap(dkd_result=>dkd_result.status==='fulfilled'?(dkd_result.value.events||[]):[]);
+  const dkd_events=await dkd_fetchFixtureDays(0,8);
+  if(dkd_events.length<3)dkd_events.push(...await dkd_fetchFixtureDays(8,7));
   if(!dkd_events.length){const dkd_league=await dkd_tsdbGet<dkd_TsdbEvents>('eventsnextleague.php?id=4339');dkd_events.push(...(dkd_league.events||[]));}
   const dkd_seen=new Set<string>(),dkd_matches:dkd_Match[]=[];const dkd_cutoff=Date.now()-6*3600000;
   for(const dkd_event of dkd_events){const dkd_match=dkd_fixtureMatch(dkd_event);if(!dkd_match||new Date(dkd_match.dkd_startAt).getTime()<dkd_cutoff||dkd_seen.has(dkd_match.dkd_id))continue;dkd_seen.add(dkd_match.dkd_id);dkd_matches.push(dkd_match);}
   dkd_matches.sort((dkd_a,dkd_b)=>new Date(dkd_a.dkd_startAt).getTime()-new Date(dkd_b.dkd_startAt).getTime());
-  const dkd_source:dkd_SourceStatus={dkd_id:'thesportsdb',dkd_name:'TheSportsDB · Süper Lig fikstürü',dkd_status:dkd_matches.length?'ok':'degraded',dkd_lastRunAt:dkd_startedAt,dkd_lastSuccessAt:dkd_matches.length?dkd_startedAt:null,dkd_lastError:dkd_matches.length?null:'Güncel Süper Lig fikstürü döndürülmedi.',dkd_matchCount:dkd_matches.length};
+  const dkd_source:dkd_SourceStatus={dkd_id:'thesportsdb',dkd_name:'Açık Süper Lig fikstür kaynağı',dkd_status:dkd_matches.length?'ok':'degraded',dkd_lastRunAt:dkd_startedAt,dkd_lastSuccessAt:dkd_matches.length?dkd_startedAt:null,dkd_lastError:dkd_matches.length?null:'Güncel Süper Lig fikstürü döndürülmedi.',dkd_matchCount:dkd_matches.length};
   return{dkd_matches,dkd_source};
 }
 
 export async function dkd_fetchLive(){
-  let dkd_backend:{dkd_matches:dkd_Match[];dkd_sources:dkd_SourceStatus[]}={dkd_matches:[],dkd_sources:[]};let dkd_backendError='';
-  try{dkd_backend=await dkd_fetchOddsBackend();}catch(dkd_failure){dkd_backendError=dkd_errorText(dkd_failure);}
-  if(dkd_backend.dkd_matches.length)return{dkd_matches:dkd_backend.dkd_matches,dkd_sources:dkd_backend.dkd_sources,dkd_loadedAt:new Date().toISOString()};
-  try{const dkd_fallback=await dkd_fetchFixtureFallback();if(dkd_fallback.dkd_matches.length)return{dkd_matches:dkd_fallback.dkd_matches,dkd_sources:[dkd_fallback.dkd_source,...dkd_backend.dkd_sources],dkd_loadedAt:new Date().toISOString()};if(dkd_backendError)throw new Error(`${dkd_backendError} Fikstür servisi de güncel maç döndürmedi.`);return{dkd_matches:[],dkd_sources:[dkd_fallback.dkd_source,...dkd_backend.dkd_sources],dkd_loadedAt:new Date().toISOString()};}catch(dkd_failure){if(dkd_backendError)throw new Error(`${dkd_backendError} ${dkd_errorText(dkd_failure)}`);throw dkd_failure;}
+  const [dkd_backendResult,dkd_fixtureResult]=await Promise.allSettled([dkd_fetchOddsBackend(),dkd_fetchFixtureFallback()]);
+  const dkd_backend=dkd_backendResult.status==='fulfilled'?dkd_backendResult.value:{dkd_matches:[],dkd_sources:[] as dkd_SourceStatus[]};
+  const dkd_fixture=dkd_fixtureResult.status==='fulfilled'?dkd_fixtureResult.value:{dkd_matches:[],dkd_source:null};
+  if(dkd_backendResult.status==='rejected'&&dkd_fixtureResult.status==='rejected')throw new Error(`${dkd_errorText(dkd_backendResult.reason)} ${dkd_errorText(dkd_fixtureResult.reason)}`);
+  const dkd_byKey=new Map<string,dkd_Match>();
+  for(const dkd_match of dkd_fixture.dkd_matches)dkd_byKey.set(dkd_mergeKey(dkd_match),dkd_match);
+  for(const dkd_match of dkd_backend.dkd_matches)dkd_byKey.set(dkd_mergeKey(dkd_match),dkd_match);
+  const dkd_matches=[...dkd_byKey.values()].sort((dkd_a,dkd_b)=>new Date(dkd_a.dkd_startAt).getTime()-new Date(dkd_b.dkd_startAt).getTime());
+  const dkd_sources=dkd_fixture.dkd_source?[dkd_fixture.dkd_source,...dkd_backend.dkd_sources]:dkd_backend.dkd_sources;
+  return{dkd_matches,dkd_sources,dkd_loadedAt:new Date().toISOString()};
 }
