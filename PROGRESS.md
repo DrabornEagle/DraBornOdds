@@ -1,26 +1,24 @@
-# DraBornOdds v0.5 çalışma kaydı
+# DraBornOdds v0.6 çalışma kaydı
 
 - v0.1 geri dönüş noktası: `74b4f28930d5c0d51439c155a36fbb2cbd51cff8`; yedek dal: `backup/v0.1-2026-09-17`.
-- v0.2: `0.2.0`, Android versionCode `1`, Expo Go / SDK 58; APK/AAB yok.
+- Aktif sürüm: `0.6.0`, Android versionCode `1`, Expo Go / SDK 58; APK/AAB yok.
 - Demo maç/oran tamamen kaldırıldı; sahte veri veya sentetik fallback yok.
 - `DraBorn-Park-Garage-SportOdds` içinde yalnızca `dbo_` nesneleri kullanılıyor; diğer proje verilerine dokunulmuyor.
-- API kullanılmıyor. TFF `pageID=198` public HTML, Süper Lig fikstür yedeği olarak scraping ile okunuyor.
-- Geniş public futbol bülteni collector’ı eklendi. 17.09.2026 canlı smoke: **157 maç / 1.543 oran seçimi**.
-- Aktif market kapsamı: 1X2, 2.5/3.5 Alt-Üst, Çifte Şans, KG Var-Yok, İlk Yarı 1X2. Generic `dbo_market_key + dbo_selection_key + dbo_line` şeması daha fazla markete hazır.
+- Spor/odds API kullanılmıyor. TFF public HTML Süper Lig fikstür yedeği; geniş futbol bülteni ve oran collector’ları public-web verisini işler.
 - Nesine/Misli/Bilyoner/Tuttur doğrudan collector’ları korunuyor; CAPTCHA/bot koruması aşılmıyor.
 - `dbo-ingest-odds` Edge Function GitHub OIDC ile korunuyor; GitHub’da service-role anahtarı yok.
-- Edge ingest çoklu marketleri toplu yazar, 1X2 no-vig analizini ve market genişliğine duyarlı kalite skorunu üretir. Büyük bülten workflow’da güvenli batch’lere bölünür.
-- Uygulama Supabase’den çoklu marketleri okuyor; tamamlayıcı gruplarda no-vig olasılık, çifte şansta normalize 1X2 bileşimi kullanılıyor.
-- Akıllı kupon motoru yalnızca 1X2 değil tüm doğrulanmış marketleri veri kalitesi + olasılık + oran + risk profiline göre sıralıyor. Aynı maç kupona bir kez girer.
-- Maç detayında market grupları ayrı listeleniyor; oran/olasılık/veri kalitesi görünür. Fixture-only maç analiz dışı kalır.
-- Ana sayfa artık toplam maç, oranlı maç ve doğrulanmış market seçim sayısını gösterir. Sağ üst backend/Supabase rozeti kaldırılmıştır.
-- Builder, filtre içindeki gerçek analiz edilebilir maç ve market sayısını gösterir; “0 1X2” eski mesajları kaldırılmıştır.
-- Domain testlerine wide-market low-risk seçimi ve fixture-only dışlama regresyonları eklendi.
-- TFF fixture smoke ve public bulletin smoke GitHub Actions üzerinde gerçek kaynak erişimini doğrular.
-- Collector her saatin 07/37. dakikasında ve manuel çalışır; collector parser değişince ayrıca hemen çalışır.
-- Ana CI: npm locked install, TypeScript, domain tests, Expo SDK check, Android JS export. Web deploy yok.
-- Sonuçlar kesinlik/kazanç garantisi olarak sunulmaz; oran-temelli piyasa olasılığı ve veri kalite sıralamasıdır.
-
-- v0.5: risk profillerine olasılık/oran bantları ve aşırı longshot cezası eklendi; benzer seçimlerde market ailesi çeşitliliği uygulanıyor.
-- Tam 9 seçenekli İY/MS marketi artık no-vig normalize edilerek otomatik analize girebilir; eksik grup uydurulmaz.
-- Builder her risk profili için önceden tahmini birleşik olasılık + toplam oran gösterir; çok küçük olasılıklar %0,0 diye yuvarlanmaz.
+- Son taze Supabase doğrulaması: **126 scheduled maç / 126 taze oranlı maç / 2.710 taze oran satırı**.
+- Güncel market yayılımı: 126 maç 1X2, 126 KG, 119 Alt/Üst, 97 İlk Yarı Sonucu, 77 Çifte Şans, 77 Tek/Çift, 62 İlk Yarı Alt/Üst, 39 Gol Aralığı, 17 Doğru Skor, 17 tam İY/MS.
+- Tam 9 seçenekli İY/MS (`1/1 ... 2/2`) no-vig normalize edilerek otomatik analizde kullanılabilir; eksik grup uydurulmaz.
+- Risk motorunda ayrı olasılık/oran hedef bantları, aşırı longshot cezası ve market ailesi çeşitlilik cezası var.
+- v0.6 rapor ana yüzdesi artık **seçim tahmini gerçekleşme olasılıklarının aritmetik ortalaması**. Bu değer `dkd_averageProbability` olarak hesaplanır.
+- Eski olasılık çarpımı korunur ancak açıkça **Tüm Seçimler Birlikte** adıyla ikincil matematiksel metrik olarak gösterilir; ortalama ile karıştırılmaz.
+- Ortalama duyarlılık `dkd_averageLower / dkd_averageUpper`; birlikte-gerçekleşme duyarlılığı `dkd_lower / dkd_upper` olarak ayrı tutulur.
+- Builder risk kartları oluşturulacak seçimler için `Ort. %... · Oran ...` önizlemesi gösterir.
+- Paylaşım metni seçim ortalaması ile birlikte-gerçekleşme hesabını ayrı satırlarda açıklar.
+- Keşfet ekranına gerçek normalize market dağılımını kullanan **Canlı Analiz Radarı** eklendi; ilk 5 market ailesi animasyonlu barlarla gösterilir.
+- Keşfet başlığında canlı nabız ve risk kartlarında animasyonlu hedef barları var. Hareket ayarı kapalıysa grafikler statik kalır.
+- Maç detayındaki Oran Hareketi son 6 saatlik gerçek `dbo_odds_history` snapshot’larını özetler; otomatik seçim modeline gizlice katılmaz.
+- Canlı istemci yalnızca son 75 dakikadaki veriyle çalışır; odds history 72 saat, collector run kayıtları 30 gün saklanır.
+- CI: npm locked install, TypeScript, domain/regresyon testleri, Expo SDK 58 check ve Android JS export. Web deploy ve APK üretimi yok.
+- Genel kupon tahmini seçim güveni özetidir; bütün kuponun aynı anda tutma olasılığı değildir. İki metrik de kesinlik/kazanç garantisi olarak sunulmaz.
