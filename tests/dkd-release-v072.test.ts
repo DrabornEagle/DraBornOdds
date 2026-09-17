@@ -24,5 +24,5 @@ test('privacy and Play-facing disclosures remain reachable',()=>{
   assert.match(dkd_profile,/Gizlilik Politikası/);
   assert.match(dkd_profile,/18\+/);
   assert.match(dkd_privacy,/support@draborneagle\.com/);
-  assert.match(dkd_privacy,/hesap oluşturmaz/i);
+  assert.match(dkd_privacy,/kullanıcı hesabı oluşturmaz/i);
 });
