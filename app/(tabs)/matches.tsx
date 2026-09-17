@@ -4,6 +4,7 @@ import * as dkd_Router from 'expo-router';
 import { dkd, dkd_colors } from '../../src/dkd-ui';
 import { dkd_LiveMatchCard } from '../../src/dkd-live-card';
 import { dkd_filterMatches } from '../../src/dkd-engine';
+import { dkd_isPlayable } from '../../src/dkd-live';
 import { dkd_useStore } from '../../src/dkd-store';
 import type { dkd_Period } from '../../src/dkd-types';
 
@@ -19,7 +20,7 @@ export default function dkd_MatchesScreen(){
   const [dkd_onlyFavorites,dkd_setOnlyFavorites]=dkd_React.useState(false);
   dkd_React.useEffect(()=>{dkd_setOnlyFavorites(dkd_params.dkd_favorites==='1');},[dkd_params.dkd_favorites]);
   const dkd_resetFilters=dkd_React.useCallback(()=>{dkd_setPeriod('week');dkd_setLeague('Tümü');dkd_setQuery('');dkd_setOnlyFavorites(false);},[]);
-  const dkd_list=dkd_React.useMemo(()=>dkd_filterMatches(dkd_store.dkd_matches,dkd_period,dkd_league,dkd_query).filter(dkd_match=>!dkd_onlyFavorites||dkd_store.dkd_stored.dkd_favorites.includes(dkd_match.dkd_id)),[dkd_store.dkd_matches,dkd_period,dkd_league,dkd_query,dkd_onlyFavorites,dkd_store.dkd_stored.dkd_favorites]);
+  const dkd_list=dkd_React.useMemo(()=>dkd_filterMatches(dkd_store.dkd_matches,dkd_period,dkd_league,dkd_query).filter(dkd_match=>dkd_isPlayable(dkd_match)).filter(dkd_match=>!dkd_onlyFavorites||dkd_store.dkd_stored.dkd_favorites.includes(dkd_match.dkd_id)),[dkd_store.dkd_matches,dkd_period,dkd_league,dkd_query,dkd_onlyFavorites,dkd_store.dkd_stored.dkd_favorites]);
   const dkd_oddsReady=dkd_list.filter(dkd_match=>dkd_match.dkd_markets.length>=3).length;
   const dkd_marketCount=dkd_list.reduce((dkd_sum,dkd_match)=>dkd_sum+dkd_match.dkd_markets.length,0);
   const dkd_filtersActive=dkd_period!=='week'||dkd_league!=='Tümü'||!!dkd_query||dkd_onlyFavorites;

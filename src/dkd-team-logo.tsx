@@ -5,6 +5,9 @@ import { dkd_fetchTeamContext } from './dkd-football-context';
 
 const dkd_logoCache=new Map<string,string|null>();
 const dkd_logoPending=new Map<string,Promise<string|null>>();
+type dkd_LogoManifest={dkd_logos?:Record<string,string>};
+let dkd_manifestPromise:Promise<dkd_LogoManifest|null>|null=null;
+async function dkd_manifest(){if(dkd_manifestPromise)return dkd_manifestPromise;dkd_manifestPromise=(async()=>{try{const dkd_response=await fetch(`https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos.json?dkd=${Date.now()}`,{headers:{Accept:'application/json'}});if(!dkd_response.ok)return null;return await dkd_response.json() as dkd_LogoManifest;}catch{return null;}})();return dkd_manifestPromise;}
 const dkd_aliases:Record<string,string>={
   kasimpasa:'Kasımpaşa S.K.',konyaspor:'Konyaspor',corum:'Çorum F.K.',alanyaspor:'Alanyaspor',kocaelispor:'Kocaelispor',gaziantep:'Gaziantep F.K.',trabzonspor:'Trabzonspor',galatasaray:'Galatasaray S.K. (football)',istanbulbasaksehir:'İstanbul Başakşehir F.K.',basaksehir:'İstanbul Başakşehir F.K.',genclerbirligi:'Gençlerbirliği S.K.',fenerbahce:'Fenerbahçe S.K. (football)',eyupspor:'Eyüpspor',erzurumspor:'Erzurumspor F.K.',samsunspor:'Samsunspor',amed:'Amed S.F.K.',besiktas:'Beşiktaş J.K.',goztepe:'Göztepe S.K.',rizespor:'Çaykur Rizespor',stadetunisien:'Stade Tunisien',clubafricain:'Club Africain'
 };
@@ -24,6 +27,7 @@ async function dkd_resolveLogo(dkd_team:dkd_Team){
   const dkd_existing=dkd_logoPending.get(dkd_cacheKey);if(dkd_existing)return dkd_existing;
   const dkd_request=(async()=>{
     try{
+      const dkd_cachedManifest=await dkd_manifest(),dkd_manifestLogo=dkd_cachedManifest?.dkd_logos?.[dkd_cacheKey]??dkd_cachedManifest?.dkd_logos?.[dkd_clubKey(dkd_team.dkd_name)];if(dkd_manifestLogo){dkd_logoCache.set(dkd_cacheKey,dkd_manifestLogo);return dkd_manifestLogo;}
       const dkd_context=await dkd_fetchTeamContext(dkd_team);if(dkd_context.dkd_logoUrl){dkd_logoCache.set(dkd_cacheKey,dkd_context.dkd_logoUrl);return dkd_context.dkd_logoUrl;}
       const dkd_key=dkd_clubKey(dkd_team.dkd_name),dkd_alias=dkd_aliases[dkd_key];
       if(dkd_alias){for(const dkd_language of ['en','tr']){const dkd_logo=await dkd_wikiTitle(dkd_language,dkd_alias);if(dkd_logo){dkd_logoCache.set(dkd_cacheKey,dkd_logo);return dkd_logo;}}}
