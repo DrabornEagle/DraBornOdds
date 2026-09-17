@@ -1,0 +1,21 @@
+name: DraBornOdds fixture source smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/dkd-fixture-smoke.mjs'
+      - '.github/workflows/dkd-fixture-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dkd-fixture-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify real Turkish Super Lig fixture feed
+        run: node scripts/dkd-fixture-smoke.mjs
