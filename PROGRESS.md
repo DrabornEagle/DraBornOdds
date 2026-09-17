@@ -2,13 +2,20 @@
 
 - v0.1 geri dönüş noktası: `74b4f28930d5c0d51439c155a36fbb2cbd51cff8`; yedek dal: `backup/v0.1-2026-09-17`.
 - v0.2: uygulama sürümü `0.2.0`, Android versionCode `1`, Expo Go / SDK 58 hedefi korunuyor.
-- Demo maç/takım/oran veri seti kaldırıldı; uygulamada sahte fallback yok.
-- Supabase: `DraBorn-Park-Garage-SportOdds` projesinde yalnızca `dbo_` nesneleri oluşturuldu; diğer proje verilerine dokunulmadı.
-- Core ve analysis migration’ları uygulandı; RLS/grant ve DraBornOdds FK indeksleri denetlendi.
-- Nesine, Misli, Bilyoner, Tuttur public-web collector sistemi ve `dbo_odds_history` ingest hattı kuruldu.
+- Demo maç/takım/oran veri seti kaldırıldı; uygulamada sahte oran veya sentetik maç fallback’i yok.
+- Supabase: `DraBorn-Park-Garage-SportOdds` projesinde yalnızca `dbo_` nesneleri kullanılıyor; diğer proje verilerine dokunulmadı.
+- Core ve analysis migration’ları, RLS/grant kontrolleri ve DraBornOdds FK indeksleri tamamlandı.
+- Nesine, Misli, Bilyoner, Tuttur public-web collector sistemi ve `dbo_odds_history` ingest hattı kuruldu. Koruma mekanizmaları aşılmıyor.
 - GitHub OIDC doğrulamalı `dbo-ingest-odds` Edge Function aktif; kalıcı service key GitHub’a konmadı.
 - Maç isim eşleştirme, oran normalizasyonu, kaynak sayısı/kalite skoru, dört risk profili ve açıklama katmanı hazır.
-- Uygulama Supabase canlı verisini okuyor; doğrulanamayan kaynaklar maç üretmiyor.
+- Türk siteleri doğrulanabilir 1X2 döndürmediğinde uygulamanın tamamen boş kalmaması için bağımsız gerçek fikstür hattı eklendi: TheSportsDB V1 free key `123`, Turkish Super Lig `idLeague=4339`.
+- Fikstür akışı günlük program endpointlerini kullanır, gerekirse league-next endpointine düşer; gerçek tarih/takım gösterilir, 1X2 oranı uydurulmaz.
+- Fikstür ve Supabase 1X2 hattı paralel çalışır; birinin geçici hatası diğer veri yolunu kapatmaz. Aynı maçta doğrulanmış oranlı kayıt fixture-only kaydı geçersiz kılar.
+- Fixture-only maçlar ana sayfa, Maçlar ve maç detay ekranlarında güvenli biçimde gösterilir; analiz/kupon üreticisi oranı olmayan maçı seçemez.
+- Sağ üstteki `v0.2 CANLI` / backend rozeti kaldırıldı. Ana sayfadaki BLOCKED/DEGRADED servis kartları yerine sade `Fikstür akışı` ve `1X2 oran akışı` durumu gösteriliyor.
+- `dkd_generate()` için fixture-only regresyon testi eklendi; oranı olmayan maçın analize giremediği doğrulanıyor.
+- Gerçek harici fikstür kaynağını doğrulamak için `scripts/dkd-fixture-smoke.mjs` ve ayrı `DraBornOdds fixture source smoke` GitHub Action eklendi.
 - Kaydedilen raporlar canlı maç/oran snapshot’ını kendi içinde saklıyor; v0.1 demo kayıtları v0.2’ye taşınmıyor.
-- GitHub collector workflow’u ana dal güncellemesinde ve 30 dakikada bir çalışacak şekilde ayarlandı.
-- v0.2 doğrulama workflow’u web build/deploy yapmıyor; TypeScript, domain testleri, Expo paket kontrolü ve Android JS export çalıştırıyor. APK üretilmiyor.
+- Collector workflow’u normal pushlardan ayrıdır; her saatin 07/37. dakikasında ve manuel `workflow_dispatch` ile çalışır.
+- v0.2 doğrulama workflow’u TypeScript, domain testleri, Expo paket kontrolü ve Android JS export çalıştırır. APK/AAB ve web deploy üretilmez.
+- Bilinen dış bağımlılık: doğrulanmış 1X2 oranlarının görünmesi için izin verilen kaynaklardan yapılandırılmış gerçek oran verisi gelmesi gerekir; bu koşul sağlanmadığında fikstür gösterilir fakat oran/analiz alanları kapalı kalır.
