@@ -137,9 +137,9 @@ function dkd_matchCard(dkd_props:{dkd_match:dkd_Match;dkd_featured?:boolean}) {
 function dkd_ring(dkd_props:{dkd_value:number;dkd_size?:number;dkd_color?:string;dkd_label?:string}) {
   const dkd_size=dkd_props.dkd_size ?? 100;
   const dkd_color=dkd_props.dkd_color ?? dkd_colors.lime;
-  return <dkd_RN.View accessibilityLabel={`${dkd_props.dkd_label ?? 'Model olasılığı'} ${dkd_percent(dkd_props.dkd_value)}`} style={{width:dkd_size,height:dkd_size,alignItems:'center',justifyContent:'center'}}>
+  return <dkd_RN.View accessibilityLabel={`${dkd_props.dkd_label ?? 'Piyasa olasılığı'} ${dkd_percent(dkd_props.dkd_value)}`} style={{width:dkd_size,height:dkd_size,alignItems:'center',justifyContent:'center'}}>
     <dkd_SVG.Svg width={dkd_size} height={dkd_size} viewBox="0 0 100 100" style={{position:'absolute'}}><dkd_SVG.Circle cx="50" cy="50" r="43" stroke={dkd_colors.line} strokeWidth="7" fill="none"/><dkd_SVG.Circle cx="50" cy="50" r="43" stroke={dkd_color} strokeWidth="7" fill="none" strokeDasharray={`${Math.max(0,Math.min(1,dkd_props.dkd_value))*270.18} 270.18`} strokeLinecap="round" rotation="-90" origin="50, 50"/></dkd_SVG.Svg>
-    <dkd.Text dkd_size={dkd_size*0.23} dkd_bold dkd_color={dkd_color}>%{Math.round(dkd_props.dkd_value*100)}</dkd.Text><dkd.Text dkd_size={10} dkd_color={dkd_colors.muted}>örnek model</dkd.Text>
+    <dkd.Text dkd_size={dkd_size*0.23} dkd_bold dkd_color={dkd_color}>%{Math.round(dkd_props.dkd_value*100)}</dkd.Text>
   </dkd_RN.View>;
 }
 function dkd_pitch() {
