@@ -2,7 +2,7 @@
   "expo": {
     "name": "DraBornOdds",
     "slug": "dkd-drabornodds",
-    "version": "0.8.0",
+    "version": "0.7.0",
     "scheme": "dkd-drabornodds",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
@@ -30,7 +30,7 @@
     },
     "extra": {
       "dkd_mode": "real_data",
-      "dkd_version": "DKD_draborneagle_v0.8",
+      "dkd_version": "DKD_draborneagle_v0.7",
       "dkd_supabase_namespace": "dbo_"
     }
   }
