@@ -12,7 +12,8 @@ dkd_context=dkd_context.replace('.slice(0,8);}', '.slice(0,16);}');
 const dkd_marker='export function dkd_contextReason';
 const dkd_at=dkd_context.indexOf(dkd_marker);
 if(dkd_at<0)throw new Error('dkd_contextReason marker not found');
-const dkd_tail=fs.readFileSync('scripts/dkd-v071-context-tail.txt','utf8').trim()+'\n';
+let dkd_tail=fs.readFileSync('scripts/dkd-v071-context-tail.txt','utf8').trim()+'\n';
+dkd_tail=dkd_tail.replace('dkd_match.dkd_away.dkd_standing.dkd_position','dkd_context.dkd_away.dkd_standing.dkd_position');
 dkd_context=dkd_context.slice(0,dkd_at)+dkd_tail;
 fs.writeFileSync(dkd_contextPath,dkd_context);
 
