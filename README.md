@@ -1,54 +1,48 @@
-# DraBornOdds · v0.6 · versionCode 1
+# DraBornOdds · v0.7 · versionCode 1
 
-DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 uygulaması gerçek futbol verisini public-web kaynaklarından toplar; ücretli spor/odds API’si kullanılmaz. TFF herkese açık sayfası Süper Lig fikstür yedeğidir. Geniş futbol bülteni ve doğrulanmış oran marketleri `DraBorn-Park-Garage-SportOdds` Supabase projesindeki yalnızca `dbo_` ad alanına alınır. APK/AAB henüz üretilmez.
+DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 uygulaması gerçek futbol verisini public-web kaynaklarından toplar; ücretli spor/odds API'si kullanılmaz. APK/AAB henüz üretilmez.
 
-## v0.6 gerçek veri akışı
+## v0.7 gerçek veri akışı
 
 Public futbol bülteni → maç/takım/tarih eşleştirme → erişilebilir oran marketlerini sınıflandırma → `dbo_odds_history` → tamamlanmış market gruplarında bookmaker marjını normalize etme → risk/getiri profiline göre olasılık + oran + veri kalitesi + market çeşitliliği sıralaması → seçim bazlı tahminler → genel seçim ortalaması + ayrı birlikte-gerçekleşme hesabı → açıklamalı analiz raporu.
 
-17 Eylül 2026 canlı doğrulamasında **126 güncel karşılaşmanın 126’sında taze oran** ve toplam **2.710 güncel oran satırı** bulunuyor. Piyasa kapsamı Maç Sonucu, Toplam Gol Alt/Üst, İlk Yarı Toplam Gol, Karşılıklı Gol, Çifte Şans, İlk Yarı Sonucu, Tek/Çift, Gol Aralığı, Doğru Skor ve İlk Yarı/Maç Sonucu gruplarını içeriyor. Bülten değiştikçe sayılar doğal olarak değişebilir.
+17 Eylül 2026 12:56–12:58 TSİ canlı collector doğrulamasında çalışan açık bülten hattı **129 gerçek karşılaşma ve 2.705 oran** topladı; 17 güvenli batch halinde Supabase `dbo_` tablolarına başarıyla işlendi. Bülten değiştikçe bu sayılar doğal olarak değişir.
 
-Nesine / Misli / Bilyoner / Tuttur doğrudan collector’ları korunur. CAPTCHA/bot koruması aşılmaz. Açık bülten hattı çalışırken engellenen veya ayrıştırılamayan kaynakların sağlık durumu ayrıca saklanır.
+Nesine / Misli / Bilyoner / Tuttur doğrudan collector'ları korunur. CAPTCHA/bot koruması aşılmaz. Son çalışmada Nesine, Bilyoner ve Tuttur koruma katmanında; Misli erişilebilir fakat doğrulanabilir yapı ayrıştırılamaz durumdaydı. Çalışan public bülten hattı bu kaynaklardan bağımsızdır.
 
-## Genel kupon tahmini: seçim ortalaması
+## Maçlar kaybolmasın: iki katmanlı gerçek fikstür
 
-v0.6 raporundaki büyük **Genel Kupon Tahmini** değeri, kupondaki seçimlerin normalize tahmini gerçekleşme yüzdelerinin aritmetik ortalamasıdır. Beş seçim varsa beş yüzde toplanıp 5’e bölünür. Böylece örneğin tek tek seçimler yaklaşık %30 bandındayken ana raporda anlamsız biçimde %0,12 gibi görünen bir “genel güven” etiketi kullanılmaz.
+Ana uygulama önce taze Supabase oran/bülten akışını kullanır. Bu akış cihazda boş veya geçici olarak erişilemezse uygulama artık gerçek TFF public HTML fikstürünün merkezi önbelleğine düşer. GitHub Actions TFF sayfasını yaklaşık 30 dakikada bir yeniden doğrular, tarih/saat/ev/deplasman alanlarını JSON'a dönüştürür ve `dkd-live-cache` dalında yayınlar.
 
-Matematiksel olarak bütün seçimlerin aynı anda gerçekleşmesi farklı bir sorudur. Bu nedenle eski çarpım hesabı silinmedi: raporda **Tüm Seçimler Birlikte** adıyla ikinci ve açıkça ayrılmış bir metrik olarak gösterilir. Bu değer seçim olasılıklarının çarpımıdır, bağımsızlık varsayar ve maç sayısı arttıkça doğal olarak çok hızlı küçülür. Genel seçim ortalaması tüm kuponun aynı anda tutma olasılığı değildir.
+Bu fallback **oran üretmez**. Yalnızca doğrulanmış gerçek fikstürü görünür tutar. Doğrulanmış oran yoksa maç kartı açılır ancak otomatik kupona eklenmez. İlk cache doğrulamasında 9 yaklaşan gerçek Süper Lig karşılaşması yayınlandı.
 
-Builder risk kartları da artık profil önizlemesinde `Ort. %... · Oran ...` gösterir. Paylaşım metni ortalama güven ile birlikte-gerçekleşme hesabını ayrı satırlarda taşır. Her iki değer de karar desteğidir; sonuç veya kazanç garantisi değildir.
+Maçlar sekmesi varsayılan olarak **Tüm yaklaşan** filtresiyle açılır. Bugün/Yarın, lig, arama veya favori filtresi sonucu sıfıra düşürürse uygulama gerçek akışın kaybolduğunu söylemek yerine kaç maçın mevcut olduğunu gösterir ve **Tüm maçları göster** ile filtreleri tek dokunuşta sıfırlar.
 
-## Keşfet: animasyonlu veri görünümü
+## Keşfet animasyonları
 
-Keşfet ana ekranına hafif React Native animasyonlarıyla **Canlı Analiz Radarı** eklendi. Güncel normalize market aileleri gerçek uygulama verisinden sayılır, en yoğun beş aile animasyonlu yatay çubuklarla gösterilir. Canlı veri başlığında düşük maliyetli nabız animasyonu bulunur. Risk kartlarında profil hedef güven seviyelerini görselleştiren animasyonlu mini çubuklar vardır. Kullanıcının uygulama içi hareket/animasyon ayarı kapalıysa bu animasyonlar statik gösterilir.
+Keşfet ana ekranında hareket ayarı açıkken canlı nabız, dönen/pulse yapan **Sinyal Tarama** alanı, gerçek normalize market dağılımından **Canlı Analiz Radarı** ve dört risk kartında animasyonlu hedef barları bulunur. Bunlar sahte istatistik kullanmaz. Oran akışı yoksa radar market barları doğal olarak oluşmaz; Sinyal Tarama ve canlı nabız yine görünür şekilde çalışır.
 
-Grafikler dekoratif sahte veri kullanmaz; o anda cihazda bulunan gerçek normalize market dağılımından hesaplanır.
+Profildeki **Arayüz animasyonları** kapalıysa veya Android Reduce Motion etkinse hareketler statik gösterilir.
 
-## Risk dengesi ve market çeşitliliği
+## Sürüm tek kaynaktan okunur
 
-Düşük Risk, Dengeli, Yüksek Getiri ve Ultra Getiri için ayrı olasılık/oran hedef bantları vardır. Seçim hedef olasılıktan uzaklaştıkça, profilin oran bandını aştıkça veya aşırı longshot hâline geldikçe sıralama cezası artar. Böylece **4-5 Gol / 6+ Gol gibi çok düşük olasılıklı dev oranların Yüksek ve Ultra profiline tek başına hakim olması engellenir**.
+Profil ekranındaki sürüm metni artık hard-code değildir. `app.json` içindeki Expo `version`, Android `versionCode` ve `extra.dkd_version` doğrudan okunur. Güncel değerler **v0.7 / DKD_draborneagle_v0.7 / versionCode 1**. Böylece eski v0.2 etiketi kaynakta kalmaz.
 
-Aynı market ailesi kupona tekrar tekrar girdikçe çeşitlilik cezası uygulanır; benzer kalite ve riskte 1X2, Alt/Üst, KG, Çifte Şans, İlk Yarı, Gol Aralığı ve İY/MS gibi farklı doğrulanmış market aileleri yarışır. Aynı maç kupona yalnızca bir kez girebilir.
+## Analiz ve kupon olasılığı
 
-## İY/MS ve normalize marketler
+Düşük Risk, Dengeli, Yüksek Getiri ve Ultra Getiri için ayrı olasılık/oran hedef bantları vardır. Aşırı longshot ve aynı market ailesini tekrar seçme cezaları uygulanır. Aynı maç kupona yalnızca bir kez girebilir.
 
-Analiz motorunun normalize edebildiği aileler: **1/X/2, tamamlanmış Alt/Üst çizgileri, İlk Yarı Alt/Üst, KG Var/Yok, Çifte Şans, İlk Yarı 1/X/2, Tek/Çift, dört seçenekli Gol Aralığı ve tam dokuz seçenekli İY/MS**.
+Tamamlanmış 1X2, Alt/Üst, İlk Yarı Alt/Üst, KG, Çifte Şans, İlk Yarı 1/X/2, Tek/Çift, Gol Aralığı ve tam dokuz seçenekli İY/MS grupları normalize edilebilir. İY/MS `1/1 ... 2/2` yalnızca dokuz seçeneğin tamamı gerçek kaynakta mevcutsa analize girer. Eksik market uydurulmaz.
 
-İY/MS için `1/1, 1/X, 1/2, X/1, X/X, X/2, 2/1, 2/X, 2/2` seçeneklerinin dokuzu da mevcutsa dokuzlu grubun bookmaker marjı birlikte temizlenir ve market otomatik analize katılır. Güncel doğrulamada **17 maçta eksiksiz dokuzlu İY/MS** bulunuyor. `İY/MS 1/2`, ilk yarı ev sahibi üstün / maç sonucu deplasman üstün senaryosudur; ayrı “ikinci yarı sonucu” marketi değildir ve kaynakta bulunmayan market uydurulmaz.
+Raporun büyük **Genel Kupon Tahmini** değeri seçimlerin tahmini gerçekleşme olasılıklarının aritmetik ortalamasıdır. Bütün seçimlerin aynı anda gerçekleşmesine ait olasılık çarpımı ayrıca **Tüm Seçimler Birlikte** olarak gösterilir. Ortalama seçim güveni tüm kuponun aynı anda tutma olasılığı değildir; iki değer de kazanç garantisi değildir.
 
-Doğru skor gibi çok geniş veya eksik/örtüşen gruplar gerçek ham oran olarak maç detayında gösterilebilir ancak tamamlayıcı market seti doğrulanmadıkça otomatik kupon olasılığına sokulmaz.
+## Güvenlik ve izolasyon
 
-## Oran hareketi
-
-Maç detayındaki **Oran hareketi** sekmesi seçili karşılaşmanın son 6 saatlik `dbo_odds_history` snapshot’larını talep üzerine çeker; her market/seçim için ilk görülen oran, güncel oran, minimum, maksimum, snapshot sayısı ve yüzdesel fiyat değişimini hesaplar. Oran hareketi tek başına sonuç sinyali sayılmaz ve otomatik kupon modeline gizlice eklenmez.
-
-Ana veri akışı yalnızca son **75 dakika** içinde collector tarafından görülmüş maç ve oranları canlı kabul eder. `dbo_odds_history` depolamasının sınırsız büyümemesi için 72 saatten eski oran snapshot’ları, collector kayıtlarında ise 30 günden eski satırlar zamanlanmış cleanup ile temizlenir.
-
-## Supabase izolasyonu ve güvenlik
-
-DraBornOdds nesneleri yalnızca `dbo_` ad alanındadır. GitHub Actions collector her saatin 07/37. dakikasında ve manuel çalışır. Büyük bülten güvenli ingestion batch’lerine ayrılır. GitHub’da kalıcı service-role anahtarı tutulmaz; `dbo-ingest-odds` GitHub OIDC issuer + audience + repository + main ref kontrolü yapar. `dbo_odds_history` istemciye RLS üzerinden yalnızca salt-okunur sunulur.
+DraBornOdds verileri paylaşılan Supabase projesinde yalnızca `dbo_` ad alanındadır. GitHub Actions collector kalıcı service-role anahtarı taşımaz; ingestion GitHub OIDC issuer + audience + repository + main ref kontrolleriyle korunur. Odds history istemciye RLS üzerinden salt okunur sunulur.
 
 ## Termux + Expo Go 58
+
+Güncel sürümü telefonuna temiz ZIP kurulumu ile almak için:
 
 ```bash
 pkg install -y nodejs-lts curl unzip
@@ -56,7 +50,7 @@ curl -fL "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/script
 bash "$HOME/dkd-odds-install.sh"
 ```
 
-Aynı telefonda Expo Go URL: `exp://127.0.0.1:8081`. Kurulum ZIP tabanlıdır; telefonda `git` gerekmez. Sonraki açılış:
+Aynı telefonda Expo Go adresi: `exp://127.0.0.1:8081`. Telefonda `git` gerekmez. Sonraki açılışlar:
 
 ```bash
 cd ~/projects/DraBornOdds
@@ -75,6 +69,6 @@ node scripts/dkd-fixture-smoke.mjs
 node collectors/dkd_collect.mjs iddaa_public
 ```
 
-v0.6 CI; kilitli bağımlılık kurulumu, TypeScript, domain/regresyon testleri, Expo SDK 58 paket uyumu ve Android JavaScript export’unu kontrol eder. Regresyonlar seçim ortalamasının doğru hesaplanmasını, birlikte-gerçekleşme metriğinin ayrı korunmasını, aşırı longshot seçimini, market çeşitliliğini ve küçük yüzdelerin görünürlüğünü denetler. Expo export APK üretmez.
+CI; TypeScript/domain testlerini, Expo SDK 58 paket uyumunu ve Android JavaScript export'unu kontrol eder. Fixture-cache workflow'u ayrıca TFF public HTML'i doğrular. Expo export APK üretmez.
 
-Görünür sürüm: **DKD_draborneagle_v0.6** · Expo SDK 58 · Android **versionCode 1**.
+Görünür sürüm: **DKD_draborneagle_v0.7** · Expo SDK 58 · Android **versionCode 1**.
