@@ -1,0 +1,52 @@
+name: DraBornOdds v0.4 movement UI once
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/dkd-v04-movement-ui-once.yml']
+permissions:
+  contents: write
+jobs:
+  dkd-integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Integrate six-hour odds movement tab
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('app/match/[dkd_id].tsx')
+          s=p.read_text()
+          old="import { dkd_useStore } from '../../src/dkd-store';\nimport type { dkd_Market } from '../../src/dkd-types';"
+          new="import { dkd_useStore } from '../../src/dkd-store';\nimport { dkd_fetchOddsMovement } from '../../src/dkd-movement';\nimport type { dkd_Movement } from '../../src/dkd-movement';\nimport type { dkd_Market } from '../../src/dkd-types';"
+          if old not in s: raise SystemExit('movement import target not found')
+          s=s.replace(old,new)
+          old="const [dkd_oddsBusy,dkd_setOddsBusy]=dkd_React.useState(false);const [dkd_oddsError,dkd_setOddsError]=dkd_React.useState('');const dkd_match="
+          new="const [dkd_oddsBusy,dkd_setOddsBusy]=dkd_React.useState(false);const [dkd_oddsError,dkd_setOddsError]=dkd_React.useState('');const [dkd_movements,dkd_setMovements]=dkd_React.useState<dkd_Movement[]>([]);const [dkd_movementBusy,dkd_setMovementBusy]=dkd_React.useState(false);const [dkd_movementError,dkd_setMovementError]=dkd_React.useState('');const dkd_match="
+          if old not in s: raise SystemExit('movement state target not found')
+          s=s.replace(old,new)
+          marker="  if(!dkd_match)return <dkd.Page>"
+          effect="  dkd_React.useEffect(()=>{let dkd_active=true;if(dkd_tab!=='movement'||!dkd_match||dkd_movements.length)return()=>{dkd_active=false};dkd_setMovementBusy(true);dkd_setMovementError('');dkd_fetchOddsMovement(dkd_match.dkd_id,6).then(dkd_values=>{if(dkd_active)dkd_setMovements(dkd_values)}).catch(dkd_failure=>{if(dkd_active)dkd_setMovementError(dkd_failure instanceof Error?dkd_failure.message:'Oran hareketi yüklenemedi.')}).finally(()=>{if(dkd_active)dkd_setMovementBusy(false)});return()=>{dkd_active=false};},[dkd_tab,dkd_match?.dkd_id,dkd_movements.length]);\n"
+          if marker not in s: raise SystemExit('movement effect marker not found')
+          s=s.replace(marker,effect+marker,1)
+          old="{dkd_id:'stats',dkd_label:'Veri kalitesi'},{dkd_id:'odds',dkd_label:'Tüm oranlar'}"
+          new="{dkd_id:'stats',dkd_label:'Veri kalitesi'},{dkd_id:'movement',dkd_label:'Oran hareketi'},{dkd_id:'odds',dkd_label:'Tüm oranlar'}"
+          if old not in s: raise SystemExit('movement tab target not found')
+          s=s.replace(old,new,1)
+          marker="    {dkd_tab==='odds'&&<>"
+          movement="    {dkd_tab==='movement'&&<><dkd.Section dkd_title=\"Son 6 saat · oran hareketi\" dkd_subtitle=\"Aynı seçim için collector snapshot’larının açılış/güncel oran farkı. Yön değişimi tek başına sonuç sinyali değildir.\"/>{dkd_movementBusy&&<dkd.Card><dkd.Text dkd_bold>Oran geçmişi yükleniyor…</dkd.Text></dkd.Card>}{!!dkd_movementError&&<dkd.Card dkd_style={{borderColor:dkd_colors.coral}}><dkd.Text dkd_color={dkd_colors.coral}>{dkd_movementError}</dkd.Text></dkd.Card>}{!dkd_movementBusy&&!dkd_movementError&&!dkd_movements.length&&<dkd.Empty dkd_title=\"Henüz hareket geçmişi yok\" dkd_body=\"Bu maç için birden fazla collector snapshot’ı biriktiğinde oran hareketleri burada görünür.\"/>}{dkd_movements.slice(0,16).map(dkd_move=>{const dkd_up=dkd_move.dkd_delta>0,dkd_flat=Math.abs(dkd_move.dkd_delta)<.0001,dkd_color=dkd_flat?dkd_colors.muted:dkd_up?dkd_colors.blue:dkd_colors.coral,dkd_change=`${dkd_up?'+':''}${(dkd_move.dkd_deltaPct*100).toFixed(1).replace('.',',')}%`;return <dkd.Card key={dkd_move.dkd_id} dkd_style={{padding:14,gap:9}}><dkd.Row dkd_between><dkd_RN.View style={{flex:1,gap:3}}><dkd.Text dkd_bold>{dkd_move.dkd_label}</dkd.Text><dkd.Text dkd_size={10} dkd_color={dkd_colors.muted}>{dkd_move.dkd_samples} snapshot · min {dkd_decimal(dkd_move.dkd_min)} · max {dkd_decimal(dkd_move.dkd_max)}</dkd.Text></dkd_RN.View><dkd.Badge dkd_color={dkd_color}>{dkd_flat?'SABİT':dkd_up?'YÜKSELDİ':'DÜŞTÜ'} {dkd_change}</dkd.Badge></dkd.Row><dkd.Row dkd_between><dkd.Text dkd_size={12} dkd_color={dkd_colors.muted}>İlk {dkd_decimal(dkd_move.dkd_open)}</dkd.Text><dkd.Text dkd_size={18} dkd_bold dkd_color={dkd_color}>Güncel {dkd_decimal(dkd_move.dkd_current)}</dkd.Text></dkd.Row></dkd.Card>})}<dkd.Notice dkd_text=\"Oran hareketi yalnızca piyasadaki fiyat değişimini gösterir; tek başına takım haberi, sonuç ihtimali veya bahis önerisi olarak yorumlanmaz.\"/></>}\n"
+          if marker not in s: raise SystemExit('movement render target not found')
+          s=s.replace(marker,movement+marker,1)
+          p.write_text(s)
+          PY
+          rm .github/workflows/dkd-v04-movement-ui-once.yml
+      - name: Commit movement UI
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 'app/match/[dkd_id].tsx' .github/workflows/dkd-v04-movement-ui-once.yml
+          git commit -m 'feat(v0.4): show six-hour odds movement'
+          git push origin HEAD:main
