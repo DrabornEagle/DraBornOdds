@@ -48,16 +48,21 @@ jobs:
             curl --retry 90 --retry-delay 10 --retry-all-errors -fL "$dkd_base/$dkd_name" -o "dkd_signed_release/$dkd_name"
           done
 
-      - name: DKD verify APK integrity and exact source
+      - name: DKD verify APK integrity and application source
         shell: bash
         run: |
           set -euo pipefail
           (cd dkd_signed_release && sha256sum -c SHA256.txt)
           dkd_signed_source="$(tr -d '\r\n' < dkd_signed_release/SOURCE_COMMIT.txt)"
-          dkd_canonical_source="$(git rev-parse HEAD)"
-          test "$dkd_signed_source" = "$dkd_canonical_source" || { echo "DKD ERROR: signed APK source $dkd_signed_source does not equal canonical $dkd_canonical_source"; exit 1; }
+          git cat-file -e "$dkd_signed_source^{commit}"
+          git merge-base --is-ancestor "$dkd_signed_source" HEAD
+          if ! git diff --quiet "$dkd_signed_source" HEAD -- . ':(exclude).github/**'; then
+            echo 'DKD ERROR: application source changed after the signed APK was built.'
+            git diff --name-only "$dkd_signed_source" HEAD -- . ':(exclude).github/**'
+            exit 1
+          fi
           grep -q 'Signer #1 certificate SHA-256 digest' dkd_signed_release/CERTIFICATE.txt
-          echo 'DKD signed APK integrity and canonical source verified.'
+          echo "DKD signed application source verified: $dkd_signed_source"
 
       - name: DKD publish canonical GitHub Release
         shell: bash
@@ -65,7 +70,7 @@ jobs:
           set -euo pipefail
           dkd_tag='v0.7.2'
           if ! gh release view "$dkd_tag" >/dev/null 2>&1; then
-            gh release create "$dkd_tag" --target "$GITHUB_SHA" --title 'DraBornOdds v0.7.2 · Android code 1' --notes 'DraBornOdds v0.7.2 bağımsız Android APK dağıtımı. Android versionCode 1. APK korumalı DraBornEagle Android release anahtarıyla GitHub Actions üzerinde imzalanmış, apksigner ve SHA-256 ile doğrulanmıştır. Google Play dağıtımı kullanılmaz; Android ve Web aynı canonical DraBornOdds kaynağından senkron tutulur.'
+            gh release create "$dkd_tag" --target "$GITHUB_SHA" --title 'DraBornOdds v0.7.2 · Android code 1' --notes 'DraBornOdds v0.7.2 bağımsız Android APK dağıtımı. Android versionCode 1. APK korumalı DraBornEagle Android release anahtarıyla GitHub Actions üzerinde imzalanmış, apksigner ve SHA-256 ile doğrulanmıştır. Google Play dağıtımı kullanılmaz; Android ve Web aynı canonical DraBornOdds uygulama kaynağından senkron tutulur.'
           fi
           gh release upload "$dkd_tag" \
             dkd_signed_release/DraBornOdds-v0.7.2-code1-release.apk \
