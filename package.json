@@ -1,6 +1,6 @@
 {
   "name": "dkd-drabornodds",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
@@ -10,6 +10,7 @@
     "test": "node --import tsx --test tests/*.test.ts",
     "check:sdk": "expo install --check",
     "export:android": "expo export --platform android",
+    "export:web": "expo export --platform web",
     "collect:local": "node collectors/dkd_collect.mjs"
   },
   "dependencies": {
