@@ -33,7 +33,6 @@ jobs:
           p=Path('app/(tabs)/index.tsx');s=p.read_text().replace('DKD_draborneagle_v0.3','DKD_draborneagle_v0.4');p.write_text(s)
           p=Path('app/match/[dkd_id].tsx');s=p.read_text().replace('Aynı seçim için collector snapshot’larının açılış/güncel oran farkı.','Aynı seçim için son 6 saatteki ilk/güncel collector snapshot oran farkı.');p.write_text(s)
           p=Path('collectors/dkd_collect.mjs');s=p.read_text().replace("collector_version:'dbo_v0.2.7'","collector_version:'dbo_v0.4.0'");p.write_text(s)
-          p=Path('.github/workflows/dkd-demo-check.yml');s=p.read_text().replace('name: DraBornOdds v0.3 checks','name: DraBornOdds v0.4 checks').replace('group: dkd-v03-${{ github.ref }}','group: dkd-v04-${{ github.ref }}');p.write_text(s)
           PY
           rm .github/workflows/dkd-v04-release-once.yml
       - name: Commit v0.4 release metadata
@@ -41,6 +40,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add package.json package-lock.json app.json 'app/(tabs)/index.tsx' 'app/match/[dkd_id].tsx' collectors/dkd_collect.mjs .github/workflows/dkd-demo-check.yml .github/workflows/dkd-v04-release-once.yml
+          git add package.json package-lock.json app.json 'app/(tabs)/index.tsx' 'app/match/[dkd_id].tsx' collectors/dkd_collect.mjs .github/workflows/dkd-v04-release-once.yml
           git commit -m 'chore(v0.4): synchronize release metadata'
           git push origin HEAD:main
