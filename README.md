@@ -1,14 +1,14 @@
 # DraBornOdds · v0.2 · versionCode 1
 
-DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 üzerinde çalışan uygulama iki bağımsız gerçek veri hattı kullanır: güncel futbol fikstürü için TheSportsDB V1 açık spor API’si, doğrulanmış 1X2 oranları için `DraBorn-Park-Garage-SportOdds` Supabase projesindeki izole `dbo_` hattı. Bu aşamada APK/AAB üretilmez ve web sürümü deploy edilmez.
+DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 üzerinde çalışan uygulama gerçek veriyi doğrudan web kaynaklarından toplar: güncel Süper Lig fikstürü TFF’nin herkese açık fikstür sayfasından HTML olarak kazınır; doğrulanmış 1X2 oranları ise Nesine / Misli / Bilyoner / Tuttur web collector’larından `DraBorn-Park-Garage-SportOdds` Supabase projesindeki izole `dbo_` hattına alınır. Spor/odds API’si kullanılmaz. Bu aşamada APK/AAB üretilmez ve web sürümü deploy edilmez.
 
 ## Gerçek veri akışı
 
-**Fikstür:** TheSportsDB ücretsiz V1 (`123`) → Turkish Super Lig (`idLeague=4339`) → günlük/sonraki karşılaşmalar → DraBornOdds. Fikstür kaynağı gerçek takım, tarih ve saatleri göstermek için kullanılır. Fikstürün gelmesi tek başına bahis oranı veya tahmin üretmez.
+**Fikstür:** TFF `pageID=198` herkese açık web sayfası → tarih/saat + ev/deplasman takımını HTML’den ayrıştırma → DraBornOdds. Fikstürün gelmesi tek başına bahis oranı veya tahmin üretmez.
 
-**1X2 oranı:** Nesine / Misli / Bilyoner / Tuttur → bağımsız `dbo_` collector → takım/maç eşleştirme → 1X2 oran normalizasyonu → `dbo_odds_history` → `dbo_match_analysis` / `dbo_predictions` → Düşük Risk / Dengeli / Yüksek Getiri / Ultra Getiri → açıklamalı analiz raporu.
+**1X2 oranı:** Nesine / Misli / Bilyoner / Tuttur → bağımsız `dbo_` public-web collector → takım/maç eşleştirme → 1X2 oran normalizasyonu → `dbo_odds_history` → `dbo_match_analysis` / `dbo_predictions` → Düşük Risk / Dengeli / Yüksek Getiri / Ultra Getiri → açıklamalı analiz raporu.
 
-Collector’lar yalnızca herkese açık ve otomatik erişime izin veren yanıtları işler; CAPTCHA, bot koruması veya erişim engeli aşılmaz. Bir kaynak doğrulanabilir yapılandırılmış 1X2 verisi vermiyorsa uygulama oran uydurmaz. Bu durumda gerçek fikstür yine görünür, ancak analiz ve kupona ekleme kapalı kalır. Doğrulanmış 1X2 geldiğinde aynı karşılaşmanın oran/analiz alanları otomatik açılır.
+Collector’lar yalnızca herkese açık ve otomatik erişime izin veren yanıtları işler; CAPTCHA, bot koruması veya erişim engeli aşılmaz. Bir kaynak doğrulanabilir yapılandırılmış 1X2 verisi vermiyorsa uygulama oran uydurmaz. Bu durumda TFF’den gelen gerçek fikstür yine görünür, ancak analiz ve kupona ekleme kapalı kalır. Doğrulanmış 1X2 geldiğinde aynı karşılaşmanın oran/analiz alanları otomatik açılır.
 
 Fikstür ve oran istekleri birbirinden bağımsız yürütülür. Bir veri hattının geçici olarak başarısız olması diğer hattın kullanılmasını engellemez. Aynı tarih/takım eşleşmesinde doğrulanmış oranlı kayıt, yalnızca fikstür içeren kaydın yerini alır.
 
@@ -58,6 +58,6 @@ npx expo export --platform android --output-dir dist-android
 node scripts/dkd-fixture-smoke.mjs
 ```
 
-Son iki doğrulama farklı amaç taşır: Expo export Android JavaScript paketinin derlenebilirliğini kontrol eder ve APK üretmez; fixture smoke testi ise gerçek Turkish Super Lig veri kaynağının en az bir geçerli gelecek karşılaşması döndürdüğünü denetler. v0.2 CI web export veya web deploy yapmaz.
+Son iki doğrulama farklı amaç taşır: Expo export Android JavaScript paketinin derlenebilirliğini kontrol eder ve APK üretmez; fixture smoke testi ise TFF’nin gerçek herkese açık Süper Lig HTML sayfasından en az bir geçerli güncel/gelecek karşılaşmanın ayrıştırılabildiğini denetler. v0.2 CI web export veya web deploy yapmaz.
 
 Görünür sürüm: **DKD_draborneagle_v0.2** · Expo SDK 58 · Android **versionCode 1**.
