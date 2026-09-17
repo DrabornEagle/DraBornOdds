@@ -1,21 +1,22 @@
 # DraBornOdds v0.2 çalışma kaydı
 
 - v0.1 geri dönüş noktası: `74b4f28930d5c0d51439c155a36fbb2cbd51cff8`; yedek dal: `backup/v0.1-2026-09-17`.
-- v0.2: uygulama sürümü `0.2.0`, Android versionCode `1`, Expo Go / SDK 58 hedefi korunuyor.
-- Demo maç/takım/oran veri seti kaldırıldı; uygulamada sahte oran veya sentetik maç fallback’i yok.
-- Supabase: `DraBorn-Park-Garage-SportOdds` projesinde yalnızca `dbo_` nesneleri kullanılıyor; diğer proje verilerine dokunulmadı.
-- Core ve analysis migration’ları, RLS/grant kontrolleri ve DraBornOdds FK indeksleri tamamlandı.
-- Nesine, Misli, Bilyoner, Tuttur public-web collector sistemi ve `dbo_odds_history` ingest hattı kuruldu. Koruma mekanizmaları aşılmıyor.
-- GitHub OIDC doğrulamalı `dbo-ingest-odds` Edge Function aktif; kalıcı service key GitHub’a konmadı.
-- Maç isim eşleştirme, oran normalizasyonu, kaynak sayısı/kalite skoru, dört risk profili ve açıklama katmanı hazır.
-- Kullanıcının “API kullanmayacağız” kararı doğrultusunda geçici spor API’si kaldırıldı. Güncel Süper Lig fikstürü artık TFF’nin herkese açık `pageID=198` HTML sayfasından doğrudan web scraping ile okunuyor.
-- TFF fikstür ayrıştırıcısı gerçek tarih, saat, ev sahibi ve deplasman takımını çıkarır; 1X2 oranı uydurmaz.
-- Fikstür ve Supabase 1X2 hattı paralel çalışır; birinin geçici hatası diğer veri yolunu kapatmaz. Aynı maçta doğrulanmış oranlı kayıt fixture-only kaydı geçersiz kılar.
-- Fixture-only maçlar ana sayfa, Maçlar ve maç detay ekranlarında güvenli biçimde gösterilir; analiz/kupon üreticisi oranı olmayan maçı seçemez.
-- Sağ üstteki `v0.2 CANLI` / backend rozeti kaldırıldı. Ana sayfadaki BLOCKED/DEGRADED servis kartları yerine sade `Fikstür akışı` ve `1X2 oran akışı` durumu gösteriliyor.
-- `dkd_generate()` için fixture-only regresyon testi eklendi; oranı olmayan maçın analize giremediği doğrulanıyor.
-- Gerçek harici fikstür kaynağını doğrulamak için `scripts/dkd-fixture-smoke.mjs` TFF HTML’ini doğrudan test ediyor ve ayrı `DraBornOdds fixture source smoke` GitHub Action bunu otomatik doğruluyor.
-- Kaydedilen raporlar canlı maç/oran snapshot’ını kendi içinde saklıyor; v0.1 demo kayıtları v0.2’ye taşınmıyor.
-- Collector workflow’u normal pushlardan ayrıdır; her saatin 07/37. dakikasında ve manuel `workflow_dispatch` ile çalışır.
-- v0.2 doğrulama workflow’u TypeScript, domain testleri, Expo paket kontrolü ve Android JS export çalıştırır. APK/AAB ve web deploy üretilmez.
-- Bilinen dış bağımlılık: doğrulanmış 1X2 oranlarının görünmesi için izin verilen kaynaklardan yapılandırılmış gerçek oran verisi gelmesi gerekir; bu koşul sağlanmadığında TFF fikstürü gösterilir fakat oran/analiz alanları kapalı kalır.
+- v0.2: `0.2.0`, Android versionCode `1`, Expo Go / SDK 58; APK/AAB yok.
+- Demo maç/oran tamamen kaldırıldı; sahte veri veya sentetik fallback yok.
+- `DraBorn-Park-Garage-SportOdds` içinde yalnızca `dbo_` nesneleri kullanılıyor; diğer proje verilerine dokunulmuyor.
+- API kullanılmıyor. TFF `pageID=198` public HTML, Süper Lig fikstür yedeği olarak scraping ile okunuyor.
+- Geniş public futbol bülteni collector’ı eklendi. 17.09.2026 canlı smoke: **157 maç / 1.543 oran seçimi**.
+- Aktif market kapsamı: 1X2, 2.5/3.5 Alt-Üst, Çifte Şans, KG Var-Yok, İlk Yarı 1X2. Generic `dbo_market_key + dbo_selection_key + dbo_line` şeması daha fazla markete hazır.
+- Nesine/Misli/Bilyoner/Tuttur doğrudan collector’ları korunuyor; CAPTCHA/bot koruması aşılmıyor.
+- `dbo-ingest-odds` Edge Function GitHub OIDC ile korunuyor; GitHub’da service-role anahtarı yok.
+- Edge ingest çoklu marketleri toplu yazar, 1X2 no-vig analizini ve market genişliğine duyarlı kalite skorunu üretir. Büyük bülten workflow’da güvenli batch’lere bölünür.
+- Uygulama Supabase’den çoklu marketleri okuyor; tamamlayıcı gruplarda no-vig olasılık, çifte şansta normalize 1X2 bileşimi kullanılıyor.
+- Akıllı kupon motoru yalnızca 1X2 değil tüm doğrulanmış marketleri veri kalitesi + olasılık + oran + risk profiline göre sıralıyor. Aynı maç kupona bir kez girer.
+- Maç detayında market grupları ayrı listeleniyor; oran/olasılık/veri kalitesi görünür. Fixture-only maç analiz dışı kalır.
+- Ana sayfa artık toplam maç, oranlı maç ve doğrulanmış market seçim sayısını gösterir. Sağ üst backend/Supabase rozeti kaldırılmıştır.
+- Builder, filtre içindeki gerçek analiz edilebilir maç ve market sayısını gösterir; “0 1X2” eski mesajları kaldırılmıştır.
+- Domain testlerine wide-market low-risk seçimi ve fixture-only dışlama regresyonları eklendi.
+- TFF fixture smoke ve public bulletin smoke GitHub Actions üzerinde gerçek kaynak erişimini doğrular.
+- Collector her saatin 07/37. dakikasında ve manuel çalışır; collector parser değişince ayrıca hemen çalışır.
+- Ana CI: npm locked install, TypeScript, domain tests, Expo SDK check, Android JS export. Web deploy yok.
+- Sonuçlar kesinlik/kazanç garantisi olarak sunulmaz; oran-temelli piyasa olasılığı ve veri kalite sıralamasıdır.
