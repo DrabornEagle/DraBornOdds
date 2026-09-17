@@ -10,15 +10,13 @@ jobs:
         shell: bash
         run: |
           set -e
-          echo '--- slug-only redirects ---'
-          curl -Ls --max-time 15 -A 'Mozilla/5.0' -o /tmp/slug.html -w 'ST_URL=%{url_effective} HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/soccer/team/stade-tunisien/'
-          curl -Ls --max-time 15 -A 'Mozilla/5.0' -o /tmp/club.html -w 'CA_URL=%{url_effective} HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/soccer/team/club-africain/'
-          echo '--- javascript search tokens ---'
-          curl -Ls --max-time 15 -A 'Mozilla/5.0' 'https://globalsportsarchive.com/en/resources/assets/js/common/gsa.js' -o /tmp/gsa.js
-          curl -Ls --max-time 15 -A 'Mozilla/5.0' 'https://globalsportsarchive.com/en/resources/assets/js/site.js' -o /tmp/site.js
-          grep -Ein 'search|autocomplete|ajax|typeahead' /tmp/gsa.js /tmp/site.js | head -100 || true
-          echo '--- last match markup ---'
+          for dkd_term in 'Stade Tunisien' 'Club Africain' 'Kasımpaşa' 'TÜMOSAN Konyaspor'; do
+            echo "--- SEARCH $dkd_term ---"
+            curl -Ls --max-time 15 -A 'Mozilla/5.0' --get --data-urlencode "term=$dkd_term" 'https://sport-widgets.com/search/autosearch.php' | head -c 5000
+            echo
+          done
           curl -Ls --max-time 15 -A 'Mozilla/5.0' 'https://globalsportsarchive.com/en/soccer/team/stade-tunisien/16517/' -o /tmp/team.html
-          grep -n -B12 -A25 '12.09.2026' /tmp/team.html | head -100 || true
-          echo '--- standings markup ---'
-          grep -n -B15 -A30 'Standings' /tmp/team.html | tail -100 || true
+          echo '--- Stade row markup ---'
+          grep -n -B12 -A30 '>Stade Tunisien<' /tmp/team.html | tail -120 || true
+          echo '--- last match full block ---'
+          sed -n '19636,19685p' /tmp/team.html | head -100
