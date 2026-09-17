@@ -17,7 +17,7 @@ concurrency:
 jobs:
   dkd-collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,30 +36,30 @@ jobs:
           while IFS= read -r dkd_source; do
             dkd_total="$(jq '.candidates|length' <<<"$dkd_source")"
             if [ "$dkd_total" -eq 0 ]; then
-              printf '%s\n' "$dkd_source" | jq -s '{collector_version:"dbo_v0.2.3",results:.}' > "dkd-ingest-chunks/$(printf '%03d' "$dkd_i").json"
+              printf '%s\n' "$dkd_source" | jq -s '{collector_version:"dbo_v0.2.4",results:.}' > "dkd-ingest-chunks/$(printf '%03d' "$dkd_i").json"
               dkd_i=$((dkd_i+1))
               continue
             fi
             for ((dkd_start=0; dkd_start<dkd_total; dkd_start+=20)); do
               dkd_end=$((dkd_start+20))
-              printf '%s\n' "$dkd_source" | jq --argjson dkd_start "$dkd_start" --argjson dkd_end "$dkd_end" '.candidates=.candidates[$dkd_start:$dkd_end]' | jq -s '{collector_version:"dbo_v0.2.3",results:.}' > "dkd-ingest-chunks/$(printf '%03d' "$dkd_i").json"
+              printf '%s\n' "$dkd_source" | jq --argjson dkd_start "$dkd_start" --argjson dkd_end "$dkd_end" '.candidates=.candidates[$dkd_start:$dkd_end]' | jq -s '{collector_version:"dbo_v0.2.4",results:.}' > "dkd-ingest-chunks/$(printf '%03d' "$dkd_i").json"
               dkd_i=$((dkd_i+1))
             done
           done < <(jq -c '.results[]' dkd-collector-output.json)
           echo "Prepared $dkd_i ingestion batches"
-      - name: Request short-lived GitHub OIDC token
-        id: dkd_oidc
-        shell: bash
-        run: |
-          DBO_TOKEN_JSON="$(curl --fail --silent --show-error -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=drabornodds-supabase-ingest")"
-          echo "token=$(printf '%s' "$DBO_TOKEN_JSON" | jq -r .value)" >> "$GITHUB_OUTPUT"
       - name: Ingest batches into isolated dbo_ Supabase tables
-        env:
-          DBO_OIDC_TOKEN: ${{ steps.dkd_oidc.outputs.token }}
         shell: bash
         run: |
           set -euo pipefail
           for dkd_chunk in dkd-ingest-chunks/*.json; do
-            echo "Ingesting $(basename "$dkd_chunk") · $(jq -r '.results[0].source_id' "$dkd_chunk") · $(jq '.results[0].candidates|length' "$dkd_chunk") matches"
-            curl --max-time 120 --fail-with-body --silent --show-error -X POST 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/dbo-ingest-odds' -H "Authorization: Bearer $DBO_OIDC_TOKEN" -H 'Content-Type: application/json' --data-binary @"$dkd_chunk" | jq .
+            dkd_source="$(jq -r '.results[0].source_id' "$dkd_chunk")"
+            echo "Ingesting $(basename "$dkd_chunk") · $dkd_source · $(jq '.results[0].candidates|length' "$dkd_chunk") matches"
+            DBO_TOKEN_JSON="$(curl --fail --silent --show-error -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=drabornodds-supabase-ingest")"
+            DBO_OIDC_TOKEN="$(printf '%s' "$DBO_TOKEN_JSON" | jq -r .value)"
+            DBO_RESULT="$(curl --max-time 120 --fail-with-body --silent --show-error -X POST 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/dbo-ingest-odds' -H "Authorization: Bearer $DBO_OIDC_TOKEN" -H 'Content-Type: application/json' --data-binary @"$dkd_chunk")"
+            printf '%s\n' "$DBO_RESULT" | jq .
+            if [ "$dkd_source" = "iddaa_public" ] && printf '%s\n' "$DBO_RESULT" | jq -e '.results[] | select(.status=="error")' >/dev/null; then
+              echo "Public bulletin ingestion returned an error status"
+              exit 1
+            fi
           done
