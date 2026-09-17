@@ -1,7 +1,5 @@
 name: DraBornOdds live collectors
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '7,37 * * * *'
