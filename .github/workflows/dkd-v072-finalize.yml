@@ -45,3 +45,4 @@ jobs:
             sleep 2
           done
           exit 1
+# v0.7.2 verification rerun after release assertion correction
