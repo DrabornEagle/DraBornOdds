@@ -1,0 +1,40 @@
+name: DraBornOdds v0.7.1 Larissa crest
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-v071-larissa-crest.yml'
+permissions:
+  contents: write
+jobs:
+  dkd-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache Larissa crest
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/dkd-team-logos
+          curl --fail --location --retry 2 --max-time 30 'https://ilcalcio.net/assets/36/be/36be5e8695427f78e8066c19d9c51bbb.png' -o assets/dkd-team-logos/dkd-larissa-current.png
+          node <<'NODE'
+          const fs=require('fs');
+          const path='assets/dkd-team-logos.json';
+          const data=JSON.parse(fs.readFileSync(path,'utf8'));
+          const url='https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dkd-larissa-current.png';
+          data.dkd_logos=data.dkd_logos||{};
+          for(const key of ['larissa','ael larissa','athlitiki enosi larissa'])data.dkd_logos[key]=url;
+          data.dkd_generatedAt=new Date().toISOString();
+          data.dkd_logoCount=Object.keys(data.dkd_logos).length;
+          fs.writeFileSync(path,JSON.stringify(data,null,2)+'\n');
+          NODE
+      - name: Commit Larissa crest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/dkd-team-logos/dkd-larissa-current.png assets/dkd-team-logos.json
+          git commit -m 'data(v0.7.1): add Larissa club crest cache'
+          git pull --rebase origin main
+          git push
