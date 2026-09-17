@@ -1,26 +1,23 @@
 {
   "name": "dkd-drabornodds",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start --go --localhost",
     "start:lan": "expo start --go --lan",
-    "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
     "check:sdk": "expo install --check",
-    "export:android": "expo export --platform android",
-    "export:web": "expo export --platform web",
-    "test:ui": "node --test tests/dkd-ui.smoke.mjs"
+    "export:android": "expo export --platform android"
   },
   "dependencies": {
     "expo": "58.0.0-preview.2",
-    "expo-constants": "~58.0.2",
+    "expo-constants": "~58.0.3",
     "expo-file-system": "~58.0.0",
     "expo-haptics": "~58.0.1",
-    "expo-linking": "~58.0.2",
-    "expo-router": "~58.0.3",
+    "expo-linking": "~58.0.3",
+    "expo-router": "~58.0.4",
     "expo-status-bar": "~58.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -36,7 +33,6 @@
   "devDependencies": {
     "@types/node": "22.20.3",
     "@types/react": "19.2.14",
-    "jsdom": "26.1.0",
     "tsx": "4.21.0",
     "typescript": "6.0.3"
   },
