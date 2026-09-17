@@ -1,13 +1,14 @@
 export type dkd_Risk = 'low' | 'balanced' | 'high' | 'ultra';
 export type dkd_Period = 'today' | 'tomorrow' | 'week';
-export type dkd_MarketKey = 'home' | 'draw' | 'away' | 'over' | 'under' | 'btts' | 'homeOrDraw' | 'awayOrDraw';
+export type dkd_ModelKey = 'home' | 'draw' | 'away' | 'over' | 'under' | 'btts' | 'homeOrDraw' | 'awayOrDraw';
+export type dkd_MarketKey = dkd_ModelKey | 'over25' | 'under25' | 'over35' | 'under35' | 'bttsYes' | 'bttsNo' | 'homeOrAway' | 'firstHalfHome' | 'firstHalfDraw' | 'firstHalfAway';
 export type dkd_Team = {
   dkd_id: string; dkd_name: string; dkd_short: string; dkd_color: string;
   dkd_attack: number; dkd_defense: number; dkd_form: ('G' | 'B' | 'M')[];
 };
 export type dkd_Market = {
   dkd_key: dkd_MarketKey; dkd_label: string; dkd_short: string;
-  dkd_odds: number; dkd_probability: number;
+  dkd_odds: number; dkd_probability: number; dkd_group?: string; dkd_line?: number | null;
 };
 export type dkd_Match = {
   dkd_id: string; dkd_league: string; dkd_country: string; dkd_color: string;
