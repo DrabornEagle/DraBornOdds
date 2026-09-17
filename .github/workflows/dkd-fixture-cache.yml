@@ -1,0 +1,39 @@
+name: DraBornOdds real fixture cache
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/dkd-fixture-cache.mjs'
+      - '.github/workflows/dkd-fixture-cache.yml'
+  schedule:
+    - cron: '11,41 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dkd-real-fixture-cache
+  cancel-in-progress: true
+jobs:
+  dkd-cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Scrape public TFF fixture into validated JSON
+        env:
+          DKD_FIXTURE_CACHE_PATH: /tmp/dkd-fixtures.json
+        run: node scripts/dkd-fixture-cache.mjs
+      - name: Publish tiny cache branch
+        run: |
+          git config user.name "DraBornOdds Fixture Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan dkd-live-cache-next
+          git rm -rf .
+          mkdir -p data
+          cp /tmp/dkd-fixtures.json data/dkd-fixtures.json
+          git add data/dkd-fixtures.json
+          git commit -m "data: refresh verified TFF fixture cache"
+          git push origin HEAD:dkd-live-cache --force
