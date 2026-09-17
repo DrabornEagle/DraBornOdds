@@ -3,6 +3,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '7,37 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'collectors/dkd_collect.mjs'
+      - '.github/workflows/dkd-live-collect.yml'
 permissions:
   contents: read
   id-token: write
@@ -21,7 +26,7 @@ jobs:
       - name: Collect public structured match data
         run: node collectors/dkd_collect.mjs > dkd-collector-output.json
       - name: Show source health without exposing secrets
-        run: jq '[.results[] | {source_id,status,http_status,matches:(.candidates|length),error}]' dkd-collector-output.json
+        run: jq '[.results[] | {source_id,status,http_status,matches:(.candidates|length),odds:([.candidates[]?.markets[]?]|length),error}]' dkd-collector-output.json
       - name: Request short-lived GitHub OIDC token
         id: dkd_oidc
         shell: bash
