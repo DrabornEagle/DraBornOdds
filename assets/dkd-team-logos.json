@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-17T13:36:25.724Z",
+  "dkd_generatedAt": "2026-09-17T13:44:55.228Z",
   "dkd_teamCount": 223,
   "dkd_resolvedTeams": 161,
-  "dkd_logoCount": 212,
+  "dkd_logoCount": 215,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -215,6 +215,9 @@
     "samsunspor a.ş.": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e8c24b32e1f42d9b.png",
     "samsunspor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e8c24b32e1f42d9b.png",
     "göztepe a.ş.": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/54dec2bd099aeba1.png",
-    "goztepe": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/54dec2bd099aeba1.png"
+    "goztepe": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/54dec2bd099aeba1.png",
+    "larissa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dkd-larissa-current.png",
+    "ael larissa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dkd-larissa-current.png",
+    "athlitiki enosi larissa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dkd-larissa-current.png"
   }
 }
