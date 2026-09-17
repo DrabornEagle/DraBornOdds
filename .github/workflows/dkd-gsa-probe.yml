@@ -1,0 +1,16 @@
+name: DraBornOdds public context probe
+on:
+  push:
+    paths: ['.github/workflows/dkd-gsa-probe.yml']
+jobs:
+  dkd-probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe Global Sports Archive public HTML
+        shell: bash
+        run: |
+          set -e
+          curl -L --max-time 15 -A 'Mozilla/5.0' -o /tmp/team.html -w 'TEAM_HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/soccer/team/stade-tunisien/16517/'
+          grep -Eio '<img[^>]+(Stade Tunisien|16517)[^>]*>|Last Matches|Standings|12\.09\.2026|Stade Tunisien[^<]{0,100}' /tmp/team.html | head -40 || true
+          curl -L --max-time 15 -A 'Mozilla/5.0' -o /tmp/root.html -w 'ROOT_HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/'
+          grep -Eio '.{0,100}(search|autocomplete).{0,180}' /tmp/root.html | head -30 || true
