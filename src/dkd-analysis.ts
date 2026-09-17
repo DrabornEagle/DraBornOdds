@@ -32,11 +32,16 @@ export function dkd_marketInsight(dkd_match:dkd_Match,dkd_market:dkd_Market,dkd_
   const dkd_implied=Math.min(1,1/Math.max(1.001,dkd_market.dkd_odds));
   const dkd_score=Math.round(dkd_analysisScore(dkd_match,dkd_market)*100);
   const dkd_group=dkd_market.dkd_group||'Piyasa';
+  const dkd_sameGroup=dkd_ranked.filter(dkd_item=>dkd_item.dkd_group===dkd_market.dkd_group);
+  const dkd_groupBest=[...dkd_sameGroup].sort((dkd_left,dkd_right)=>dkd_right.dkd_probability-dkd_left.dkd_probability)[0];
+  const dkd_marketSentence=dkd_groupBest&&dkd_groupBest.dkd_key!==dkd_market.dkd_key
+    ?`${dkd_group} grubunda en yüksek piyasa olasılığı ${dkd_groupBest.dkd_short} için ${dkd_percent(dkd_groupBest.dkd_probability)}; buna rağmen ${dkd_market.dkd_short} ${dkd_decimal(dkd_market.dkd_odds)} oranıyla risk–getiri dengesinde üst sıralara çıkıyor.`
+    :`${dkd_market.dkd_short}, ${dkd_group.toLocaleLowerCase('tr-TR')} grubunda ${dkd_percent(dkd_probability)} normalize olasılık ve ${dkd_decimal(dkd_market.dkd_odds)} oranı birlikte değerlendirildiğinde güçlü denge oluşturuyor.`;
   const dkd_points=[
     dkd_contextReason(dkd_match,dkd_market,dkd_context),
-    `${dkd_group} içindeki karşılıklı sonuçlar birlikte ele alındı; bookmaker marjı temizlendikten sonra ${dkd_percent(dkd_probability)} piyasa olasılığı hesaplandı.`,
-    `${dkd_ranked.length} analize uygun seçim aynı maç içinde karşılaştırıldı; “${dkd_market.dkd_label}” olasılık–oran dengesinde ${dkd_rank}. sırada ve denge skoru ${dkd_score}/100.`,
-    `Güncel decimal oran ${dkd_decimal(dkd_market.dkd_odds)}. Geçmiş performans bağlamı ile piyasa fiyatı farklı yönlere işaret ederse bu bir kesin sonuç olarak yorumlanmaz; seçim karar desteğidir.`
+    dkd_marketSentence,
+    `Aynı maçtaki ${dkd_ranked.length} uygun seçenek birlikte karşılaştırıldı; bu seçim ${dkd_rank}. sırada ve denge skoru ${dkd_score}/100.`,
+    `Özet: ${dkd_market.dkd_label} için fiyatlanan olasılık ${dkd_percent(dkd_probability)} ve güncel oran ${dkd_decimal(dkd_market.dkd_odds)}. Bu değer, karşılaşma bağlamıyla birlikte analiz sırasını belirliyor.`
   ];
   return{dkd_rank,dkd_total:dkd_ranked.length,dkd_score,dkd_implied,dkd_probability,dkd_summary:`${dkd_market.dkd_label}: ${dkd_percent(dkd_probability)} normalize olasılık · ${dkd_decimal(dkd_market.dkd_odds)} oran · ${dkd_score}/100 denge skoru.`,dkd_points};
 }
