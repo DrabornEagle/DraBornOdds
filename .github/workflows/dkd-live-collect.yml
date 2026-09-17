@@ -1,4 +1,4 @@
-name: DraBornOdds live collectors
+name: DraBornOdds v0.4 live collectors
 on:
   workflow_dispatch:
   schedule:
