@@ -10,11 +10,15 @@
 - v0.7 fikstür dayanıklılığı: TFF public HTML her 30 dakikada GitHub Actions tarafından doğrulanıp yalnızca gerçek tarih/saat/takım alanlarından oluşan `dkd-live-cache` dalına yazılır. Android istemcisi ana canlı akış boş/hatalı olursa bu merkezi gerçek fikstür önbelleğine düşer.
 - Merkezi fixture-cache ilk doğrulamasında **9 yaklaşan gerçek Süper Lig karşılaşması** yayınlandı. Oran uydurulmaz; cache yalnızca fikstür sağlar.
 - Maçlar sekmesinin varsayılanı `Tüm yaklaşan`; filtreler listeyi boşalttığında kullanıcıya akışta bulunan gerçek maç sayısı ve `Tüm maçları göster` kurtarma düğmesi sunulur.
-- Keşfet ekranında görünür animasyon katmanı güçlendirildi: canlı nabız, dönen/pulse yapan **Sinyal Tarama** alanı, gerçek market dağılımından Canlı Analiz Radarı ve risk kartlarında animasyonlu hedef barları bulunur. Hareket ayarı veya sistem Reduce Motion kapalıysa statik gösterilir.
-- Profil sürüm metni hard-code değildir; Expo config'teki `version`, `versionCode` ve `extra.dkd_version` alanlarından okunur. Böylece eski `v0.2` etiketi tekrar görünmez.
+- Keşfet ekranındaki eski radar tipi `Sinyal Tarama` kaldırıldı. Yerine saha çizgileri, hareketli oyuncu noktaları ve sahada ilerleyip dönen futbol topu içeren `Canlı Maç Akışı` animasyonu eklendi. Hareket ayarı veya sistem Reduce Motion kapalıysa statik gösterilir.
+- Maç kartları renkli lig aksanı, gerçek takım logoları, karşılaşma odaklı VS görünümü, analiz motorunun öne çıkardığı seçimler ve `Neden bu oranlar?` geçişiyle yenilendi.
+- Gerçek takım logoları public Wikipedia görsel aramasından çalışma zamanında çözülüp önbelleğe alınır; çözüm başarısızsa takım kısaltması fallback olarak kalır.
+- `dkd-analysis` açıklanabilir analiz katmanı aynı maçın doğrulanmış seçimlerini normalize olasılık + decimal oran + veri kalitesi + aşırı oran cezasıyla sıralar. Maç detayında normalize olasılık, ham implied olasılık, olasılık-oran denge skoru ve maç içi sıralama gösterilir.
+- Eski `1 bağımsız oran kaynağı...` odaklı ana bilgilendirme yerine `Neden bu seçim?` ekranı kullanılır. Form/xG/kadro verisi doğrulanmamışsa bunlar gerekçeye uydurularak eklenmez.
+- Profil sürüm metni hard-code değildir; Expo config'teki `version`, `versionCode` ve `extra.dkd_version` alanlarından okunur. Böylece eski sürüm etiketleri tekrar görünmez.
 - Risk motorunda ayrı olasılık/oran hedef bantları, aşırı longshot cezası ve market ailesi çeşitlilik cezası var.
 - Rapor ana yüzdesi seçim tahmini gerçekleşme olasılıklarının aritmetik ortalamasıdır (`dkd_averageProbability`). Eski çarpım hesabı `Tüm Seçimler Birlikte` adıyla ayrı tutulur.
 - Tam 9 seçenekli İY/MS (`1/1 ... 2/2`) yalnızca grup eksiksizse no-vig normalize edilerek analize katılır; eksik market uydurulmaz.
 - Maç detayındaki Oran Hareketi son 6 saatlik gerçek `dbo_odds_history` snapshot'larını özetler; tek başına sonuç sinyali sayılmaz.
 - Canlı odds istemcisi tazelik filtresi kullanır; odds history 72 saat, collector run kayıtları 30 gün saklanır.
-- v0.7 final CI: locked npm install, TypeScript/domain testleri, Expo SDK 58 paket kontrolü ve Android JS export. APK üretmez.
+- v0.7 CI; locked npm install, TypeScript/domain testleri, Expo SDK 58 paket kontrolü ve Android JavaScript export ile doğrulanır. APK üretmez.
