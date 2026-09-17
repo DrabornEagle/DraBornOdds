@@ -16,7 +16,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p assets/dkd-team-logos
-          curl --fail --location --retry 2 --max-time 30 'https://ilcalcio.net/assets/36/be/36be5e8695427f78e8066c19d9c51bbb.png' -o assets/dkd-team-logos/dkd-larissa-current.png
+          curl --fail --location --retry 2 --max-time 30 -A 'DraBornOdds/0.7.1' 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Ael-1964.svg/250px-Ael-1964.svg.png' -o assets/dkd-team-logos/dkd-larissa-current.png
           node <<'NODE'
           const fs=require('fs');
           const path='assets/dkd-team-logos.json';
