@@ -2,7 +2,7 @@
   "expo": {
     "name": "DraBornOdds",
     "slug": "dkd-drabornodds",
-    "version": "0.7.1",
+    "version": "0.7.2",
     "scheme": "dkd-drabornodds",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
@@ -14,7 +14,7 @@
     ],
     "android": {
       "package": "com.draborneagle.drabornodds",
-      "versionCode": 1
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro",
@@ -26,12 +26,17 @@
       "expo-status-bar"
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/DraBornOdds"
     },
     "extra": {
       "dkd_mode": "real_data",
-      "dkd_version": "DKD_draborneagle_v0.7.1",
-      "dkd_supabase_namespace": "dbo_"
+      "dkd_version": "DKD_draborneagle_v0.7.2",
+      "dkd_supabase_namespace": "dbo_",
+      "dkd_privacy_url": "https://www.draborneagle.com/DraBornOdds/privacy",
+      "dkd_terms_url": "https://www.draborneagle.com/DraBornOdds/terms",
+      "dkd_data_safety_url": "https://www.draborneagle.com/DraBornOdds/data-safety",
+      "dkd_support_url": "https://www.draborneagle.com/DraBornOdds/support"
     }
   }
 }
