@@ -1,0 +1,41 @@
+name: DraBornOdds collector polish once
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/dkd-polish-collector-once.yml']
+permissions:
+  contents: write
+jobs:
+  dkd-polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Normalize goal ranges and respect detail-page rate limits
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('collectors/dkd_collect.mjs')
+          s=p.read_text()
+          old="dkd_match=dkd_upper.match(/^(?:TG|TOPLAM GOL)\\s*(0-1|2-3|4-5|6\\+?)$/);if(dkd_match)return dkd_market('goal_range',dkd_match[1].replace('+','plus'),dkd_oddsNumber,dkd_labelClean);"
+          new="dkd_match=dkd_upper.match(/^(?:TG|TOPLAM GOL)\\s*(0-?1|2-?3|4-?5|6\\+?)$/);if(dkd_match){const dkd_range=dkd_match[1].replace(/^01$/,'0-1').replace(/^23$/,'2-3').replace(/^45$/,'4-5').replace('+','plus');return dkd_market('goal_range',dkd_range,dkd_oddsNumber,dkd_labelClean);}"
+          if old not in s: raise SystemExit('goal-range target not found')
+          s=s.replace(old,new)
+          old_workers="const dkd_workers=Array.from({length:5},async()=>{while(dkd_cursor<dkd_targets.length){const dkd_index=dkd_cursor++,dkd_candidateValue=dkd_targets[dkd_index];try{const dkd_url=(dkd_candidateValue.source_url||'').split('#')[0],dkd_page=await dkd_fetchHtml(dkd_url,10000),dkd_markets=dkd_detailMarkets(dkd_page.dkd_html);"
+          new_workers="const dkd_workers=Array.from({length:2},async()=>{while(dkd_cursor<dkd_targets.length){const dkd_index=dkd_cursor++,dkd_candidateValue=dkd_targets[dkd_index];try{await new Promise(dkd_resolve=>setTimeout(dkd_resolve,220));const dkd_url=(dkd_candidateValue.source_url||'').split('#')[0],dkd_page=await dkd_fetchHtml(dkd_url,10000),dkd_markets=dkd_detailMarkets(dkd_page.dkd_html);"
+          if old_workers not in s: raise SystemExit('worker target not found')
+          s=s.replace(old_workers,new_workers)
+          s=s.replace("collector_version:'dbo_v0.2.6'","collector_version:'dbo_v0.2.7'")
+          p.write_text(s)
+          PY
+          rm .github/workflows/dkd-polish-collector-once.yml
+      - name: Commit polished collector
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add collectors/dkd_collect.mjs .github/workflows/dkd-polish-collector-once.yml
+          git commit -m 'fix(data): normalize goal ranges and throttle detail scraping'
+          git push origin HEAD:main
