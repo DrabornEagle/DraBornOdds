@@ -36,4 +36,5 @@ jobs:
             exit 0
           fi
           git commit -m 'data(v0.7.1): refresh original club crest cache'
+          git pull --rebase origin main
           git push
