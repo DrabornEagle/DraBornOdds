@@ -14,7 +14,7 @@ Kullanılan proje: `DraBorn-Park-Garage-SportOdds` (`xpdiwyxnnrmyvpcqwuyb`). Dra
 
 Temel tablolar: `dbo_site_collectors`, `dbo_matches`, `dbo_source_matches`, `dbo_odds_history`, `dbo_collector_runs`, `dbo_teams`, `dbo_team_aliases`, `dbo_team_stats`, `dbo_match_analysis`, `dbo_predictions`, `dbo_generated_coupons`, `dbo_user_preferences`, `dbo_app_config`.
 
-GitHub Actions collector akışı `main` güncellemesinde ve her saatin 07/37. dakikasında çalışır. Supabase service role anahtarı GitHub’a yazılmaz; workflow kısa ömürlü GitHub OIDC kimliği alır ve `dbo-ingest-odds` Edge Function yalnızca `DrabornEagle/DraBornOdds` ana dalını kabul eder.
+GitHub Actions collector akışı her saatin 07/37. dakikasında otomatik, gerektiğinde `workflow_dispatch` ile manuel çalışır. Normal kod pushları collector’ı gereksiz yere tetiklemez. Supabase service role anahtarı GitHub’a yazılmaz; workflow kısa ömürlü GitHub OIDC kimliği alır ve `dbo-ingest-odds` Edge Function yalnızca `DrabornEagle/DraBornOdds` ana dalını kabul eder.
 
 ## Analiz matematiği
 
