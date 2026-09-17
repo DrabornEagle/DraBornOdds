@@ -4,6 +4,7 @@ import * as dkd_Haptics from 'expo-haptics';
 import { dkd_readStorage, dkd_writeStorage } from './dkd-storage';
 import { dkd_defaults, dkd_parseStorage } from './dkd-persistence';
 import { dkd_fetchLive, dkd_fixtureDay } from './dkd-live';
+import { dkd_fetchFixtureCache } from './dkd-fixture-cache';
 import { dkd_summarize } from './dkd-engine';
 import type { dkd_Coupon, dkd_Match, dkd_Pick, dkd_Risk, dkd_SourceStatus, dkd_Stored } from './dkd-types';
 
@@ -22,7 +23,17 @@ function dkd_useStateStore() {
   const dkd_writeQueue = dkd_React.useRef(Promise.resolve());
   const dkd_toastTimer = dkd_React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const dkd_notify = dkd_React.useCallback((dkd_message: string) => {clearTimeout(dkd_toastTimer.current);dkd_setToast(dkd_message);dkd_toastTimer.current=setTimeout(()=>dkd_setToast(''),3200);},[]);
-  const dkd_refreshLive=dkd_React.useCallback(async(dkd_silent=false)=>{if(!dkd_silent)dkd_setLiveState('loading');try{const dkd_live=await dkd_fetchLive();dkd_setMatches(dkd_live.dkd_matches);dkd_setSources(dkd_live.dkd_sources);dkd_setLiveLoadedAt(dkd_live.dkd_loadedAt);dkd_setLiveError('');dkd_setLiveState('ready');dkd_setDraft(dkd_prev=>dkd_prev.filter(dkd_pick=>dkd_live.dkd_matches.some(dkd_match=>dkd_match.dkd_id===dkd_pick.dkd_matchId)));}catch(dkd_failure){dkd_setLiveError(dkd_failure instanceof Error?dkd_failure.message:'Canlı veri alınamadı.');dkd_setLiveState('error');}},[]);
+  const dkd_refreshLive=dkd_React.useCallback(async(dkd_silent=false)=>{
+    if(!dkd_silent)dkd_setLiveState('loading');
+    const dkd_accept=(dkd_newMatches:dkd_Match[],dkd_newSources:dkd_SourceStatus[],dkd_loadedAt:string)=>{dkd_setMatches(dkd_newMatches);dkd_setSources(dkd_newSources);dkd_setLiveLoadedAt(dkd_loadedAt);dkd_setLiveError('');dkd_setLiveState('ready');dkd_setDraft(dkd_prev=>dkd_prev.filter(dkd_pick=>dkd_newMatches.some(dkd_match=>dkd_match.dkd_id===dkd_pick.dkd_matchId)));};
+    try{
+      const dkd_live=await dkd_fetchLive();
+      if(dkd_live.dkd_matches.length){dkd_accept(dkd_live.dkd_matches,dkd_live.dkd_sources,dkd_live.dkd_loadedAt);return;}
+      try{const dkd_cache=await dkd_fetchFixtureCache();dkd_accept(dkd_cache.dkd_matches,[dkd_cache.dkd_source,...dkd_live.dkd_sources],dkd_cache.dkd_loadedAt);return;}catch{dkd_accept([],dkd_live.dkd_sources,dkd_live.dkd_loadedAt);return;}
+    }catch(dkd_failure){
+      try{const dkd_cache=await dkd_fetchFixtureCache();dkd_accept(dkd_cache.dkd_matches,[dkd_cache.dkd_source],dkd_cache.dkd_loadedAt);return;}catch(dkd_cacheFailure){const dkd_primary=dkd_failure instanceof Error?dkd_failure.message:'Canlı veri alınamadı.';const dkd_cache=dkd_cacheFailure instanceof Error?dkd_cacheFailure.message:'Fikstür önbelleği alınamadı.';dkd_setLiveError(`${dkd_primary} ${dkd_cache}`);dkd_setLiveState('error');}
+    }
+  },[]);
   dkd_React.useEffect(()=>{let dkd_active=true;dkd_readStorage().then(dkd_json=>{if(dkd_active)dkd_setStored(dkd_parseStorage(dkd_json));}).catch(()=>{if(dkd_active)dkd_notify('Cihazdaki kayıtlar okunamadı; yerel tercihler sıfırlandı.');}).finally(()=>{if(dkd_active)dkd_setLoaded(true);});dkd_refreshLive().catch(()=>{});dkd_RN.AccessibilityInfo.isReduceMotionEnabled().then(dkd_value=>{if(dkd_active)dkd_setReduceMotion(dkd_value);}).catch(()=>{});const dkd_subscription=dkd_RN.AccessibilityInfo.addEventListener('reduceMotionChanged',dkd_setReduceMotion);return()=>{dkd_active=false;dkd_subscription.remove();clearTimeout(dkd_toastTimer.current);};},[dkd_notify,dkd_refreshLive]);
   dkd_React.useEffect(()=>{if(!dkd_loaded)return;const dkd_json=JSON.stringify(dkd_stored);dkd_writeQueue.current=dkd_writeQueue.current.then(()=>dkd_writeStorage(dkd_json)).catch(()=>dkd_notify('Cihaza kaydedilemedi. Bu oturumda kullanmaya devam edebilirsin.'));},[dkd_stored,dkd_loaded,dkd_notify]);
   const dkd_haptic=()=>{if(dkd_stored.dkd_settings.dkd_haptics&&process.env.EXPO_OS!=='web')dkd_Haptics.selectionAsync().catch(()=>{});};
