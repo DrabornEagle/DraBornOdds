@@ -1,0 +1,34 @@
+name: DraBornOdds v0.7.1 context alias fix
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-v071-context-alias-fix.yml'
+permissions:
+  contents: write
+jobs:
+  dkd-apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preserve canonical club names for history parser
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('src/dkd-football-context.ts'); s=p.read_text()
+          old="const dkd_knownGsa:Record<string,string>={gasogi:'https://globalsportsarchive.com/en/soccer/team/gasogi-united-fc/42590/',gorilla:'https://globalsportsarchive.com/en/soccer/team/gorilla-fc/48840/',mukura:'https://globalsportsarchive.com/en/soccer/team/mukura-victory-sport/14422/',police:'https://globalsportsarchive.com/en/soccer/team/police-fc/14419/'};"
+          new="const dkd_knownGsa:Record<string,{dkd_name:string;dkd_url:string}>={gasogi:{dkd_name:'Gasogi United FC',dkd_url:'https://globalsportsarchive.com/en/soccer/team/gasogi-united-fc/42590/'},gorilla:{dkd_name:'Gorilla FC',dkd_url:'https://globalsportsarchive.com/en/soccer/team/gorilla-fc/48840/'},mukura:{dkd_name:'Mukura Victory Sport',dkd_url:'https://globalsportsarchive.com/en/soccer/team/mukura-victory-sport/14422/'},police:{dkd_name:'Police FC',dkd_url:'https://globalsportsarchive.com/en/soccer/team/police-fc/14419/'}};"
+          old2="if(dkd_known)return{dkd_name:dkd_teamName,dkd_url:dkd_known,dkd_logo:null};"
+          new2="if(dkd_known)return{dkd_name:dkd_known.dkd_name,dkd_url:dkd_known.dkd_url,dkd_logo:null};"
+          if old not in s or old2 not in s: raise SystemExit('alias patch target missing')
+          p.write_text(s.replace(old,new,1).replace(old2,new2,1))
+          PY
+      - name: Commit alias fix
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/dkd-football-context.ts
+          git commit -m 'fix(v0.7.1): keep canonical club names for form history'
+          git pull --rebase origin main
+          git push
