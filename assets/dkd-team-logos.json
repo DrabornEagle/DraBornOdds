@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-17T19:43:08.923Z",
-  "dkd_teamCount": 40,
-  "dkd_resolvedTeams": 36,
-  "dkd_logoCount": 218,
+  "dkd_generatedAt": "2026-09-17T22:50:38.083Z",
+  "dkd_teamCount": 36,
+  "dkd_resolvedTeams": 34,
+  "dkd_logoCount": 220,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -221,6 +221,8 @@
     "athlitiki enosi larissa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dkd-larissa-current.png",
     "vargas torres": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7813267e893c7836.png",
     "9 de octubre": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/199cb96219812995.png",
-    "entag harby": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5cb44252e6b8717a.png"
+    "entag harby": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5cb44252e6b8717a.png",
+    "istanbul başakşehir fk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/162bc76b4fdb5b98.jpg",
+    "istanbul basaksehir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/162bc76b4fdb5b98.jpg"
   }
 }
