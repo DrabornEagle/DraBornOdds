@@ -18,15 +18,21 @@ Bu fallback **oran üretmez**. Yalnızca doğrulanmış gerçek fikstürü gör�
 
 Maçlar sekmesi varsayılan olarak **Tüm yaklaşan** filtresiyle açılır. Bugün/Yarın, lig, arama veya favori filtresi sonucu sıfıra düşürürse uygulama gerçek akışın kaybolduğunu söylemek yerine kaç maçın mevcut olduğunu gösterir ve **Tüm maçları göster** ile filtreleri tek dokunuşta sıfırlar.
 
-## Keşfet animasyonları
+## Futbol akışı, modern maç kartları ve gerçek takım logoları
 
-Keşfet ana ekranında hareket ayarı açıkken canlı nabız, dönen/pulse yapan **Sinyal Tarama** alanı, gerçek normalize market dağılımından **Canlı Analiz Radarı** ve dört risk kartında animasyonlu hedef barları bulunur. Bunlar sahte istatistik kullanmaz. Oran akışı yoksa radar market barları doğal olarak oluşmaz; Sinyal Tarama ve canlı nabız yine görünür şekilde çalışır.
+Keşfet ana ekranındaki eski radar tipi **Sinyal Tarama** kaldırıldı. Yerine saha çizgileri, iki takımın hareketli oyuncu noktaları ve sahada pas/şut rotasında ilerleyip dönen futbol topundan oluşan **Canlı Maç Akışı** animasyonu geldi. Animasyon gerçek maç/oran sayaçlarını kullanır; hareket ayarı veya Android Reduce Motion kapalıysa statik görünür.
 
-Profildeki **Arayüz animasyonları** kapalıysa veya Android Reduce Motion etkinse hareketler statik gösterilir.
+Maç kartları renkli lig aksanı, gerçek takım logoları, ortalanmış karşılaşma görünümü, analiz motorunun öne çıkardığı seçimler ve doğrudan **Neden bu oranlar?** geçişiyle yenilendi. Takım logoları ücretsiz public Wikipedia görsel aramasından çalışma zamanında çözülür ve cihaz oturumunda önbelleğe alınır; logo çözülemezse takım kısaltması güvenli yedek olarak gösterilir.
+
+## Neden bu oran seçildi?
+
+Maç detayında eski teknik kaynak sayısı merkezli açıklama yerine **Neden bu seçim?** analizi bulunur. Sistem aynı maçtaki analize uygun doğrulanmış marketleri karşılaştırır; karşılıklı market grubunda bookmaker marjı temizlenmiş olasılığı, güncel decimal oranı, veri kalite katsayısını ve aşırı yüksek oran cezasını birlikte değerlendirerek olasılık–oran denge skoru üretir.
+
+Ekranda seçimin normalize piyasa olasılığı, oranın ham ima ettiği olasılık, denge skoru ve maç içindeki sırası ayrı gösterilir. Doğrulanmış takım formu, xG veya kadro verisi yoksa bunlar varmış gibi gerekçe üretilmez. Analiz açıklaması fiyatlama/model değerlendirmesidir; sonuç veya kazanç garantisi değildir.
 
 ## Sürüm tek kaynaktan okunur
 
-Profil ekranındaki sürüm metni artık hard-code değildir. `app.json` içindeki Expo `version`, Android `versionCode` ve `extra.dkd_version` doğrudan okunur. Güncel değerler **v0.7 / DKD_draborneagle_v0.7 / versionCode 1**. Böylece eski v0.2 etiketi kaynakta kalmaz.
+Profil ekranındaki sürüm metni hard-code değildir. `app.json` içindeki Expo `version`, Android `versionCode` ve `extra.dkd_version` doğrudan okunur. Güncel değerler **v0.7 / DKD_draborneagle_v0.7 / versionCode 1**. Böylece eski sürüm etiketi tekrar görünmez.
 
 ## Analiz ve kupon olasılığı
 
@@ -71,4 +77,4 @@ node collectors/dkd_collect.mjs iddaa_public
 
 CI; TypeScript/domain testlerini, Expo SDK 58 paket uyumunu ve Android JavaScript export'unu kontrol eder. Fixture-cache workflow'u ayrıca TFF public HTML'i doğrular. Expo export APK üretmez.
 
-Görünür sürüm: **DKD_draborneagle_v0.7** · Expo SDK 58 · Android **versionCode 1**.
+Görünür sürüm: **DKD_draborneagle_v0.7** · Expo Go / SDK 58 · Android **versionCode 1**.
