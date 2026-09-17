@@ -1,0 +1,158 @@
+name: DraBornOdds Signed Release APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-release-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dkd-drabornodds-v072-release-apk
+  cancel-in-progress: false
+
+jobs:
+  dkd_build_signed_apk:
+    name: DraBornOdds v0.7.2 code 1 signed APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    env:
+      CI: '1'
+      EXPO_NO_TELEMETRY: '1'
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+      ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+      ANDROID_HOME: /usr/local/lib/android/sdk
+      DKD_ANDROID_KEYSTORE_BASE64: ${{ secrets.DKD_ANDROID_KEYSTORE_BASE64 }}
+      DKD_ANDROID_KEYSTORE_PASSWORD: ${{ secrets.DKD_ANDROID_KEYSTORE_PASSWORD }}
+      DKD_ANDROID_KEY_ALIAS: ${{ secrets.DKD_ANDROID_KEY_ALIAS }}
+      DKD_ANDROID_KEY_PASSWORD: ${{ secrets.DKD_ANDROID_KEY_PASSWORD }}
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: DKD checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: DKD setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: DKD setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: DKD validate release signing key
+        shell: bash
+        run: |
+          set -euo pipefail
+          for dkd_secret_name in DKD_ANDROID_KEYSTORE_BASE64 DKD_ANDROID_KEYSTORE_PASSWORD DKD_ANDROID_KEY_ALIAS DKD_ANDROID_KEY_PASSWORD; do
+            test -n "${!dkd_secret_name}" || { echo "DKD ERROR: ${dkd_secret_name} is missing"; exit 1; }
+          done
+          mkdir -p "$RUNNER_TEMP/dkd_signing_check"
+          printf '%s' "$DKD_ANDROID_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/dkd_signing_check/dkd_release.jks"
+          test -s "$RUNNER_TEMP/dkd_signing_check/dkd_release.jks"
+          keytool -list -keystore "$RUNNER_TEMP/dkd_signing_check/dkd_release.jks" -storepass "$DKD_ANDROID_KEYSTORE_PASSWORD" -alias "$DKD_ANDROID_KEY_ALIAS" >/dev/null
+          rm -rf "$RUNNER_TEMP/dkd_signing_check"
+          echo 'DKD release signing key verified.'
+
+      - name: DKD install packages
+        run: npm ci --no-audit --no-fund
+
+      - name: DKD verify synchronized source
+        shell: bash
+        run: |
+          npm run typecheck
+          npm test
+          npx expo install --check
+          node <<'DKD_NODE'
+          const dkd_app=require('./app.json').expo;
+          const dkd_package=require('./package.json');
+          if(dkd_app.version!=='0.7.2'||dkd_package.version!=='0.7.2') throw new Error('DKD ERROR: version must be 0.7.2');
+          if(Number(dkd_app.android.versionCode)!==1) throw new Error('DKD ERROR: Android versionCode must be 1');
+          if(dkd_app.android.package!=='com.draborneagle.drabornodds') throw new Error('DKD ERROR: Android package mismatch');
+          console.log('DKD identity OK: DraBornOdds v0.7.2 / code 1');
+          DKD_NODE
+
+      - name: DKD prepare Android SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$PATH"
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager --install 'platform-tools' 'platforms;android-36' 'build-tools;36.0.0'
+
+      - name: DKD generate native Android project
+        run: npx expo prebuild --platform android --clean --non-interactive
+
+      - name: DKD configure release signing
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p android/app/dkd_secure
+          printf '%s' "$DKD_ANDROID_KEYSTORE_BASE64" | base64 --decode > android/app/dkd_secure/dkd_release_keystore.jks
+          cat > android/app/dkd_release_signing.gradle <<'DKD_GRADLE'
+          android {
+              signingConfigs {
+                  dkdRelease {
+                      storeFile file('dkd_secure/dkd_release_keystore.jks')
+                      storePassword System.getenv('DKD_ANDROID_KEYSTORE_PASSWORD')
+                      keyAlias System.getenv('DKD_ANDROID_KEY_ALIAS')
+                      keyPassword System.getenv('DKD_ANDROID_KEY_PASSWORD')
+                  }
+              }
+              buildTypes {
+                  release {
+                      signingConfig signingConfigs.dkdRelease
+                  }
+              }
+          }
+          DKD_GRADLE
+          printf '\napply from: "dkd_release_signing.gradle"\n' >> android/app/build.gradle
+          printf '\norg.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=1g -Dfile.encoding=UTF-8\norg.gradle.daemon=false\norg.gradle.parallel=false\n' >> android/gradle.properties
+
+      - name: DKD build release APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd android
+          ./gradlew :app:assembleRelease --no-daemon
+
+      - name: DKD verify signed APK and checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dkd_release_output
+          dkd_apk_path="$(find android/app/build/outputs/apk/release -type f -name '*.apk' | head -n 1)"
+          test -n "$dkd_apk_path"
+          cp "$dkd_apk_path" dkd_release_output/DraBornOdds-v0.7.2-code1-release.apk
+          "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" verify --verbose --print-certs dkd_release_output/DraBornOdds-v0.7.2-code1-release.apk | tee dkd_release_output/CERTIFICATE.txt
+          (cd dkd_release_output && sha256sum DraBornOdds-v0.7.2-code1-release.apk > SHA256.txt)
+          ls -lh dkd_release_output
+
+      - name: DKD upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DraBornOdds_v0.7.2_code1_signed_release
+          path: dkd_release_output/
+          retention-days: 30
+
+      - name: DKD publish GitHub Release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! gh release view v0.7.2 >/dev/null 2>&1; then
+            gh release create v0.7.2 --target "$GITHUB_SHA" --title 'DraBornOdds v0.7.2' --notes 'DraBornOdds Android/Web senkron sürümü. Android versionCode 1. APK GitHub Actions üzerinde DraBornEagle release anahtarıyla imzalanmış ve apksigner ile doğrulanmıştır.'
+          fi
+          gh release upload v0.7.2 \
+            dkd_release_output/DraBornOdds-v0.7.2-code1-release.apk \
+            dkd_release_output/SHA256.txt \
+            dkd_release_output/CERTIFICATE.txt \
+            --clobber
