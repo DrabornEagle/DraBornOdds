@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
     "check:sdk": "expo install --check",
-    "export:android": "expo export --platform android"
+    "export:android": "expo export --platform android",
+    "collect:local": "node collectors/dkd_collect.mjs"
   },
   "dependencies": {
     "expo": "58.0.0-preview.2",
