@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   dkd-upgrade:
-    if: github.actor != 'github-actions[bot]'
+    if: github.event_name == 'workflow_dispatch' || github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -71,7 +71,7 @@ jobs:
           npm test
       - name: Live context smoke test
         run: |
-          npx tsx -e "import {dkd_fetchTeamContext} from './src/dkd-football-context.ts'; const team=(name)=>({dkd_id:name,dkd_name:name,dkd_short:name.slice(0,2),dkd_color:'#fff',dkd_attack:1,dkd_defense:1,dkd_form:[]}); const a=await dkd_fetchTeamContext(team('Stade Tunisien')); const b=await dkd_fetchTeamContext(team('Club Africain')); console.log(JSON.stringify({stade:{logo:!!a.dkd_logoUrl,recent:a.dkd_recent.length,standing:a.dkd_standing},africain:{logo:!!b.dkd_logoUrl,recent:b.dkd_recent.length,standing:b.dkd_standing}},null,2)); if(!a.dkd_logoUrl&&!b.dkd_logoUrl) process.exit(2);"
+          npx tsx -e "import {dkd_fetchTeamContext} from './src/dkd-football-context.ts'; const team=(name)=>({dkd_id:name,dkd_name:name,dkd_short:name.slice(0,2),dkd_color:'#fff',dkd_attack:1,dkd_defense:1,dkd_form:[]}); const a=await dkd_fetchTeamContext(team('Stade Tunisien')); const b=await dkd_fetchTeamContext(team('Club Africain')); console.log(JSON.stringify({stade:{logo:!!a.dkd_logoUrl,recent:a.dkd_recent.length,standing:a.dkd_standing},africain:{logo:!!b.dkd_logoUrl,recent:b.dkd_recent.length,standing:b.dkd_standing}},null,2)); if((!a.dkd_logoUrl&&!b.dkd_logoUrl)||(a.dkd_recent.length===0&&b.dkd_recent.length===0&& !a.dkd_standing&&!b.dkd_standing)) process.exit(2);"
       - name: Commit validated v0.7.1
         run: |
           git config user.name "github-actions[bot]"
@@ -81,4 +81,4 @@ jobs:
           git commit -m "feat(v0.7.1): add club crests and football-form reasoning"
           git push
 
-# dkd v0.7.1 one-time trigger
+# dkd v0.7.1 validator trigger 2
