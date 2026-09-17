@@ -1,46 +1,38 @@
 # DraBornOdds · v0.2 · versionCode 1
 
-DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 üzerinde çalışan uygulama gerçek veriyi doğrudan web kaynaklarından toplar: güncel Süper Lig fikstürü TFF’nin herkese açık fikstür sayfasından HTML olarak kazınır; doğrulanmış 1X2 oranları ise Nesine / Misli / Bilyoner / Tuttur web collector’larından `DraBorn-Park-Garage-SportOdds` Supabase projesindeki izole `dbo_` hattına alınır. Spor/odds API’si kullanılmaz. Bu aşamada APK/AAB üretilmez ve web sürümü deploy edilmez.
+DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 uygulaması gerçek futbol verisini public-web scraping ile toplar; spor/odds API’si kullanılmaz. TFF herkese açık sayfası Süper Lig fikstür yedeğidir. Geniş futbol bülteni ve doğrulanmış oran marketleri `DraBorn-Park-Garage-SportOdds` Supabase projesindeki yalnızca `dbo_` ad alanına alınır. APK/AAB henüz üretilmez.
 
-## Gerçek veri akışı
+## Geniş gerçek veri akışı
 
-**Fikstür:** TFF `pageID=198` herkese açık web sayfası → tarih/saat + ev/deplasman takımını HTML’den ayrıştırma → DraBornOdds. Fikstürün gelmesi tek başına bahis oranı veya tahmin üretmez.
+Public futbol bülteni → maç/takım/tarih eşleştirme → tüm erişilebilir market seçimlerini normalize etme → `dbo_odds_history` → market bazlı marj temizleme → `dbo_match_analysis` → Düşük Risk / Dengeli / Yüksek Getiri / Ultra Getiri → açıklamalı kupon raporu.
 
-**1X2 oranı:** Nesine / Misli / Bilyoner / Tuttur → bağımsız `dbo_` public-web collector → takım/maç eşleştirme → 1X2 oran normalizasyonu → `dbo_odds_history` → `dbo_match_analysis` / `dbo_predictions` → Düşük Risk / Dengeli / Yüksek Getiri / Ultra Getiri → açıklamalı analiz raporu.
+17 Eylül 2026 canlı doğrulama turunda collector tek çalışmada **157 yaklaşan maç ve 1.543 doğrulanabilir oran seçimi** ayrıştırdı. Bu sayı bülten değiştikçe doğal olarak değişir. Şu an doğrudan kullanılan market grupları: **Maç Sonucu 1/X/2, 2.5 ve 3.5 Alt/Üst, Çifte Şans, Karşılıklı Gol Var/Yok ve İlk Yarı 1/X/2**. `dbo_odds_history` şeması market anahtarı + seçim anahtarı + line şeklinde geneldir; yeni public marketler aynı tabloya eklenebilir.
 
-Collector’lar yalnızca herkese açık ve otomatik erişime izin veren yanıtları işler; CAPTCHA, bot koruması veya erişim engeli aşılmaz. Bir kaynak doğrulanabilir yapılandırılmış 1X2 verisi vermiyorsa uygulama oran uydurmaz. Bu durumda TFF’den gelen gerçek fikstür yine görünür, ancak analiz ve kupona ekleme kapalı kalır. Doğrulanmış 1X2 geldiğinde aynı karşılaşmanın oran/analiz alanları otomatik açılır.
+Nesine / Misli / Bilyoner / Tuttur doğrudan collector’ları da korunur. Bir kaynak CAPTCHA/bot koruması döndürürse koruma aşılmaz. Doğrudan siteler erişim vermediğinde açık bülten hattı çalışmaya devam eder; hiçbir eksik oran uydurulmaz.
 
-Fikstür ve oran istekleri birbirinden bağımsız yürütülür. Bir veri hattının geçici olarak başarısız olması diğer hattın kullanılmasını engellemez. Aynı tarih/takım eşleşmesinde doğrulanmış oranlı kayıt, yalnızca fikstür içeren kaydın yerini alır.
+## Analiz yaklaşımı
 
-## Supabase izolasyonu
+Tamamlayıcı market gruplarında bookmaker marjı kaldırılır. Örneğin 1X2 için `q = 1/oran`, ardından `p = q / Σq`; Alt/Üst ve KG Var/Yok için aynı no-vig mantığı kendi tamamlayıcı grubunda uygulanır. Çifte şans olasılığı normalize 1X2 bileşenlerinden türetilir.
 
-Kullanılan proje: `DraBorn-Park-Garage-SportOdds` (`xpdiwyxnnrmyvpcqwuyb`). DraBornOdds için oluşturulan bütün tablo, görünüm, indeks, politika ve fonksiyon adları `dbo_` ile ayrılmıştır. Mevcut DraBornPark/Garage tabloları değiştirilmez.
+Akıllı kupon motoru artık yalnızca 1X2 seçmez. Her oranlı maçtaki doğrulanmış marketleri tarar ve **veri kalite skoru + market olasılığı + oran seviyesi + seçilen risk profili** bileşimini sıralar. Düşük risk profili daha yüksek olasılık/kaliteye, yüksek ve ultra profiller daha yüksek oran ve belirsizliğe daha fazla ağırlık verir. Bu sıralama istatistiksel karar desteğidir; kesin sonuç veya kazanç garantisi değildir.
 
-Temel tablolar: `dbo_site_collectors`, `dbo_matches`, `dbo_source_matches`, `dbo_odds_history`, `dbo_collector_runs`, `dbo_teams`, `dbo_team_aliases`, `dbo_team_stats`, `dbo_match_analysis`, `dbo_predictions`, `dbo_generated_coupons`, `dbo_user_preferences`, `dbo_app_config`.
+Maç detayında marketler ayrı gruplarda gösterilir. Analiz için oranı olmayan TFF fikstürleri görünür kalır ancak kupona alınmaz. Rapor oluşturulduğunda kullanılan maç/oran/olasılık snapshot’ı cihazda saklanır.
 
-GitHub Actions collector akışı her saatin 07/37. dakikasında otomatik, gerektiğinde `workflow_dispatch` ile manuel çalışır. Normal kod pushları collector’ı gereksiz yere tetiklemez. Supabase service role anahtarı GitHub’a yazılmaz; workflow kısa ömürlü GitHub OIDC kimliği alır ve `dbo-ingest-odds` Edge Function yalnızca `DrabornEagle/DraBornOdds` ana dalını kabul eder.
+## Supabase izolasyonu ve güvenlik
 
-Uygulama arayüzünde sağ üstte backend/Supabase rozeti gösterilmez. Kullanıcıya teknik servis adı yerine **Fikstür akışı** ve **1X2 oran akışı** durumu gösterilir.
+Proje: `DraBorn-Park-Garage-SportOdds` (`xpdiwyxnnrmyvpcqwuyb`). DraBornOdds nesneleri `dbo_` ile izoledir. Temel tablolar: `dbo_site_collectors`, `dbo_matches`, `dbo_source_matches`, `dbo_odds_history`, `dbo_collector_runs`, `dbo_teams`, `dbo_team_aliases`, `dbo_team_stats`, `dbo_match_analysis`, `dbo_predictions`, `dbo_generated_coupons`, `dbo_user_preferences`, `dbo_app_config`.
 
-## Analiz matematiği
-
-1X2 için önce doğrulanmış kaynak oranları birleştirilir. Her seçim için `q = 1 / oran`; ardından bookmaker marjını normalize etmek için `p = q / (q1 + qX + q2)` uygulanır. Risk profilleri kesin sonuç iddiası değildir; seçimleri hedef olasılık/risk aralığına yakınlığa göre sıralar. Toplam oran seçim oranlarının çarpımıdır; birleşik piyasa olasılığı seçim olasılıklarının çarpımıdır ve bağımsızlık varsayımı taşır.
-
-v0.2 doğrulanmamış form, sakatlık, hava, xG, geçmiş skor veya eksik 1X2 oranı üretmez. Bu alanlar için güvenilir ayrı veri hattı kurulana kadar analize katılmaz.
-
-## Rapor snapshot’ları
-
-Rapor oluşturulduğunda kullanılan gerçek maç/oran/olasılık verisi cihazda snapshot olarak saklanır. Böylece oran daha sonra değişse veya maç bültenden kalksa bile geçmiş rapor değişmez. v0.1 demo kayıtları v0.2 depolamasına taşınmaz.
+GitHub Actions collector her saatin 07/37. dakikasında ve manuel çalışır; collector kodu değiştiğinde de yeni parser hemen doğrulanır. Büyük bülten Edge Function kaynak limitine takılmaması için küçük ingestion batch’lerine bölünür. GitHub’da kalıcı service-role anahtarı tutulmaz; kısa ömürlü GitHub OIDC kimliği kullanılır ve `dbo-ingest-odds` yalnızca `DrabornEagle/DraBornOdds` `main` ref’ini kabul eder.
 
 ## Termux + Expo Go 58
 
 ```bash
 pkg install -y nodejs-lts curl unzip
-curl -fL https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/scripts/dkd-termux-install.sh -o "$HOME/dkd-odds-install.sh"
+curl -fL "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/scripts/dkd-termux-install.sh?$(date +%s)" -o "$HOME/dkd-odds-install.sh"
 bash "$HOME/dkd-odds-install.sh"
 ```
 
-Aynı telefonda Expo Go → Enter URL: `exp://127.0.0.1:8081`. Sonraki açılış:
+Aynı telefonda Expo Go URL: `exp://127.0.0.1:8081`. Kurulum ZIP tabanlıdır; telefonda `git` gerekmez. Sonraki açılış:
 
 ```bash
 cd ~/projects/DraBornOdds
@@ -56,8 +48,9 @@ npm test
 npx expo install --check
 npx expo export --platform android --output-dir dist-android
 node scripts/dkd-fixture-smoke.mjs
+node collectors/dkd_collect.mjs iddaa_public
 ```
 
-Son iki doğrulama farklı amaç taşır: Expo export Android JavaScript paketinin derlenebilirliğini kontrol eder ve APK üretmez; fixture smoke testi ise TFF’nin gerçek herkese açık Süper Lig HTML sayfasından en az bir geçerli güncel/gelecek karşılaşmanın ayrıştırılabildiğini denetler. v0.2 CI web export veya web deploy yapmaz.
+Expo export APK üretmez; Android JavaScript paketinin derlenebilirliğini doğrular. TFF smoke gerçek fikstür HTML’ini, public bulletin smoke ise geniş oran ayrıştırıcısını doğrular.
 
 Görünür sürüm: **DKD_draborneagle_v0.2** · Expo SDK 58 · Android **versionCode 1**.
