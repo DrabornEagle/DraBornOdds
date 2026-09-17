@@ -1,0 +1,52 @@
+name: DraBornOdds v0.7.1 reason summary fix
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-v071-reason-summary-fix.yml'
+permissions:
+  contents: write
+jobs:
+  dkd-apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make reasons matchup-specific
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const dkd_path='src/dkd-football-context.ts';
+          let dkd_source=fs.readFileSync(dkd_path,'utf8');
+          const dkd_marker='export function dkd_contextReason';
+          const dkd_at=dkd_source.indexOf(dkd_marker);
+          if(dkd_at<0)throw new Error('dkd_contextReason target missing');
+          const dkd_replacement=`function dkd_formMetrics(dkd_context:dkd_TeamContext){const dkd_rows=dkd_context.dkd_recent.filter(dkd_item=>dkd_item.dkd_result!=='?').slice(0,5);if(!dkd_rows.length)return null;let dkd_points=0,dkd_for=0,dkd_against=0,dkd_scores=0,dkd_scored=0,dkd_conceded=0;for(const dkd_item of dkd_rows){dkd_points+=dkd_item.dkd_result==='W'?3:dkd_item.dkd_result==='D'?1:0;const dkd_score=dkd_item.dkd_score.match(/(\\d+)\\s*:\\s*(\\d+)/);if(!dkd_score)continue;let dkd_left=Number(dkd_score[1]),dkd_right=Number(dkd_score[2]);if(dkd_item.dkd_venue==='away')[dkd_left,dkd_right]=[dkd_right,dkd_left];dkd_for+=dkd_left;dkd_against+=dkd_right;dkd_scores++;if(dkd_left>0)dkd_scored++;if(dkd_right>0)dkd_conceded++;}return{dkd_count:dkd_rows.length,dkd_ppg:dkd_points/dkd_rows.length,dkd_goalFor:dkd_scores?dkd_for/dkd_scores:0,dkd_goalAgainst:dkd_scores?dkd_against/dkd_scores:0,dkd_totalGoals:dkd_scores?(dkd_for+dkd_against)/dkd_scores:0,dkd_scoredRate:dkd_scores?dkd_scored/dkd_scores:0,dkd_concededRate:dkd_scores?dkd_conceded/dkd_scores:0};}
+function dkd_fmt(dkd_value:number){return String(dkd_value.toFixed(1)).replace('.',',');}
+function dkd_pct(dkd_value:number){return '%' + Math.round(Math.max(0,Math.min(1,dkd_value))*100);}
+export function dkd_contextReason(dkd_match:dkd_Match,dkd_market:dkd_Market,dkd_context:dkd_MatchContext|null|undefined){
+  const dkd_homeForm=dkd_context?dkd_formMetrics(dkd_context.dkd_home):null,dkd_awayForm=dkd_context?dkd_formMetrics(dkd_context.dkd_away):null,dkd_short=dkd_market.dkd_short.toLocaleUpperCase('tr-TR'),dkd_label=dkd_market.dkd_label,dkd_isHome=dkd_market.dkd_key==='home'||dkd_market.dkd_key==='firstHalfHome'||dkd_short==='MS 1'||dkd_short==='İY 1',dkd_isAway=dkd_market.dkd_key==='away'||dkd_market.dkd_key==='firstHalfAway'||dkd_short==='MS 2'||dkd_short==='İY 2',dkd_isDraw=dkd_market.dkd_key==='draw'||dkd_market.dkd_key==='firstHalfDraw'||dkd_short==='MS X'||dkd_short==='İY X';
+  if((dkd_isHome||dkd_isAway)&&dkd_homeForm&&dkd_awayForm){const dkd_selected=dkd_isHome?dkd_match.dkd_home.dkd_name:dkd_match.dkd_away.dkd_name,dkd_other=dkd_isHome?dkd_match.dkd_away.dkd_name:dkd_match.dkd_home.dkd_name,dkd_selectedForm=dkd_isHome?dkd_homeForm:dkd_awayForm,dkd_otherForm=dkd_isHome?dkd_awayForm:dkd_homeForm,dkd_gap=dkd_selectedForm.dkd_ppg-dkd_otherForm.dkd_ppg;if(dkd_gap>.2)return\`Sebep şu: \${dkd_selected} son \${dkd_selectedForm.dkd_count} maçta \${dkd_fmt(dkd_selectedForm.dkd_ppg)} puan/maç temposuyla \${dkd_other} ekibinin \${dkd_fmt(dkd_otherForm.dkd_ppg)} seviyesinin üzerinde. \${dkd_label} için \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oranı da bu form üstünlüğüyle birlikte öne çıkıyor.\`;if(dkd_gap<-.2)return\`Sebep şu: son dönem form avantajı \${dkd_other} tarafında; bu yüzden \${dkd_selected} seçimi form favorisi olduğu için değil, \${dkd_label} için \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oran ile \${dkd_pct(dkd_market.dkd_probability)} piyasa olasılığının oluşturduğu risk–getiri dengesi nedeniyle öne çıkıyor.\`;return\`Sebep şu: iki takımın son dönem puan temposu birbirine yakın (\${dkd_match.dkd_home.dkd_name} \${dkd_fmt(dkd_homeForm.dkd_ppg)}, \${dkd_match.dkd_away.dkd_name} \${dkd_fmt(dkd_awayForm.dkd_ppg)} puan/maç). Bu dengeli eşleşmede \${dkd_label}, \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oranıyla fiyat avantajı sunduğu için öne çıkıyor.\`;}
+  if(dkd_isDraw&&dkd_homeForm&&dkd_awayForm){const dkd_gap=Math.abs(dkd_homeForm.dkd_ppg-dkd_awayForm.dkd_ppg);return dkd_gap<=.35?\`Sebep şu: \${dkd_match.dkd_home.dkd_name} ile \${dkd_match.dkd_away.dkd_name} son dönem puan temposunda birbirine yakın. Bu güç dengesi, \${dkd_label} seçiminin \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oranıyla öne çıkmasının temel nedeni.\`:\`Sebep şu: takımların son dönem formu eşit değil; beraberlik seçimi form benzerliğinden değil, \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oran ve \${dkd_pct(dkd_market.dkd_probability)} piyasa olasılığının oluşturduğu fiyat dengesinden öne çıkıyor.\`;}
+  const dkd_isOver=/üst/i.test(dkd_label),dkd_isUnder=/alt/i.test(dkd_label);if((dkd_isOver||dkd_isUnder)&&dkd_homeForm&&dkd_awayForm&&dkd_market.dkd_line!=null){const dkd_goalEnv=(dkd_homeForm.dkd_totalGoals+dkd_awayForm.dkd_totalGoals)/2,dkd_supports=dkd_isOver?dkd_goalEnv>dkd_market.dkd_line:dkd_goalEnv<dkd_market.dkd_line;return dkd_supports?\`Sebep şu: iki takımın yakın dönem maçları ortalama yaklaşık \${dkd_fmt(dkd_goalEnv)} toplam gole çıkıyor. Bu tempo \${dkd_label} çizgisiyle aynı yönde olduğu için \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oranıyla seçim öne çıkıyor.\`:\`Sebep şu: yakın dönem gol temposu \${dkd_label} yönünü güçlü biçimde desteklemiyor; seçim esas olarak \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oran ile \${dkd_pct(dkd_market.dkd_probability)} piyasa olasılığının dengesinden öne çıkıyor.\`;}
+  if(/karşılıklı gol|kg /i.test(dkd_label)&&dkd_homeForm&&dkd_awayForm){const dkd_yes=/var/i.test(dkd_label),dkd_scoring=(dkd_homeForm.dkd_scoredRate+dkd_awayForm.dkd_scoredRate)/2,dkd_conceding=(dkd_homeForm.dkd_concededRate+dkd_awayForm.dkd_concededRate)/2;return dkd_yes?\`Sebep şu: iki takımın yakın dönem maçlarında gol bulma oranı ortalama \${dkd_pct(dkd_scoring)}, gol yeme oranı ise \${dkd_pct(dkd_conceding)}. Bu karşılıklı üretim/açık verme profili KG Var seçimini \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oranıyla öne taşıyor.\`:\`Sebep şu: yakın dönem gol üretimi ve gol yeme sıklığı birlikte değerlendirildiğinde maçın iki taraflı gol üretme ihtimali sınırlı fiyatlanıyor; KG Yok \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oranıyla bu nedenle öne çıkıyor.\`;}
+  const dkd_home=dkd_match.dkd_markets.find(dkd_item=>dkd_item.dkd_key==='home'),dkd_draw=dkd_match.dkd_markets.find(dkd_item=>dkd_item.dkd_key==='draw'),dkd_away=dkd_match.dkd_markets.find(dkd_item=>dkd_item.dkd_key==='away');if(dkd_home&&dkd_draw&&dkd_away)return\`Sebep şu: \${dkd_match.dkd_home.dkd_name}–\${dkd_match.dkd_away.dkd_name} eşleşmesinde 1/X/2 piyasa dengesi \${dkd_pct(dkd_home.dkd_probability)} / \${dkd_pct(dkd_draw.dkd_probability)} / \${dkd_pct(dkd_away.dkd_probability)}. \${dkd_label}, \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oran ve \${dkd_pct(dkd_market.dkd_probability)} normalize olasılıkla bu maçta en dikkat çekici risk–getiri seçeneklerinden biri oluyor.\`;
+  return\`Sebep şu: \${dkd_match.dkd_home.dkd_name}–\${dkd_match.dkd_away.dkd_name} maçında \${dkd_label}, \${dkd_market.dkd_odds.toFixed(2).replace('.',',')} oran ile \${dkd_pct(dkd_market.dkd_probability)} piyasa olasılığının oluşturduğu denge nedeniyle öne çıkıyor.\`;
+}
+`;
+          fs.writeFileSync(dkd_path,dkd_source.slice(0,dkd_at)+dkd_replacement);
+          const dkd_matchPath='app/match/[dkd_id].tsx';
+          let dkd_match=fs.readFileSync(dkd_matchPath,'utf8');
+          dkd_match=dkd_match.replace('Takımların doğrulanmış son maçları, lig sırası ve güncel oran bağlamını birlikte açıklar.','Takımların son dönem performansı, karşılaşma dengesi ve güncel oran ilişkisini kısa ve anlaşılır biçimde açıklar.');
+          fs.writeFileSync(dkd_matchPath,dkd_match);
+          NODE
+      - name: Commit reason improvements
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/dkd-football-context.ts 'app/match/[dkd_id].tsx'
+          git commit -m 'feat(v0.7.1): explain why each selection stands out'
+          git pull --rebase origin main
+          git push
