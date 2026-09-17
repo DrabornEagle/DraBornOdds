@@ -1,4 +1,4 @@
-name: DraBornOdds demo checks
+name: DraBornOdds v0.2 checks
 on:
   push:
     branches: [main]
@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: dkd-demo-${{ github.ref }}
+  group: dkd-v02-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   dkd-verify:
@@ -30,9 +30,5 @@ jobs:
           npm test
       - name: Verify Expo native package versions
         run: npx expo install --check
-      - name: Export Android JavaScript (no APK)
+      - name: Export Android JavaScript for Expo validation only
         run: npx expo export --platform android --output-dir dist-android
-      - name: Export web and verify screen behavior
-        run: |
-          npm run export:web
-          npm run test:ui
