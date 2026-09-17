@@ -2,41 +2,41 @@
 
 DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 uygulaması gerçek futbol verisini public-web kaynaklarından toplar; ücretli spor/odds API’si kullanılmaz. TFF herkese açık sayfası Süper Lig fikstür yedeğidir. Geniş futbol bülteni ve doğrulanmış oran marketleri `DraBorn-Park-Garage-SportOdds` Supabase projesindeki yalnızca `dbo_` ad alanına alınır. APK/AAB henüz üretilmez.
 
-## v0.4 gerçek veri akışı
+## v0.5 gerçek veri akışı
 
-Public futbol bülteni → maç/takım/tarih eşleştirme → erişilebilir oran marketlerini sınıflandırma → `dbo_odds_history` → tamamlanmış market gruplarında bookmaker marjını normalize etme → `dbo_match_analysis` → Düşük Risk / Dengeli / Yüksek Getiri / Ultra Getiri → açıklamalı analiz raporu.
+Public futbol bülteni → maç/takım/tarih eşleştirme → erişilebilir oran marketlerini sınıflandırma → `dbo_odds_history` → tamamlanmış market gruplarında bookmaker marjını normalize etme → risk/getiri profiline göre olasılık + oran + veri kalitesi + market çeşitliliği sıralaması → açıklamalı analiz raporu.
 
-17 Eylül 2026 v0.4 canlı doğrulama turunda collector tek çalışmada **126 güncel karşılaşma ve 2.710 oran seçimi** ayrıştırdı. Parser kimliği **`dbo_v0.4.0`** olarak Supabase sağlık kaydına işlendi. Bülten içeriği değiştikçe bu sayılar doğal olarak değişir. Oranlar **10 market grubunda** doğrulandı: Maç Sonucu, Toplam Gol Alt/Üst, İlk Yarı Toplam Gol, Karşılıklı Gol, Çifte Şans, İlk Yarı Sonucu, Tek/Çift, Gol Aralığı, Doğru Skor ve İlk Yarı/Maç Sonucu.
+17 Eylül 2026 canlı doğrulama turunda collector tek çalışmada **126 güncel karşılaşma ve 2.710 oran seçimi** ayrıştırdı. Bülten içeriği değiştikçe bu sayılar değişebilir. Oranlar 10 grupta toplandı: Maç Sonucu, Toplam Gol Alt/Üst, İlk Yarı Toplam Gol, Karşılıklı Gol, Çifte Şans, İlk Yarı Sonucu, Tek/Çift, Gol Aralığı, Doğru Skor ve İlk Yarı/Maç Sonucu.
 
-Analiz motorunun olasılık ürettiği normalize aileler: **1/X/2, tamamlanmış Alt/Üst çizgileri, İlk Yarı Alt/Üst, KG Var/Yok, Çifte Şans, İlk Yarı 1/X/2, Tek/Çift ve dört seçenekli Gol Aralığı**. Doğru Skor gerçek ham oran olarak maç detayında gösterilir. İlk Yarı/Maç Sonucu ise dokuz seçeneğin tamamı varsa no-vig normalize edilerek otomatik analize katılır; eksik grup olasılığı uydurulmaz.
+Nesine / Misli / Bilyoner / Tuttur doğrudan collector’ları da korunur. Bir kaynak CAPTCHA/bot koruması döndürürse koruma aşılmaz. Açık bülten hattı çalışırken engellenen veya ayrıştırılamayan kaynakların sağlık durumu ayrıca saklanır.
 
-Nesine / Misli / Bilyoner / Tuttur doğrudan collector’ları da korunur. Bir kaynak CAPTCHA/bot koruması döndürürse koruma aşılmaz. Son doğrulamada açık bülten hattı çalışırken Nesine, Bilyoner ve Tuttur koruma katmanında; Misli ise erişilebilir fakat doğrulanabilir 1X2 yapısı ayrıştırılamadığı için degraded durumdaydı. Bu durumlar kaynak değiştikçe collector sağlık kaydında güncellenir.
+## Risk dengesi ve market çeşitliliği
+
+v0.5 risk motoru yalnızca “oran ne kadar yüksekse o kadar iyi” yaklaşımını kullanmaz. Düşük Risk, Dengeli, Yüksek Getiri ve Ultra Getiri için ayrı olasılık/oran hedef bantları vardır. Seçim hedef olasılıktan uzaklaştıkça, profilin oran bandını aştıkça veya aşırı longshot hâline geldikçe sıralama cezası artar. Böylece **4-5 Gol / 6+ Gol gibi çok düşük olasılıklı dev oranların Yüksek ve Ultra profiline tek başına hakim olması engellenir**.
+
+Kupon oluşturma artık tek tek maçların en yüksek oranlı seçimini bağımsız seçmekle yetinmez. Aynı market ailesi kupona tekrar tekrar girdikçe çeşitlilik cezası uygulanır; benzer kalite ve riskte 1X2, Alt/Üst, KG, Çifte Şans, İlk Yarı, Gol Aralığı ve İY/MS gibi farklı doğrulanmış market aileleri yarışır. Aynı maç kupona yine yalnızca bir kez girebilir.
+
+Risk kartları rapor oluşturulmadan önce o anki filtre, maç sayısı ve gerçek oranlarla her profil için **tahmini birleşik gerçekleşme olasılığı + toplam oran** önizlemesi gösterir. Rapor ekranındaki birleşik değer de “Tahmini Gerçekleşme Olasılığı” olarak gösterilir. Çok küçük fakat sıfır olmayan olasılıklar `%0,0` diye kaybolmaz; adaptif ondalık basamak kullanılır.
+
+Bu olasılıklar gerçek oranlardan bookmaker marjı temizlenerek türetilen piyasa bazlı tahminlerdir. Kesin sonuç veya kazanç garantisi değildir; birleşik hesap seçimlerin bağımsız olduğu varsayımını kullanır.
+
+## İY/MS ve normalize marketler
+
+Analiz motorunun normalize edebildiği aileler: **1/X/2, tamamlanmış Alt/Üst çizgileri, İlk Yarı Alt/Üst, KG Var/Yok, Çifte Şans, İlk Yarı 1/X/2, Tek/Çift, dört seçenekli Gol Aralığı ve tam dokuz seçenekli İY/MS**.
+
+İY/MS için `1/1, 1/X, 1/2, X/1, X/X, X/2, 2/1, 2/X, 2/2` seçeneklerinin dokuzu da mevcutsa dokuzlu grubun bookmaker marjı birlikte temizlenir ve market otomatik analize katılır. 17 Eylül doğrulamasında son 75 dakikalık canlı veride İY/MS bulunan **17 maçın 17’sinde de dokuz seçeneğin tamamı** mevcuttu. Örneğin `İY/MS 1/2`, ilk yarı ev sahibi üstün / maç sonucu deplasman üstün senaryosudur; kaynakta ayrı “ikinci yarı sonucu” marketi yoksa uygulama bunu uydurmaz.
+
+Doğru skor gibi çok geniş veya eksik/örtüşen gruplar gerçek ham oran olarak maç detayında gösterilebilir ancak tamamlayıcı market seti doğrulanmadıkça otomatik kupon olasılığına sokulmaz.
 
 ## Oran hareketi
 
-v0.4 ile maç detayına **Oran hareketi** sekmesi eklendi. Uygulama seçili karşılaşmanın son 6 saatlik `dbo_odds_history` snapshot’larını talep üzerine çeker; her market/seçim için ilk görülen oran, güncel oran, minimum, maksimum, snapshot sayısı ve yüzdesel fiyat değişimini hesaplar. En çok değişen seçimler üstte gösterilir.
+Maç detayındaki **Oran hareketi** sekmesi seçili karşılaşmanın son 6 saatlik `dbo_odds_history` snapshot’larını talep üzerine çeker; her market/seçim için ilk görülen oran, güncel oran, minimum, maksimum, snapshot sayısı ve yüzdesel fiyat değişimini hesaplar. Oran hareketi tek başına sonuç sinyali sayılmaz ve otomatik kupon modeline gizlice eklenmez.
 
-Bu özellik yalnızca geçmiş collector snapshot’larını özetler. Oranın düşmesi veya yükselmesi kendi başına takım haberi, sonuç olasılığı veya bahis sinyali sayılmaz. Hareket özeti otomatik kupon modeline gizlice eklenmez; model ve ham piyasa verisi ayrımı korunur.
+Ana veri akışı yalnızca son **75 dakika** içinde collector tarafından görülmüş maç ve oranları canlı kabul eder. `dbo_odds_history` depolamasının sınırsız büyümemesi için 72 saatten eski oran snapshot’ları, collector kayıtlarında ise 30 günden eski satırlar zamanlanmış cleanup ile temizlenir.
 
-## Analiz yaklaşımı
+## Supabase izolasyonu ve güvenlik
 
-Tamamlayıcı market gruplarında bookmaker marjı kaldırılır. Örneğin 1X2 için `q = 1/oran`, ardından `p = q / Σq`; iki yönlü Alt/Üst, KG Var/Yok ve Tek/Çift için aynı no-vig mantığı kendi tamamlayıcı grubunda uygulanır. İlk Yarı 1/X/2 üç yönlü normalize edilir. Gol Aralığı ancak 0-1, 2-3, 4-5 ve 6+ seçeneklerinin dördü de varsa normalize edilir. Çifte şans olasılığı normalize 1X2 bileşenlerinden türetilir.
-
-Akıllı analiz motoru her oranlı maçtaki **yalnızca normalize edilebilir** marketleri tarar ve veri kalite skoru + piyasa olasılığı + oran seviyesi + seçilen risk profili bileşimini sıralar. Düşük risk profili daha yüksek olasılık/kaliteye; yüksek ve ultra profiller daha yüksek oran ve belirsizliğe daha fazla ağırlık verir. Bu sıralama istatistiksel karar desteğidir; kesin sonuç veya kazanç garantisi değildir.
-
-Maç detayında geniş oran seti ve oran hareketi talep üzerine yüklenir; böylece ana ekran her karşılaşmanın yüzlerce ham/geçmiş oranını gereksiz yere indirmez. Analiz için oranı olmayan TFF fikstürleri görünür kalır ancak kupona alınmaz. Rapor oluşturulduğunda kullanılan maç/oran/olasılık snapshot’ı cihazda saklanır.
-
-Uygulama ana veri akışında yalnızca son **75 dakika** içinde collector tarafından görülmüş maç ve oranları canlı kabul eder. Böylece bültenden düşmüş veya eski kalmış oranların aktif analizde uzun süre görünmesi engellenir; collector normalde 30 dakikada bir çalıştığı için bir geçici çalışma kaçırılsa bile veri hattı gereksiz yere kapanmaz.
-
-## Supabase izolasyonu, saklama ve güvenlik
-
-Proje: `DraBorn-Park-Garage-SportOdds` (`xpdiwyxnnrmyvpcqwuyb`). DraBornOdds nesneleri `dbo_` ile izoledir. Temel tablolar: `dbo_site_collectors`, `dbo_matches`, `dbo_source_matches`, `dbo_odds_history`, `dbo_collector_runs`, `dbo_teams`, `dbo_team_aliases`, `dbo_team_stats`, `dbo_match_analysis`, `dbo_predictions`, `dbo_generated_coupons`, `dbo_user_preferences`, `dbo_app_config`.
-
-GitHub Actions collector her saatin 07/37. dakikasında ve manuel çalışır; collector veya workflow kodu değiştiğinde parser hemen doğrulanır. Büyük bülten Edge Function kaynak limitine takılmaması için 10 maçlık ingestion batch’lerine bölünür. Batch’ler toplam kaynak maç sayısını da taşır; bu nedenle `dbo_site_collectors.dbo_last_match_count` son küçük batch’i değil gerçek toplamı gösterir. Son doğrulamada `iddaa_public` sağlık kaydı **126 maç** olarak doğru biçimde saklandı.
-
-Oran geçmişinin sınırsız büyüyerek Supabase depolamasını tüketmemesi için `dbo_v04_odds_history_retention` migration’ı eklendi. `pg_cron` her saatin 23. dakikasında `dbo_cleanup_history()` çalıştırır; **72 saatten eski oran snapshot’larını** ve **30 günden eski collector run kayıtlarını** temizler. Temizleme için `dbo_collected_at` zaman indeksi vardır. Fonksiyon `anon` ve `authenticated` rollerine açık değildir; yalnızca `postgres`/`service_role` çalıştırabilir. İlk manuel doğrulamada 72 saat sınırının dışında kalan oran satırı 0 olarak kontrol edildi.
-
-`dbo_odds_history` istemci tarafında yalnızca SELECT için RLS ile `anon`/`authenticated` erişimine açıktır; oran hareketi ekranı publishable key ile salt-okunur sorgu yapar. GitHub’da kalıcı service-role anahtarı tutulmaz. Kısa ömürlü GitHub OIDC kimliği kullanılır ve `dbo-ingest-odds` yalnızca `DrabornEagle/DraBornOdds` reposunun `main` ref’ini kabul eder. Edge Function’ın platform JWT kontrolü özel GitHub OIDC doğrulaması kullanıldığı için kapalıdır; fonksiyon kendi içinde issuer + audience + repository + ref denetimini yapar.
+DraBornOdds nesneleri yalnızca `dbo_` ad alanındadır. GitHub Actions collector her saatin 07/37. dakikasında ve manuel çalışır. Büyük bülten güvenli ingestion batch’lerine ayrılır. GitHub’da kalıcı service-role anahtarı tutulmaz; `dbo-ingest-odds` GitHub OIDC issuer + audience + repository + main ref kontrolü yapar. `dbo_odds_history` istemciye RLS üzerinden yalnızca salt-okunur sunulur.
 
 ## Termux + Expo Go 58
 
@@ -65,6 +65,6 @@ node scripts/dkd-fixture-smoke.mjs
 node collectors/dkd_collect.mjs iddaa_public
 ```
 
-CI; kilitli bağımlılık kurulumu, TypeScript, domain testleri, oran hareketi özet testleri, Expo SDK 58 paket uyumu ve Android JavaScript export’unu kontrol eder. Expo export APK üretmez; Android paketinin Expo Go/Metro tarafında derlenebilirliğini doğrular. TFF smoke gerçek fikstür HTML’ini, public bulletin smoke ise geniş oran ayrıştırıcısını doğrular.
+v0.5 CI; kilitli bağımlılık kurulumu, TypeScript, **18 domain/regresyon testi**, Expo SDK 58 paket uyumu ve Android JavaScript export’unu kontrol eder. Regresyon testleri özellikle aşırı longshot seçimini, market ailesi çeşitliliğini ve sıfır olmayan küçük olasılıkların `%0,0` gösterilmemesini denetler. Expo export APK üretmez.
 
 Görünür sürüm: **DKD_draborneagle_v0.5** · Expo SDK 58 · Android **versionCode 1**.
