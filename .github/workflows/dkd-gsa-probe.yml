@@ -10,7 +10,10 @@ jobs:
         shell: bash
         run: |
           set -e
-          curl -L --max-time 15 -A 'Mozilla/5.0' -o /tmp/team.html -w 'TEAM_HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/soccer/team/stade-tunisien/16517/'
-          grep -Eio '<img[^>]+(Stade Tunisien|16517)[^>]*>|Last Matches|Standings|12\.09\.2026|Stade Tunisien[^<]{0,100}' /tmp/team.html | head -40 || true
-          curl -L --max-time 15 -A 'Mozilla/5.0' -o /tmp/root.html -w 'ROOT_HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/'
-          grep -Eio '.{0,100}(search|autocomplete).{0,180}' /tmp/root.html | head -30 || true
+          curl -Ls --max-time 15 -A 'Mozilla/5.0' -o /tmp/root.html 'https://globalsportsarchive.com/en/'
+          echo '--- inputs/forms around search ---'
+          grep -Ein 'League, event or player|search|autocomplete' /tmp/root.html | head -50 || true
+          echo '--- scripts ---'
+          grep -Eo '<script[^>]+src="[^"]+"' /tmp/root.html | head -50 || true
+          echo '--- candidate endpoint tokens ---'
+          grep -Eio '[/A-Za-z0-9_.?=&-]{0,120}(search|autocomplete)[/A-Za-z0-9_.?=&-]{0,160}' /tmp/root.html | head -50 || true
