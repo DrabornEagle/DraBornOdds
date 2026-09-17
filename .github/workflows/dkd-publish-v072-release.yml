@@ -1,0 +1,75 @@
+name: DraBornOdds v0.7.2 canonical APK release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-publish-v072-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dkd-drabornodds-v072-canonical-release
+  cancel-in-progress: false
+
+jobs:
+  dkd_publish_canonical_release:
+    name: Publish verified v0.7.2 code 1 APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: DKD checkout canonical source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: DKD verify canonical identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'DKD_NODE'
+          const dkd_app=require('./app.json').expo;
+          const dkd_package=require('./package.json');
+          if(dkd_app.version!=='0.7.2'||dkd_package.version!=='0.7.2') throw new Error('DKD ERROR: canonical version must be 0.7.2');
+          if(Number(dkd_app.android.versionCode)!==1) throw new Error('DKD ERROR: Android versionCode must be 1');
+          DKD_NODE
+
+      - name: DKD download signed APK from protected signer
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dkd_signed_release
+          dkd_base='https://github.com/DrabornEagle/DraBornGo/releases/download/drabornodds-v0.7.2-code1'
+          for dkd_name in DraBornOdds-v0.7.2-code1-release.apk SHA256.txt CERTIFICATE.txt SOURCE_COMMIT.txt; do
+            curl --retry 90 --retry-delay 10 --retry-all-errors -fL "$dkd_base/$dkd_name" -o "dkd_signed_release/$dkd_name"
+          done
+
+      - name: DKD verify APK integrity and exact source
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd dkd_signed_release && sha256sum -c SHA256.txt)
+          dkd_signed_source="$(tr -d '\r\n' < dkd_signed_release/SOURCE_COMMIT.txt)"
+          dkd_canonical_source="$(git rev-parse HEAD)"
+          test "$dkd_signed_source" = "$dkd_canonical_source" || { echo "DKD ERROR: signed APK source $dkd_signed_source does not equal canonical $dkd_canonical_source"; exit 1; }
+          grep -q 'Signer #1 certificate SHA-256 digest' dkd_signed_release/CERTIFICATE.txt
+          echo 'DKD signed APK integrity and canonical source verified.'
+
+      - name: DKD publish canonical GitHub Release
+        shell: bash
+        run: |
+          set -euo pipefail
+          dkd_tag='v0.7.2'
+          if ! gh release view "$dkd_tag" >/dev/null 2>&1; then
+            gh release create "$dkd_tag" --target "$GITHUB_SHA" --title 'DraBornOdds v0.7.2 · Android code 1' --notes 'DraBornOdds v0.7.2 bağımsız Android APK dağıtımı. Android versionCode 1. APK korumalı DraBornEagle Android release anahtarıyla GitHub Actions üzerinde imzalanmış, apksigner ve SHA-256 ile doğrulanmıştır. Google Play dağıtımı kullanılmaz; Android ve Web aynı canonical DraBornOdds kaynağından senkron tutulur.'
+          fi
+          gh release upload "$dkd_tag" \
+            dkd_signed_release/DraBornOdds-v0.7.2-code1-release.apk \
+            dkd_signed_release/SHA256.txt \
+            dkd_signed_release/CERTIFICATE.txt \
+            dkd_signed_release/SOURCE_COMMIT.txt \
+            --clobber
