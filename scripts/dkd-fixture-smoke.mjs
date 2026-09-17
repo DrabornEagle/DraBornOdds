@@ -1,12 +1,17 @@
 const dkd_url='https://www.tff.org/?pageID=198';
 
+function dkd_decodeTurkish(dkd_buffer){
+  const dkd_map=new Map([[0xD0,0x011E],[0xDD,0x0130],[0xDE,0x015E],[0xF0,0x011F],[0xFD,0x0131],[0xFE,0x015F]]);
+  return Array.from(new Uint8Array(dkd_buffer),dkd_byte=>String.fromCodePoint(dkd_map.get(dkd_byte)??dkd_byte)).join('');
+}
 const dkd_controller=new AbortController();
 const dkd_timer=setTimeout(()=>dkd_controller.abort(),15000);
-let dkd_html='';
+let dkd_html='';let dkd_charset='';
 try{
   const dkd_response=await fetch(dkd_url,{signal:dkd_controller.signal,headers:{Accept:'text/html,application/xhtml+xml','User-Agent':'DraBornOdds/0.2 public-fixture-smoke'}});
   if(!dkd_response.ok)throw new Error(`TFF HTTP ${dkd_response.status}`);
-  dkd_html=await dkd_response.text();
+  const dkd_type=dkd_response.headers.get('content-type')||'';dkd_charset=dkd_type;
+  dkd_html=/utf-8/i.test(dkd_type)?await dkd_response.text():dkd_decodeTurkish(await dkd_response.arrayBuffer());
 }finally{clearTimeout(dkd_timer);}
 
 const dkd_text=dkd_html.replace(/<script\b[\s\S]*?<\/script>/gi,' ').replace(/<style\b[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;|&#160;/gi,' ').replace(/&amp;/gi,'&').replace(/&#(\d+);/g,(dkd_all,dkd_code)=>String.fromCodePoint(Number(dkd_code))).replace(/\s+/g,' ').trim();
@@ -15,4 +20,5 @@ const dkd_rows=[...dkd_text.matchAll(dkd_pattern)].map(dkd_match=>({dkd_date:dkd
 if(!dkd_rows.length)throw new Error('TFF public fixture page returned no parseable dated fixtures.');
 const dkd_future=dkd_rows.find(dkd_row=>{const [dkd_day,dkd_month,dkd_year]=dkd_row.dkd_date.split('.');return new Date(`${dkd_year}-${dkd_month}-${dkd_day}T${dkd_row.dkd_time}:00+03:00`).getTime()>Date.now()-6*3600000;});
 if(!dkd_future)throw new Error('TFF public fixture page returned no current/future fixture.');
-console.log(JSON.stringify({dkd_status:'ok',dkd_source:'TFF public HTML',dkd_count:dkd_rows.length,...dkd_future},null,2));
+if(/[�]/.test(`${dkd_future.dkd_home}${dkd_future.dkd_away}`))throw new Error('TFF Turkish text charset could not be decoded cleanly.');
+console.log(JSON.stringify({dkd_status:'ok',dkd_source:'TFF public HTML',dkd_contentType:dkd_charset,dkd_count:dkd_rows.length,...dkd_future},null,2));
