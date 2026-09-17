@@ -41,32 +41,18 @@ jobs:
           dkd_replace(path,
             "  const dkd_match=dkd_store.dkd_matches.find(dkd_item=>dkd_item.dkd_id===dkd_id)??dkd_store.dkd_stored.dkd_coupons.flatMap(dkd_coupon=>dkd_coupon.dkd_snapshot).find(dkd_item=>dkd_item.dkd_id===dkd_id);",
             "  const dkd_match=dkd_store.dkd_matches.find(dkd_item=>dkd_item.dkd_id===dkd_id)??dkd_store.dkd_stored.dkd_coupons.flatMap(dkd_coupon=>dkd_coupon.dkd_snapshot).find(dkd_item=>dkd_item.dkd_id===dkd_id);\n  dkd_React.useEffect(()=>{let dkd_active=true;dkd_setContext(null);if(!dkd_match)return()=>{dkd_active=false};dkd_fetchMatchContext(dkd_match).then(dkd_value=>{if(dkd_active)dkd_setContext(dkd_value)});return()=>{dkd_active=false};},[dkd_match?.dkd_id]);")
-          dkd_replace(path,
-            "dkd_top?dkd_marketInsight(dkd_match,dkd_top):null",
-            "dkd_top?dkd_marketInsight(dkd_match,dkd_top,dkd_context):null")
-          dkd_replace(path,
-            "{dkd_insight.dkd_points[1]}",
-            "{dkd_insight.dkd_points[0]}")
-          dkd_replace(path,
-            "dkd_subtitle=\"Teknik kaynak sayısı yerine, bu oranın neden öne çıktığını adım adım gösterir.\"",
-            "dkd_subtitle=\"Takımların doğrulanmış son maçları, lig sırası ve güncel oran bağlamını birlikte açıklar.\"")
+          dkd_replace(path,"dkd_top?dkd_marketInsight(dkd_match,dkd_top):null","dkd_top?dkd_marketInsight(dkd_match,dkd_top,dkd_context):null")
+          dkd_replace(path,"{dkd_insight.dkd_points[1]}","{dkd_insight.dkd_points[0]}")
+          dkd_replace(path,"dkd_subtitle=\"Teknik kaynak sayısı yerine, bu oranın neden öne çıktığını adım adım gösterir.\"","dkd_subtitle=\"Takımların doğrulanmış son maçları, lig sırası ve güncel oran bağlamını birlikte açıklar.\"")
 
           path='app/report/[dkd_id].tsx'
-          dkd_replace(path,
-            "import * as dkd_RN from 'react-native';",
-            "import * as dkd_React from 'react';\nimport * as dkd_RN from 'react-native';")
-          dkd_replace(path,
-            "import { dkd_decimal, dkd_money, dkd_percent, dkd_reason, dkd_risks, dkd_shareText, dkd_summarize } from '../../src/dkd-engine';",
-            "import { dkd_decimal, dkd_money, dkd_percent, dkd_risks, dkd_shareText, dkd_summarize } from '../../src/dkd-engine';\nimport { dkd_contextReason, dkd_fetchMatchContext, type dkd_MatchContext } from '../../src/dkd-football-context';")
+          dkd_replace(path,"import * as dkd_RN from 'react-native';","import * as dkd_React from 'react';\nimport * as dkd_RN from 'react-native';")
+          dkd_replace(path,"import { dkd_decimal, dkd_money, dkd_percent, dkd_reason, dkd_risks, dkd_shareText, dkd_summarize } from '../../src/dkd-engine';","import { dkd_decimal, dkd_money, dkd_percent, dkd_risks, dkd_shareText, dkd_summarize } from '../../src/dkd-engine';\nimport { dkd_contextReason, dkd_fetchMatchContext, type dkd_MatchContext } from '../../src/dkd-football-context';")
           dkd_replace(path,
             "  const {dkd_id}=dkd_Router.useLocalSearchParams<{dkd_id:string}>();const dkd_store=dkd_useStore();const dkd_saved=dkd_store.dkd_stored.dkd_coupons.find(dkd_item=>dkd_item.dkd_id===dkd_id);const dkd_coupon=dkd_saved??dkd_store.dkd_reports.find(dkd_item=>dkd_item.dkd_id===dkd_id);",
             "  const {dkd_id}=dkd_Router.useLocalSearchParams<{dkd_id:string}>();const dkd_store=dkd_useStore();const dkd_saved=dkd_store.dkd_stored.dkd_coupons.find(dkd_item=>dkd_item.dkd_id===dkd_id);const dkd_coupon=dkd_saved??dkd_store.dkd_reports.find(dkd_item=>dkd_item.dkd_id===dkd_id);\n  const [dkd_contexts,dkd_setContexts]=dkd_React.useState<Record<string,dkd_MatchContext>>({});\n  dkd_React.useEffect(()=>{let dkd_active=true;if(!dkd_coupon)return()=>{dkd_active=false};Promise.all(dkd_coupon.dkd_snapshot.map(async dkd_match=>[dkd_match.dkd_id,await dkd_fetchMatchContext(dkd_match)] as const)).then(dkd_values=>{if(dkd_active)dkd_setContexts(Object.fromEntries(dkd_values))});return()=>{dkd_active=false};},[dkd_coupon?.dkd_id]);")
-          dkd_replace(path,
-            "{dkd_reason(dkd_row.dkd_match,dkd_row.dkd_market)}",
-            "{dkd_contextReason(dkd_row.dkd_match,dkd_row.dkd_market,dkd_contexts[dkd_row.dkd_match.dkd_id])}")
-          dkd_replace(path,
-            "dkd_subtitle=\"Genel tahmin, aşağıdaki seçim yüzdelerinin aritmetik ortalamasıdır.\"",
-            "dkd_subtitle=\"Her maçta son performans, lig sırası ve güncel piyasa birlikte okunur; doğrulanmayan bilgi üretilmez.\"")
+          dkd_replace(path,"{dkd_reason(dkd_row.dkd_match,dkd_row.dkd_market)}","{dkd_contextReason(dkd_row.dkd_match,dkd_row.dkd_market,dkd_contexts[dkd_row.dkd_match.dkd_id])}")
+          dkd_replace(path,"dkd_subtitle=\"Genel tahmin, aşağıdaki seçim yüzdelerinin aritmetik ortalamasıdır.\"","dkd_subtitle=\"Her maçta son performans, lig sırası ve güncel piyasa birlikte okunur; doğrulanmayan bilgi üretilmez.\"")
 
           path='src/dkd-engine.ts'
           dkd_replace(path,
@@ -94,3 +80,5 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "feat(v0.7.1): add club crests and football-form reasoning"
           git push
+
+# dkd v0.7.1 one-time trigger
