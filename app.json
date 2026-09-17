@@ -14,7 +14,7 @@
     ],
     "android": {
       "package": "com.draborneagle.drabornodds",
-      "versionCode": 2
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
@@ -36,7 +36,8 @@
       "dkd_privacy_url": "https://www.draborneagle.com/DraBornOdds/privacy",
       "dkd_terms_url": "https://www.draborneagle.com/DraBornOdds/terms",
       "dkd_data_safety_url": "https://www.draborneagle.com/DraBornOdds/data-safety",
-      "dkd_support_url": "https://www.draborneagle.com/DraBornOdds/support"
+      "dkd_support_url": "https://www.draborneagle.com/DraBornOdds/support",
+      "dkd_apk_url": "https://www.draborneagle.com/DraBornOdss/App/"
     }
   }
 }
