@@ -1,4 +1,4 @@
-name: DraBornOdds v0.2 checks
+name: DraBornOdds v0.3 checks
 on:
   push:
     branches: [main]
@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: dkd-v02-${{ github.ref }}
+  group: dkd-v03-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   dkd-verify:
