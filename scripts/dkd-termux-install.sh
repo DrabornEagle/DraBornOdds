@@ -18,6 +18,6 @@ cd "$dkd_target"
 printf '\nSDK 58 bağımlılıkları kuruluyor…\n'
 npm ci --no-audit --no-fund
 printf '\nHazır. Bu kurulum ZIP tabanlıdır; güncelleme için git fetch/reset gerekmez.\n'
-printf 'Gerçek Süper Lig fikstürü TFF public web akışından; doğrulanmış 1X2 hattı izole dbo_ backendinden okunur.\n'
+printf 'Canlı futbol bülteni ve doğrulanmış çoklu oran marketleri izole dbo_ veri hattından okunur; TFF fikstürü güvenli yedek kaynaktır.\n'
 printf 'Aynı telefonda Expo Go 58 → URL gir → exp://127.0.0.1:8081\n\n'
 EXPO_NO_TELEMETRY=1 npm start -- --port 8081 --clear
