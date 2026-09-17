@@ -10,10 +10,15 @@ jobs:
         shell: bash
         run: |
           set -e
-          curl -Ls --max-time 15 -A 'Mozilla/5.0' -o /tmp/root.html 'https://globalsportsarchive.com/en/'
-          echo '--- inputs/forms around search ---'
-          grep -Ein 'League, event or player|search|autocomplete' /tmp/root.html | head -50 || true
-          echo '--- scripts ---'
-          grep -Eo '<script[^>]+src="[^"]+"' /tmp/root.html | head -50 || true
-          echo '--- candidate endpoint tokens ---'
-          grep -Eio '[/A-Za-z0-9_.?=&-]{0,120}(search|autocomplete)[/A-Za-z0-9_.?=&-]{0,160}' /tmp/root.html | head -50 || true
+          echo '--- slug-only redirects ---'
+          curl -Ls --max-time 15 -A 'Mozilla/5.0' -o /tmp/slug.html -w 'ST_URL=%{url_effective} HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/soccer/team/stade-tunisien/'
+          curl -Ls --max-time 15 -A 'Mozilla/5.0' -o /tmp/club.html -w 'CA_URL=%{url_effective} HTTP=%{http_code} SIZE=%{size_download}\n' 'https://globalsportsarchive.com/en/soccer/team/club-africain/'
+          echo '--- javascript search tokens ---'
+          curl -Ls --max-time 15 -A 'Mozilla/5.0' 'https://globalsportsarchive.com/en/resources/assets/js/common/gsa.js' -o /tmp/gsa.js
+          curl -Ls --max-time 15 -A 'Mozilla/5.0' 'https://globalsportsarchive.com/en/resources/assets/js/site.js' -o /tmp/site.js
+          grep -Ein 'search|autocomplete|ajax|typeahead' /tmp/gsa.js /tmp/site.js | head -100 || true
+          echo '--- last match markup ---'
+          curl -Ls --max-time 15 -A 'Mozilla/5.0' 'https://globalsportsarchive.com/en/soccer/team/stade-tunisien/16517/' -o /tmp/team.html
+          grep -n -B12 -A25 '12.09.2026' /tmp/team.html | head -100 || true
+          echo '--- standings markup ---'
+          grep -n -B15 -A30 'Standings' /tmp/team.html | tail -100 || true
