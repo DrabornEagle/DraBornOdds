@@ -1,0 +1,33 @@
+name: DraBornOdds v0.7 retention hotfix
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-v07-retention-hotfix.yml'
+permissions:
+  contents: write
+jobs:
+  dkd-hotfix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Keep last verified odds when scheduled refresh is delayed
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs=require('fs');
+          const path='src/dkd-live.ts';
+          const before=fs.readFileSync(path,'utf8');
+          const needle='Date.now()-75*60000';
+          const count=before.split(needle).length-1;
+          if(count!==2) throw new Error(`Expected exactly 2 freshness guards, found ${count}`);
+          const after=before.split(needle).join('Date.now()-6*60*60000');
+          fs.writeFileSync(path,after);
+          NODE
+          rm .github/workflows/dkd-v07-retention-hotfix.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/dkd-live.ts .github/workflows/dkd-v07-retention-hotfix.yml
+          git commit -m 'fix(v0.7): retain last verified odds across collector delays'
+          git push
