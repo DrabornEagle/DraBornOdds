@@ -35,8 +35,8 @@ export function dkd_marketInsight(dkd_match:dkd_Match,dkd_market:dkd_Market,dkd_
   const dkd_sameGroup=dkd_ranked.filter(dkd_item=>dkd_item.dkd_group===dkd_market.dkd_group);
   const dkd_groupBest=[...dkd_sameGroup].sort((dkd_left,dkd_right)=>dkd_right.dkd_probability-dkd_left.dkd_probability)[0];
   const dkd_marketSentence=dkd_groupBest&&dkd_groupBest.dkd_key!==dkd_market.dkd_key
-    ?`${dkd_group} grubunda en yüksek piyasa olasılığı ${dkd_groupBest.dkd_short} için ${dkd_percent(dkd_groupBest.dkd_probability)}; buna rağmen ${dkd_market.dkd_short} ${dkd_decimal(dkd_market.dkd_odds)} oranıyla risk–getiri dengesinde üst sıralara çıkıyor.`
-    :`${dkd_market.dkd_short}, ${dkd_group.toLocaleLowerCase('tr-TR')} grubunda ${dkd_percent(dkd_probability)} normalize olasılık ve ${dkd_decimal(dkd_market.dkd_odds)} oranı birlikte değerlendirildiğinde güçlü denge oluşturuyor.`;
+    ?`${dkd_group} grubunda en yüksek piyasa olasılığı ${dkd_groupBest.dkd_short} için ${dkd_percent(dkd_groupBest.dkd_probability)}; buna rağmen ${dkd_market.dkd_short} ${dkd_decimal(dkd_market.dkd_odds)} oranıyla olasılık–oran dengesi açısından üst sıralara çıkıyor.`
+    :`${dkd_market.dkd_short}, ${dkd_group.toLocaleLowerCase('tr-TR')} grubunda ${dkd_percent(dkd_probability)} normalize olasılık ve ${dkd_decimal(dkd_market.dkd_odds)} oranıyla güçlü bir olasılık–oran dengesi oluşturuyor.`;
   const dkd_points=[
     dkd_contextReason(dkd_match,dkd_market,dkd_context),
     dkd_marketSentence,
