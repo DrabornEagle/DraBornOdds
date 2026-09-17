@@ -1,0 +1,69 @@
+name: DraBornOdds v0.7.1 playable refresh fix
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-v071-playable-refresh-fix.yml'
+permissions:
+  contents: write
+jobs:
+  dkd-apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch v0.7.1 runtime
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          def patch(path, pairs):
+              file=Path(path); text=file.read_text()
+              for old,new in pairs:
+                  if old not in text:
+                      raise SystemExit(f'Patch target missing in {path}: {old[:100]}')
+                  text=text.replace(old,new,1)
+              file.write_text(text)
+
+          patch('src/dkd-live.ts',[
+            ("export const dkd_fixtureDay=()=>dkd_dayKey(new Date());", "export const dkd_fixtureDay=()=>dkd_dayKey(new Date());\nexport function dkd_isPlayable(dkd_match:Pick<dkd_Match,'dkd_startAt'>,dkd_now=Date.now()){const dkd_start=new Date(dkd_match.dkd_startAt).getTime();return Number.isFinite(dkd_start)&&dkd_start>dkd_now}"),
+            ("async function dkd_backend(){const dkd_now=new Date(Date.now()-30*60000).toISOString()", "async function dkd_backend(){const dkd_now=new Date().toISOString()"),
+            ("dkd_cutoff=Date.now()-6*3600000,dkd_matches=dkd_parseTffFixtures(dkd_html).map(dkd_fixture).filter(dkd_match=>new Date(dkd_match.dkd_startAt).getTime()>=dkd_cutoff)", "dkd_cutoff=Date.now(),dkd_matches=dkd_parseTffFixtures(dkd_html).map(dkd_fixture).filter(dkd_match=>new Date(dkd_match.dkd_startAt).getTime()>dkd_cutoff)"),
+            ("dkd_matches:[...dkd_map.values()].sort((dkd_a,dkd_b2)=>new Date(dkd_a.dkd_startAt).getTime()-new Date(dkd_b2.dkd_startAt).getTime())", "dkd_matches:[...dkd_map.values()].filter(dkd_match=>dkd_isPlayable(dkd_match)).sort((dkd_a,dkd_b2)=>new Date(dkd_a.dkd_startAt).getTime()-new Date(dkd_b2.dkd_startAt).getTime())")
+          ])
+
+          patch('src/dkd-store.tsx',[
+            ("import { dkd_fetchLive, dkd_fixtureDay } from './dkd-live';", "import { dkd_fetchLive, dkd_fixtureDay, dkd_isPlayable } from './dkd-live';"),
+            ("const dkd_accept=(dkd_newMatches:dkd_Match[],dkd_newSources:dkd_SourceStatus[],dkd_loadedAt:string)=>{dkd_setMatches(dkd_newMatches);dkd_setSources(dkd_newSources);dkd_setLiveLoadedAt(dkd_loadedAt);dkd_setLiveError('');dkd_setLiveState('ready');dkd_setDraft(dkd_prev=>dkd_prev.filter(dkd_pick=>dkd_newMatches.some(dkd_match=>dkd_match.dkd_id===dkd_pick.dkd_matchId)));};", "const dkd_accept=(dkd_newMatches:dkd_Match[],dkd_newSources:dkd_SourceStatus[],dkd_loadedAt:string)=>{const dkd_playable=dkd_newMatches.filter(dkd_match=>dkd_isPlayable(dkd_match));dkd_setMatches(dkd_playable);dkd_setSources(dkd_newSources);dkd_setLiveLoadedAt(dkd_loadedAt);dkd_setLiveError('');dkd_setLiveState('ready');dkd_setDraft(dkd_prev=>dkd_prev.filter(dkd_pick=>dkd_playable.some(dkd_match=>dkd_match.dkd_id===dkd_pick.dkd_matchId)));};"),
+            ("dkd_refreshLive().catch(()=>{});dkd_RN.AccessibilityInfo.isReduceMotionEnabled()", "dkd_refreshLive().catch(()=>{});const dkd_pruneTimer=setInterval(()=>{dkd_setMatches(dkd_prev=>dkd_prev.filter(dkd_match=>dkd_isPlayable(dkd_match)));dkd_setDraft(dkd_prev=>dkd_prev.filter(dkd_pick=>dkd_matches.some(dkd_match=>dkd_match.dkd_id===dkd_pick.dkd_matchId&&dkd_isPlayable(dkd_match))));},10000);const dkd_refreshTimer=setInterval(()=>{dkd_refreshLive(true).catch(()=>{});},60000);const dkd_appState=dkd_RN.AppState.addEventListener('change',dkd_state=>{if(dkd_state==='active')dkd_refreshLive(true).catch(()=>{});});dkd_RN.AccessibilityInfo.isReduceMotionEnabled()"),
+            ("return()=>{dkd_active=false;dkd_subscription.remove();clearTimeout(dkd_toastTimer.current);};", "return()=>{dkd_active=false;clearInterval(dkd_pruneTimer);clearInterval(dkd_refreshTimer);dkd_appState.remove();dkd_subscription.remove();clearTimeout(dkd_toastTimer.current);};"),
+            ("const dkd_select=(dkd_pick:dkd_Pick)=>{const dkd_existing=", "const dkd_select=(dkd_pick:dkd_Pick)=>{const dkd_target=dkd_matches.find(dkd_match=>dkd_match.dkd_id===dkd_pick.dkd_matchId);if(!dkd_target||!dkd_isPlayable(dkd_target)){dkd_notify('Bu karşılaşmanın başlama saati geçti; artık kupona eklenemez.');dkd_refreshLive(true).catch(()=>{});return;}const dkd_existing=")
+          ])
+
+          patch('app/(tabs)/matches.tsx',[
+            ("import { dkd_filterMatches } from '../../src/dkd-engine';", "import { dkd_filterMatches } from '../../src/dkd-engine';\nimport { dkd_isPlayable } from '../../src/dkd-live';"),
+            ("const dkd_list=dkd_React.useMemo(()=>dkd_filterMatches(dkd_store.dkd_matches,dkd_period,dkd_league,dkd_query).filter(dkd_match=>!dkd_onlyFavorites||dkd_store.dkd_stored.dkd_favorites.includes(dkd_match.dkd_id))", "const dkd_list=dkd_React.useMemo(()=>dkd_filterMatches(dkd_store.dkd_matches,dkd_period,dkd_league,dkd_query).filter(dkd_match=>dkd_isPlayable(dkd_match)).filter(dkd_match=>!dkd_onlyFavorites||dkd_store.dkd_stored.dkd_favorites.includes(dkd_match.dkd_id))")
+          ])
+
+          patch('src/dkd-football-context.ts',[
+            ("const dkd_sponsors=new Set(['tumosan','corendon','arca','caykur','rams','ikas','atakum','bellona']);", "const dkd_sponsors=new Set(['tumosan','corendon','arca','caykur','rams','ikas','atakum','bellona']);\nconst dkd_knownGsa:Record<string,string>={gasogi:'https://globalsportsarchive.com/en/soccer/team/gasogi-united-fc/42590/',gorilla:'https://globalsportsarchive.com/en/soccer/team/gorilla-fc/48840/',mukura:'https://globalsportsarchive.com/en/soccer/team/mukura-victory-sport/14422/',police:'https://globalsportsarchive.com/en/soccer/team/police-fc/14419/'};"),
+            ("async function dkd_searchGsa(dkd_teamName:string):Promise<dkd_GsaResolved|null>{const dkd_terms=", "async function dkd_searchGsa(dkd_teamName:string):Promise<dkd_GsaResolved|null>{const dkd_known=dkd_knownGsa[dkd_coreName(dkd_teamName)];if(dkd_known)return{dkd_name:dkd_teamName,dkd_url:dkd_known,dkd_logo:null};const dkd_terms="),
+            ("dkd_logo=String(dkd_best.dkd_item.logo??'').replace('/50x50/','/200x200/');return{dkd_name:dkd_best.dkd_name||dkd_teamName,dkd_url:`https://globalsportsarchive.com/en/soccer/team/${dkd_path}/`,dkd_logo:dkd_logo||null};", "dkd_logoRaw=String(dkd_best.dkd_item.logo??'').replace('/50x50/','/200x200/'),dkd_logo=dkd_absolute(dkd_decode(dkd_logoRaw),'https://sport-widgets.com/');return{dkd_name:dkd_best.dkd_name||dkd_teamName,dkd_url:`https://globalsportsarchive.com/en/soccer/team/${dkd_path}/`,dkd_logo};"),
+            ("return dkd_absolute(dkd_decode(dkd_source),dkd_base)??dkd_fallback;", "return dkd_absolute(dkd_decode(dkd_source),dkd_base)??dkd_absolute(dkd_fallback??'',dkd_base);")
+          ])
+
+          patch('src/dkd-team-logo.tsx',[
+            ("const dkd_logoPending=new Map<string,Promise<string|null>>();", "const dkd_logoPending=new Map<string,Promise<string|null>>();\ntype dkd_LogoManifest={dkd_logos?:Record<string,string>};\nlet dkd_manifestPromise:Promise<dkd_LogoManifest|null>|null=null;\nasync function dkd_manifest(){if(dkd_manifestPromise)return dkd_manifestPromise;dkd_manifestPromise=(async()=>{try{const dkd_response=await fetch(`https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos.json?dkd=${Date.now()}`,{headers:{Accept:'application/json'}});if(!dkd_response.ok)return null;return await dkd_response.json() as dkd_LogoManifest;}catch{return null;}})();return dkd_manifestPromise;}"),
+            ("try{\n      const dkd_context=await dkd_fetchTeamContext", "try{\n      const dkd_cachedManifest=await dkd_manifest(),dkd_manifestLogo=dkd_cachedManifest?.dkd_logos?.[dkd_cacheKey]??dkd_cachedManifest?.dkd_logos?.[dkd_clubKey(dkd_team.dkd_name)];if(dkd_manifestLogo){dkd_logoCache.set(dkd_cacheKey,dkd_manifestLogo);return dkd_manifestLogo;}\n      const dkd_context=await dkd_fetchTeamContext")
+          ])
+
+          patch('.github/workflows/dkd-live-collect.yml',[("- cron: '7,22,37,52 * * * *'", "- cron: '*/5 * * * *'")])
+          PY
+      - name: Commit fixes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/dkd-live.ts src/dkd-store.tsx src/dkd-football-context.ts src/dkd-team-logo.tsx 'app/(tabs)/matches.tsx' .github/workflows/dkd-live-collect.yml
+          git commit -m 'fix(v0.7.1): hide started matches refresh live feed and stabilize club crests'
+          git push
