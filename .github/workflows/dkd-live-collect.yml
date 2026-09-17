@@ -1,5 +1,7 @@
 name: DraBornOdds live collectors
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '7,37 * * * *'
@@ -32,8 +34,4 @@ jobs:
         env:
           DBO_OIDC_TOKEN: ${{ steps.dkd_oidc.outputs.token }}
         run: |
-          curl --fail-with-body --silent --show-error \
-            -X POST 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/dbo-ingest-odds' \
-            -H "Authorization: Bearer $DBO_OIDC_TOKEN" \
-            -H 'Content-Type: application/json' \
-            --data-binary @dkd-collector-output.json | jq .
+          curl --fail-with-body --silent --show-error -X POST 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/dbo-ingest-odds' -H "Authorization: Bearer $DBO_OIDC_TOKEN" -H 'Content-Type: application/json' --data-binary @dkd-collector-output.json | jq .
