@@ -1,0 +1,39 @@
+name: DraBornOdds club crest cache
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '18 */4 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/dkd-refresh-team-logos.mjs'
+      - '.github/workflows/dkd-team-logo-cache.yml'
+permissions:
+  contents: write
+concurrency:
+  group: dkd-team-logo-cache
+  cancel-in-progress: true
+jobs:
+  dkd-cache-club-crests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Resolve and cache original club crests
+        run: node scripts/dkd-refresh-team-logos.mjs
+      - name: Commit refreshed crest cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/dkd-team-logos assets/dkd-team-logos.json
+          if git diff --cached --quiet; then
+            echo 'Logo cache already current.'
+            exit 0
+          fi
+          git commit -m 'data(v0.7.1): refresh original club crest cache'
+          git push
