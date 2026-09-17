@@ -1,0 +1,90 @@
+name: DraBornOdds canonical APK mirror
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,37 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dkd-drabornodds-canonical-apk-mirror
+  cancel-in-progress: true
+
+jobs:
+  dkd_publish_apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: DKD checkout canonical source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+
+      - name: DKD resolve current release identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          dkd_version="$(node -p "require('./app.json').expo.version")"
+          dkd_code="$(node -p "require('./app.json').expo.android.versionCode")"
+          echo "DKD_VERSION=$dkd_version" >> "$GITHUB_ENV"
+          echo "DKD_CODE=$dkd_code" >> "$GITHUB_ENV"
+          echo "DKD_SIGNER_TAG=drabornodds-v${dkd_version}-code${dkd_code}" >> "$GITHUB_ENV"
+          echo "DKD_CANONICAL_TAG=v${dkd_version}" >> "$GITHUB_ENV"
+          echo "DKD_APK=DraBornOdds-v${dkd_version}-code${dkd_code}-release.apk" >> "$GITHUB_ENV"
+
+      - name: DKD download synchronized signer release
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dkd_signed_release
+          dkd_base="https://github.com/DrabornEagle/DraBornGo/releases/download/${DKD_SIGNER_TAG}"
+          for dkd_name in "$DKD_APK" SHA256.txt CERTIFICATE.txt SOURCE_COMMIT.txt; do
+            curl --retry 12 --retry-delay 10 --retry-all-errors -fL "$dkd_base/$dkd_name" -o "dkd_signed_release/$dkd_name"
+          done
+
+      - name: DKD verify signed application identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd dkd_signed_release && sha256sum -c SHA256.txt)
+          dkd_signed_source="$(tr -d '\r\n' < dkd_signed_release/SOURCE_COMMIT.txt)"
+          if ! git cat-file -e "$dkd_signed_source^{commit}" 2>/dev/null; then
+            git fetch origin "$dkd_signed_source" --depth=1
+          fi
+          if ! git diff --quiet "$dkd_signed_source" HEAD -- . ':(exclude).github/**'; then
+            echo 'DKD ERROR: signer release is older than the application source; waiting for the automatic signer.'
+            exit 1
+          fi
+          grep -q 'Signer #1 certificate SHA-256 digest' dkd_signed_release/CERTIFICATE.txt
+          echo "DKD_SIGNED_SOURCE=$dkd_signed_source" >> "$GITHUB_ENV"
+
+      - name: DKD decide whether canonical release is current
+        shell: bash
+        run: |
+          set -euo pipefail
+          dkd_published_source="$(curl -fsL "https://github.com/DrabornEagle/DraBornOdds/releases/download/${DKD_CANONICAL_TAG}/SOURCE_COMMIT.txt" 2>/dev/null | tr -d '\r\n' || true)"
+          if [ "$dkd_published_source" = "$DKD_SIGNED_SOURCE" ]; then
+            echo 'DKD_PUBLISH=0' >> "$GITHUB_ENV"
+            echo 'Canonical release already matches the signed application source.'
+          else
+            echo 'DKD_PUBLISH=1' >> "$GITHUB_ENV"
+          fi
+
+      - name: DKD publish canonical signed APK
+        if: env.DKD_PUBLISH == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! gh release view "$DKD_CANONICAL_TAG" >/dev/null 2>&1; then
+            gh release create "$DKD_CANONICAL_TAG" --target "$GITHUB_SHA" --title "DraBornOdds v${DKD_VERSION} · Android code ${DKD_CODE}" --notes 'Android ve Web aynı DraBornOdds uygulama kaynağından senkron tutulur. APK korumalı DraBornEagle release anahtarıyla imzalanır ve SHA-256 ile doğrulanır.'
+          fi
+          gh release upload "$DKD_CANONICAL_TAG" \
+            "dkd_signed_release/$DKD_APK" \
+            dkd_signed_release/SHA256.txt \
+            dkd_signed_release/CERTIFICATE.txt \
+            dkd_signed_release/SOURCE_COMMIT.txt \
+            --clobber
