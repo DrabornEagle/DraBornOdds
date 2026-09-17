@@ -1,4 +1,4 @@
-# DraBornOdds · v0.4 · versionCode 1
+# DraBornOdds · v0.5 · versionCode 1
 
 DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 uygulaması gerçek futbol verisini public-web kaynaklarından toplar; ücretli spor/odds API’si kullanılmaz. TFF herkese açık sayfası Süper Lig fikstür yedeğidir. Geniş futbol bülteni ve doğrulanmış oran marketleri `DraBorn-Park-Garage-SportOdds` Supabase projesindeki yalnızca `dbo_` ad alanına alınır. APK/AAB henüz üretilmez.
 
@@ -8,7 +8,7 @@ Public futbol bülteni → maç/takım/tarih eşleştirme → erişilebilir oran
 
 17 Eylül 2026 v0.4 canlı doğrulama turunda collector tek çalışmada **126 güncel karşılaşma ve 2.710 oran seçimi** ayrıştırdı. Parser kimliği **`dbo_v0.4.0`** olarak Supabase sağlık kaydına işlendi. Bülten içeriği değiştikçe bu sayılar doğal olarak değişir. Oranlar **10 market grubunda** doğrulandı: Maç Sonucu, Toplam Gol Alt/Üst, İlk Yarı Toplam Gol, Karşılıklı Gol, Çifte Şans, İlk Yarı Sonucu, Tek/Çift, Gol Aralığı, Doğru Skor ve İlk Yarı/Maç Sonucu.
 
-Analiz motorunun olasılık ürettiği normalize aileler: **1/X/2, tamamlanmış Alt/Üst çizgileri, İlk Yarı Alt/Üst, KG Var/Yok, Çifte Şans, İlk Yarı 1/X/2, Tek/Çift ve dört seçenekli Gol Aralığı**. Doğru Skor ile İlk Yarı/Maç Sonucu gibi çok geniş marketler gerçek ham oran olarak maç detayındaki “Tüm oranlar” bölümünde gösterilir; eksik/örtüşen grup olasılığı uydurulmaz ve otomatik kupona sokulmaz.
+Analiz motorunun olasılık ürettiği normalize aileler: **1/X/2, tamamlanmış Alt/Üst çizgileri, İlk Yarı Alt/Üst, KG Var/Yok, Çifte Şans, İlk Yarı 1/X/2, Tek/Çift ve dört seçenekli Gol Aralığı**. Doğru Skor gerçek ham oran olarak maç detayında gösterilir. İlk Yarı/Maç Sonucu ise dokuz seçeneğin tamamı varsa no-vig normalize edilerek otomatik analize katılır; eksik grup olasılığı uydurulmaz.
 
 Nesine / Misli / Bilyoner / Tuttur doğrudan collector’ları da korunur. Bir kaynak CAPTCHA/bot koruması döndürürse koruma aşılmaz. Son doğrulamada açık bülten hattı çalışırken Nesine, Bilyoner ve Tuttur koruma katmanında; Misli ise erişilebilir fakat doğrulanabilir 1X2 yapısı ayrıştırılamadığı için degraded durumdaydı. Bu durumlar kaynak değiştikçe collector sağlık kaydında güncellenir.
 
@@ -67,4 +67,4 @@ node collectors/dkd_collect.mjs iddaa_public
 
 CI; kilitli bağımlılık kurulumu, TypeScript, domain testleri, oran hareketi özet testleri, Expo SDK 58 paket uyumu ve Android JavaScript export’unu kontrol eder. Expo export APK üretmez; Android paketinin Expo Go/Metro tarafında derlenebilirliğini doğrular. TFF smoke gerçek fikstür HTML’ini, public bulletin smoke ise geniş oran ayrıştırıcısını doğrular.
 
-Görünür sürüm: **DKD_draborneagle_v0.4** · Expo SDK 58 · Android **versionCode 1**.
+Görünür sürüm: **DKD_draborneagle_v0.5** · Expo SDK 58 · Android **versionCode 1**.

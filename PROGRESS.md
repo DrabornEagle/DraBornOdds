@@ -1,4 +1,4 @@
-# DraBornOdds v0.2 çalışma kaydı
+# DraBornOdds v0.5 çalışma kaydı
 
 - v0.1 geri dönüş noktası: `74b4f28930d5c0d51439c155a36fbb2cbd51cff8`; yedek dal: `backup/v0.1-2026-09-17`.
 - v0.2: `0.2.0`, Android versionCode `1`, Expo Go / SDK 58; APK/AAB yok.
@@ -20,3 +20,7 @@
 - Collector her saatin 07/37. dakikasında ve manuel çalışır; collector parser değişince ayrıca hemen çalışır.
 - Ana CI: npm locked install, TypeScript, domain tests, Expo SDK check, Android JS export. Web deploy yok.
 - Sonuçlar kesinlik/kazanç garantisi olarak sunulmaz; oran-temelli piyasa olasılığı ve veri kalite sıralamasıdır.
+
+- v0.5: risk profillerine olasılık/oran bantları ve aşırı longshot cezası eklendi; benzer seçimlerde market ailesi çeşitliliği uygulanıyor.
+- Tam 9 seçenekli İY/MS marketi artık no-vig normalize edilerek otomatik analize girebilir; eksik grup uydurulmaz.
+- Builder her risk profili için önceden tahmini birleşik olasılık + toplam oran gösterir; çok küçük olasılıklar %0,0 diye yuvarlanmaz.
