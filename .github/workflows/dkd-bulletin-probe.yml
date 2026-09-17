@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'collectors/dkd_collect.mjs'
       - 'scripts/dkd-bulletin-probe.mjs'
       - '.github/workflows/dkd-bulletin-probe.yml'
 permissions:
@@ -19,3 +20,9 @@ jobs:
           node-version: '24'
       - name: Probe public football bulletin HTML
         run: node scripts/dkd-bulletin-probe.mjs
+      - name: Validate normalized wide-market collector output
+        run: |
+          node collectors/dkd_collect.mjs iddaa_public > dkd-public.json
+          jq '{version:.collector_version,source:.results[0].source_id,status:.results[0].status,matches:(.results[0].candidates|length),odds:([.results[0].candidates[].markets[]]|length),markets:([.results[0].candidates[].markets[].market_key]|unique),sample:(.results[0].candidates[0]|{home,away,league,start_at,markets})}' dkd-public.json
+          test "$(jq '.results[0].candidates|length' dkd-public.json)" -ge 20
+          test "$(jq '[.results[0].candidates[].markets[]]|length' dkd-public.json)" -ge 100
