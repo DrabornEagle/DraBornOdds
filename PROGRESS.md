@@ -8,14 +8,14 @@
 - Nesine, Misli, Bilyoner, Tuttur public-web collector sistemi ve `dbo_odds_history` ingest hattı kuruldu. Koruma mekanizmaları aşılmıyor.
 - GitHub OIDC doğrulamalı `dbo-ingest-odds` Edge Function aktif; kalıcı service key GitHub’a konmadı.
 - Maç isim eşleştirme, oran normalizasyonu, kaynak sayısı/kalite skoru, dört risk profili ve açıklama katmanı hazır.
-- Türk siteleri doğrulanabilir 1X2 döndürmediğinde uygulamanın tamamen boş kalmaması için bağımsız gerçek fikstür hattı eklendi: TheSportsDB V1 free key `123`, Turkish Super Lig `idLeague=4339`.
-- Fikstür akışı günlük program endpointlerini kullanır, gerekirse league-next endpointine düşer; gerçek tarih/takım gösterilir, 1X2 oranı uydurulmaz.
+- Kullanıcının “API kullanmayacağız” kararı doğrultusunda geçici spor API’si kaldırıldı. Güncel Süper Lig fikstürü artık TFF’nin herkese açık `pageID=198` HTML sayfasından doğrudan web scraping ile okunuyor.
+- TFF fikstür ayrıştırıcısı gerçek tarih, saat, ev sahibi ve deplasman takımını çıkarır; 1X2 oranı uydurmaz.
 - Fikstür ve Supabase 1X2 hattı paralel çalışır; birinin geçici hatası diğer veri yolunu kapatmaz. Aynı maçta doğrulanmış oranlı kayıt fixture-only kaydı geçersiz kılar.
 - Fixture-only maçlar ana sayfa, Maçlar ve maç detay ekranlarında güvenli biçimde gösterilir; analiz/kupon üreticisi oranı olmayan maçı seçemez.
 - Sağ üstteki `v0.2 CANLI` / backend rozeti kaldırıldı. Ana sayfadaki BLOCKED/DEGRADED servis kartları yerine sade `Fikstür akışı` ve `1X2 oran akışı` durumu gösteriliyor.
 - `dkd_generate()` için fixture-only regresyon testi eklendi; oranı olmayan maçın analize giremediği doğrulanıyor.
-- Gerçek harici fikstür kaynağını doğrulamak için `scripts/dkd-fixture-smoke.mjs` ve ayrı `DraBornOdds fixture source smoke` GitHub Action eklendi.
+- Gerçek harici fikstür kaynağını doğrulamak için `scripts/dkd-fixture-smoke.mjs` TFF HTML’ini doğrudan test ediyor ve ayrı `DraBornOdds fixture source smoke` GitHub Action bunu otomatik doğruluyor.
 - Kaydedilen raporlar canlı maç/oran snapshot’ını kendi içinde saklıyor; v0.1 demo kayıtları v0.2’ye taşınmıyor.
 - Collector workflow’u normal pushlardan ayrıdır; her saatin 07/37. dakikasında ve manuel `workflow_dispatch` ile çalışır.
 - v0.2 doğrulama workflow’u TypeScript, domain testleri, Expo paket kontrolü ve Android JS export çalıştırır. APK/AAB ve web deploy üretilmez.
-- Bilinen dış bağımlılık: doğrulanmış 1X2 oranlarının görünmesi için izin verilen kaynaklardan yapılandırılmış gerçek oran verisi gelmesi gerekir; bu koşul sağlanmadığında fikstür gösterilir fakat oran/analiz alanları kapalı kalır.
+- Bilinen dış bağımlılık: doğrulanmış 1X2 oranlarının görünmesi için izin verilen kaynaklardan yapılandırılmış gerçek oran verisi gelmesi gerekir; bu koşul sağlanmadığında TFF fikstürü gösterilir fakat oran/analiz alanları kapalı kalır.
