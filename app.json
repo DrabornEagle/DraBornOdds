@@ -46,7 +46,7 @@
     },
     "extra": {
       "dkd_mode": "real_data",
-      "dkd_version": "DKD_draborneagle_v0.7.3",
+      "dkd_version": "DKD_draborneagle_v0.7.4",
       "dkd_supabase_namespace": "dbo_",
       "dkd_privacy_url": "https://www.draborneagle.com/DraBornOdds/privacy",
       "dkd_terms_url": "https://www.draborneagle.com/DraBornOdds/terms",

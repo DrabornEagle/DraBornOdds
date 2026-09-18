@@ -1,6 +1,6 @@
 # DraBornOdds v0.7.4 — Android code 1
 
-- Aktif sürüm: `0.7.0`, görünür etiket `DKD_draborneagle_v0.7`, Android versionCode `1`, Expo Go / SDK 58; APK/AAB yok.
+- Aktif sürüm: `0.7.4`, görünür etiket `DKD_draborneagle_v0.7.4`, Android versionCode `1`, Expo Go / SDK 58. Release APK DraBornEagle anahtarıyla imzalanır, SHA-256 ile doğrulanır ve web indirme sayfasına senkronlanır.
 - Demo maç/oran yok; sahte veri veya sentetik oran fallback'i üretilmez.
 - `DraBorn-Park-Garage-SportOdds` içinde yalnızca `dbo_` nesneleri kullanılır; diğer proje verilerine dokunulmaz.
 - Spor/odds API kullanılmıyor. Geniş gerçek bülten ve oranlar public-web collector hattından Supabase'e alınır; TFF public HTML Süper Lig fikstürü ayrıca doğrudan doğrulanır.
@@ -21,4 +21,5 @@
 - Tam 9 seçenekli İY/MS (`1/1 ... 2/2`) yalnızca grup eksiksizse no-vig normalize edilerek analize katılır; eksik market uydurulmaz.
 - Maç detayındaki Oran Hareketi son 6 saatlik gerçek `dbo_odds_history` snapshot'larını özetler; tek başına sonuç sinyali sayılmaz.
 - Canlı odds istemcisi tazelik filtresi kullanır; odds history 72 saat, collector run kayıtları 30 gün saklanır.
-- v0.7 CI; locked npm install, TypeScript/domain testleri, Expo SDK 58 paket kontrolü ve Android JavaScript export ile doğrulanır. APK üretmez.
+- v0.7.4 CI; locked npm install, TypeScript/domain testleri ve Expo SDK 58 paket kontrolüyle doğrulanır. Korunan signer native Android release APK üretir; APK imza ve SHA-256 doğrulamasından sonra yayınlanır.
+- v0.7.4: eski ızgaralı native açılış varlığı kaldırıldı; yeni modern futbol temalı uygulama ikonu/splash kullanılıyor. Android status/navigation yüzeyi native tema eklentisiyle şeffaf, açık renk sistem ikonlu ve navigation contrast zorlaması kapalı olacak şekilde ayarlandı.

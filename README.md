@@ -1,6 +1,6 @@
-# DraBornOdds · v0.7 · versionCode 1
+# DraBornOdds · v0.7.4 · versionCode 1
 
-DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go 58.0.0 uygulaması gerçek futbol verisini public-web kaynaklarından toplar; ücretli spor/odds API'si kullanılmaz. APK/AAB henüz üretilmez.
+DraBornOdds demo maç veya sahte oran kullanmaz. Expo Go / SDK 58 uygulaması gerçek futbol verisini public-web kaynaklarından toplar; ücretli spor/odds API'si kullanılmaz. Android v0.7.4 release APK korunan DraBornEagle anahtarıyla imzalanır, SHA-256 ile doğrulanır ve web indirme sayfasıyla senkron tutulur.
 
 ## v0.7 gerçek veri akışı
 
@@ -32,7 +32,7 @@ Ekranda seçimin normalize piyasa olasılığı, oranın ham ima ettiği olasıl
 
 ## Sürüm tek kaynaktan okunur
 
-Profil ekranındaki sürüm metni hard-code değildir. `app.json` içindeki Expo `version`, Android `versionCode` ve `extra.dkd_version` doğrudan okunur. Güncel değerler **v0.7 / DKD_draborneagle_v0.7 / versionCode 1**. Böylece eski sürüm etiketi tekrar görünmez.
+Profil ekranındaki sürüm metni hard-code değildir. `app.json` içindeki Expo `version`, Android `versionCode` ve `extra.dkd_version` doğrudan okunur. Güncel değerler **v0.7.4 / DKD_draborneagle_v0.7.4 / versionCode 1**. Böylece eski sürüm etiketi tekrar görünmez.
 
 ## Analiz ve kupon olasılığı
 
@@ -75,6 +75,11 @@ node scripts/dkd-fixture-smoke.mjs
 node collectors/dkd_collect.mjs iddaa_public
 ```
 
-CI; TypeScript/domain testlerini, Expo SDK 58 paket uyumunu ve Android JavaScript export'unu kontrol eder. Fixture-cache workflow'u ayrıca TFF public HTML'i doğrular. Expo export APK üretmez.
+CI; TypeScript/domain testlerini, Expo SDK 58 paket uyumunu ve Android JavaScript export'unu kontrol eder. Fixture-cache workflow'u ayrıca TFF public HTML'i doğrular. Release APK ayrı korunan signer hattında native Android derlemesiyle oluşturulur ve imza/SHA-256 doğrulamasından sonra yayınlanır.
 
-Görünür sürüm: **DKD_draborneagle_v0.7** · Expo Go / SDK 58 · Android **versionCode 1**.
+Görünür sürüm: **DKD_draborneagle_v0.7.4** · Expo Go / SDK 58 · Android **versionCode 1**.
+
+
+## v0.7.4 Android görünüm düzeltmeleri
+
+Native açılıştaki eski ızgaralı görsel kaldırıldı ve DraBornOdds için sıfırdan hazırlanmış modern futbol temalı ikon/splash kullanılıyor. Android sistem status/navigation yüzeyi şeffaf olacak, sistem ikonları açık renkte kalacak ve navigation-bar contrast zorlaması devre dışı olacak şekilde native config plugin ile ayarlanır.
