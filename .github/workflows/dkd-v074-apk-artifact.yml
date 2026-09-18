@@ -10,6 +10,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: dkd-v074-apk-artifact
+  cancel-in-progress: true
+
 jobs:
   dkd_package_verified_apk:
     runs-on: ubuntu-latest
