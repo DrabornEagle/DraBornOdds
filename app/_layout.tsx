@@ -89,6 +89,8 @@ function dkd_FootballSplash() {
   );
 }
 
+const dkd_components = { FootballSplash: dkd_FootballSplash };
+
 function dkd_appShell() {
   const dkd_store = dkd_useStore();
   const [dkd_minimumSplashDone, dkd_setMinimumSplashDone] = dkd_React.useState(false);
@@ -98,7 +100,7 @@ function dkd_appShell() {
     return () => clearTimeout(dkd_timer);
   }, []);
 
-  if (!dkd_store.dkd_loaded || !dkd_minimumSplashDone) return <dkd_FootballSplash />;
+  if (!dkd_store.dkd_loaded || !dkd_minimumSplashDone) return <dkd_components.FootballSplash />;
 
   return (
     <dkd_RN.View style={{ flex: 1, backgroundColor: dkd_colors.bg }}>
