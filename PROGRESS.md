@@ -1,4 +1,4 @@
-# DraBornOdds v0.7 çalışma kaydı
+# DraBornOdds v0.7.4 — Android code 1
 
 - Aktif sürüm: `0.7.0`, görünür etiket `DKD_draborneagle_v0.7`, Android versionCode `1`, Expo Go / SDK 58; APK/AAB yok.
 - Demo maç/oran yok; sahte veri veya sentetik oran fallback'i üretilmez.

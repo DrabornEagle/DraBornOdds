@@ -2,7 +2,7 @@
   "expo": {
     "name": "DraBornOdds",
     "slug": "dkd-drabornodds",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "scheme": "dkd-drabornodds",
     "orientation": "portrait",
     "icon": "./assets/dkd-icon.png",
@@ -13,21 +13,21 @@
       "resizeMode": "contain",
       "backgroundColor": "#07101D"
     },
-    "platforms": ["android", "ios", "web"],
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
     "android": {
       "package": "com.draborneagle.drabornodds",
       "versionCode": 1,
       "backgroundColor": "#07101D",
       "icon": "./assets/dkd-icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/dkd-adaptive-icon.png",
-        "backgroundColor": "#07101D"
-      }
-    },
-    "androidNavigationBar": {
-      "backgroundColor": "#07101D",
-      "barStyle": "light-content",
-      "enforceContrast": false
+        "foregroundImage": "./assets/dkd-icon.png",
+        "backgroundColor": "#061018"
+      },
+      "userInterfaceStyle": "dark"
     },
     "web": {
       "bundler": "metro",
@@ -35,7 +35,11 @@
       "name": "DraBornOdds",
       "backgroundColor": "#07101D"
     },
-    "plugins": ["expo-router", "expo-status-bar"],
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "./plugins/dkd-android-system-ui"
+    ],
     "experiments": {
       "typedRoutes": true,
       "baseUrl": "/DraBornOdds"
@@ -49,6 +53,11 @@
       "dkd_data_safety_url": "https://www.draborneagle.com/DraBornOdds/data-safety",
       "dkd_support_url": "https://www.draborneagle.com/DraBornOdds/support",
       "dkd_apk_url": "https://www.draborneagle.com/DraBornOdds/App/"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#00000000",
+      "barStyle": "light-content",
+      "translucent": true
     }
   }
 }
