@@ -1,0 +1,63 @@
+name: DraBornOdds v0.7.4 downloadable APK artifact
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-v074-apk-artifact.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dkd_package_verified_apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 80
+
+      - name: Wait for matching protected v0.7.4 signer release
+        shell: bash
+        run: |
+          set -euo pipefail
+          dkd_base='https://github.com/DrabornEagle/DraBornGo/releases/download/drabornodds-v0.7.4-code1'
+          for dkd_try in $(seq 1 90); do
+            dkd_signed_source="$(curl -fsL "$dkd_base/SOURCE_COMMIT.txt" 2>/dev/null | tr -d '\r\n' || true)"
+            if [ -n "$dkd_signed_source" ]; then
+              if ! git cat-file -e "$dkd_signed_source^{commit}" 2>/dev/null; then
+                git fetch origin "$dkd_signed_source" --depth=1 || true
+              fi
+              if git cat-file -e "$dkd_signed_source^{commit}" 2>/dev/null && git diff --quiet "$dkd_signed_source" HEAD -- . ':(exclude).github/**'; then
+                echo "DKD_SIGNED_SOURCE=$dkd_signed_source" >> "$GITHUB_ENV"
+                echo "DKD_BASE=$dkd_base" >> "$GITHUB_ENV"
+                exit 0
+              fi
+            fi
+            echo "Signer has not reached current v0.7.4 source yet ($dkd_try/90)."
+            sleep 30
+          done
+          echo 'DKD ERROR: protected signer did not publish the current source in time.'
+          exit 1
+
+      - name: Download and verify signed v0.7.4 APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dkd_apk
+          for dkd_name in DraBornOdds-v0.7.4-code1-release.apk SHA256.txt CERTIFICATE.txt SOURCE_COMMIT.txt; do
+            curl --retry 12 --retry-delay 4 --retry-all-errors -fL "$DKD_BASE/$dkd_name" -o "dkd_apk/$dkd_name"
+          done
+          (cd dkd_apk && sha256sum -c SHA256.txt)
+          grep -q 'Signer #1 certificate SHA-256 digest' dkd_apk/CERTIFICATE.txt
+          test "$(tr -d '\r\n' < dkd_apk/SOURCE_COMMIT.txt)" = "$DKD_SIGNED_SOURCE"
+
+      - name: Upload verified APK package
+        uses: actions/upload-artifact@v4
+        with:
+          name: DraBornOdds-v0.7.4-code1-release
+          path: dkd_apk/
+          if-no-files-found: error
+          compression-level: 0
