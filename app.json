@@ -5,26 +5,30 @@
     "version": "0.7.2",
     "scheme": "dkd-drabornodds",
     "orientation": "portrait",
+    "icon": "./assets/dkd-icon.png",
     "userInterfaceStyle": "dark",
-    "backgroundColor": "#0B1020",
-    "platforms": [
-      "android",
-      "ios",
-      "web"
-    ],
+    "backgroundColor": "#07101D",
+    "splash": {
+      "image": "./assets/dkd-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#07101D"
+    },
+    "platforms": ["android", "ios", "web"],
     "android": {
       "package": "com.draborneagle.drabornodds",
-      "versionCode": 1
+      "versionCode": 1,
+      "icon": "./assets/dkd-icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/dkd-adaptive-icon.png",
+        "backgroundColor": "#07101D"
+      }
     },
     "web": {
       "bundler": "metro",
       "output": "single",
       "name": "DraBornOdds"
     },
-    "plugins": [
-      "expo-router",
-      "expo-status-bar"
-    ],
+    "plugins": ["expo-router", "expo-status-bar"],
     "experiments": {
       "typedRoutes": true,
       "baseUrl": "/DraBornOdds"
