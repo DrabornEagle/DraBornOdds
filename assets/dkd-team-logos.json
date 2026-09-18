@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-18T19:02:55.858Z",
-  "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 619,
-  "dkd_logoCount": 1539,
+  "dkd_generatedAt": "2026-09-18T22:34:22.701Z",
+  "dkd_teamCount": 820,
+  "dkd_resolvedTeams": 599,
+  "dkd_logoCount": 1562,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -1542,6 +1542,29 @@
     "batman petrolspor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/91010a7321890ca6.png",
     "fatih karagümrük": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/76c124807126db39.png",
     "fatih karagumruk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/76c124807126db39.png",
-    "esenler erokspor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ba0ab73adf946d96.png"
+    "esenler erokspor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ba0ab73adf946d96.png",
+    "u. magdalena": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/36b8170f8dcb580b.jpg",
+    "u magdalena": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/36b8170f8dcb580b.jpg",
+    "ceara ce": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/062c9aa4e5b8ee95.png",
+    "piratas veracruz": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/33d98fcebf488461.jpg",
+    "oakleigh c.": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/667643d339fdc138.jpg",
+    "oakleigh c": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/667643d339fdc138.jpg",
+    "csd macara": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f2037d5af127b723.png",
+    "acs unu fotbal club gloria": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7356580aa5f23797.jpg",
+    "fc cetate suceava": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/95a403a671450d12.jpg",
+    "cetate suceava": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/95a403a671450d12.jpg",
+    "arema fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/54ee2065f2abb456.png",
+    "guangdong mingtu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6cc2f57ab64b7758.png",
+    "changchun xidu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/708fea1f9b156f2f.png",
+    "fc osaka": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/096cd771e0362978.png",
+    "yanbian longding": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/626b685d0280a6c8.png",
+    "hougang united fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f7709f3fb93baf02.png",
+    "nantong zhiyun fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5d27ead2db8f6204.png",
+    "guangxi hengchen fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/403853c2ef67f619.png",
+    "guangxi hengchen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/403853c2ef67f619.png",
+    "zhejiang": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/31cdab47aeb0e4a2.png",
+    "uthai thani fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e5a9a7a13a9e42f0.png",
+    "arsenal fc u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b9906d2aa80621b.png",
+    "arsenal u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b9906d2aa80621b.png"
   }
 }
