@@ -15,7 +15,7 @@ function dkd_FootballSplash() {
     const dkd_ballLoop = dkd_RN.Animated.loop(
       dkd_RN.Animated.timing(dkd_motion, {
         toValue: 1,
-        duration: 1800,
+        duration: 1200,
         easing: dkd_RN.Easing.inOut(dkd_RN.Easing.cubic),
         useNativeDriver: true,
       }),
@@ -96,7 +96,7 @@ function dkd_appShell() {
   const [dkd_minimumSplashDone, dkd_setMinimumSplashDone] = dkd_React.useState(false);
 
   dkd_React.useEffect(() => {
-    const dkd_timer = setTimeout(() => dkd_setMinimumSplashDone(true), 1800);
+    const dkd_timer = setTimeout(() => dkd_setMinimumSplashDone(true), 850);
     return () => clearTimeout(dkd_timer);
   }, []);
 
