@@ -32,5 +32,5 @@ test('privacy and standalone APK disclosures remain reachable',()=>{
   assert.match(dkd_profile,/18\+/);
   assert.match(dkd_privacy,/support@draborneagle\.com/);
   assert.match(dkd_privacy,/kullanıcı hesabı oluşturmaz/i);
-  assert.match(dkd_apkPage,/DraBornOdds-v0\.7\.3-code1-release\.apk/);
+  assert.match(dkd_apkPage,/DraBornOdds-v0\.7\.4-code1-release\.apk/);
 });
