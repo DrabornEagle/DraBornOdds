@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-18T22:34:22.701Z",
+  "dkd_generatedAt": "2026-09-19T04:35:34.071Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 599,
-  "dkd_logoCount": 1562,
+  "dkd_resolvedTeams": 592,
+  "dkd_logoCount": 1563,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -1565,6 +1565,7 @@
     "zhejiang": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/31cdab47aeb0e4a2.png",
     "uthai thani fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e5a9a7a13a9e42f0.png",
     "arsenal fc u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b9906d2aa80621b.png",
-    "arsenal u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b9906d2aa80621b.png"
+    "arsenal u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b9906d2aa80621b.png",
+    "guizhou zhucheng athletic": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2f942b9da72dda15.jpg"
   }
 }
