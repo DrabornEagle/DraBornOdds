@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-19T18:36:56.031Z",
-  "dkd_teamCount": 818,
-  "dkd_resolvedTeams": 318,
-  "dkd_logoCount": 1785,
+  "dkd_generatedAt": "2026-09-19T22:20:00.877Z",
+  "dkd_teamCount": 820,
+  "dkd_resolvedTeams": 320,
+  "dkd_logoCount": 1794,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -1788,6 +1788,15 @@
     "sligo rovers": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e5e232b09f465451.jpg",
     "rennes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5a02bece293a9774.jpg",
     "anderlecht": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bd4e3ba45ca61a67.jpg",
-    "sk rapid wien (a)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d458ab937edf06f9.png"
+    "sk rapid wien (a)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d458ab937edf06f9.png",
+    "necaxa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9e1f61536bd7de5b.png",
+    "brooklyn fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4fa02e0756f153a0.png",
+    "brooklyn": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4fa02e0756f153a0.png",
+    "puntarenas fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5d69b0ea1de8f85d.jpg",
+    "puntarenas": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5d69b0ea1de8f85d.jpg",
+    "at. san luis": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9d947663790bee79.png",
+    "at san luis": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9d947663790bee79.png",
+    "charleston": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f0dfb476b4c84bcd.png",
+    "america mg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e2fc4efca91eb634.png"
   }
 }
