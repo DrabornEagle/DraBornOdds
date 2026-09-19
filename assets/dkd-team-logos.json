@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-19T12:30:11.066Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 607,
-  "dkd_logoCount": 1774,
+  "dkd_generatedAt": "2026-09-19T18:36:56.031Z",
+  "dkd_teamCount": 818,
+  "dkd_resolvedTeams": 318,
+  "dkd_logoCount": 1785,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -1777,6 +1777,17 @@
     "al hussein irbid": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/23892a287c5d7d44.jpg",
     "torreense u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6595884f383ec2f.png",
     "shabab al ordon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/590932678bf1f665.png",
-    "chiclana cf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34becb1b5f074bd3.png"
+    "chiclana cf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34becb1b5f074bd3.png",
+    "lazio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/410ff625c35e2df7.jpg",
+    "le havre": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/71d7db9d66d7c305.jpg",
+    "lyon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dcc69171d04abec2.jpg",
+    "toulouse": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/452c3c4bde397948.jpg",
+    "st. patricks": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81aa48261f381617.png",
+    "st patricks": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81aa48261f381617.png",
+    "venezia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7aa5d6db462469b3.jpg",
+    "sligo rovers": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e5e232b09f465451.jpg",
+    "rennes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5a02bece293a9774.jpg",
+    "anderlecht": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bd4e3ba45ca61a67.jpg",
+    "sk rapid wien (a)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d458ab937edf06f9.png"
   }
 }
