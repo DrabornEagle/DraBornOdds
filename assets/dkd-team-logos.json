@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-19T22:20:00.877Z",
+  "dkd_generatedAt": "2026-09-20T04:52:23.058Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 320,
-  "dkd_logoCount": 1794,
+  "dkd_resolvedTeams": 318,
+  "dkd_logoCount": 1805,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -1797,6 +1797,17 @@
     "at. san luis": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9d947663790bee79.png",
     "at san luis": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9d947663790bee79.png",
     "charleston": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f0dfb476b4c84bcd.png",
-    "america mg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e2fc4efca91eb634.png"
+    "america mg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e2fc4efca91eb634.png",
+    "çin u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a5f9cbc2354f0a62.png",
+    "cin u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a5f9cbc2354f0a62.png",
+    "iran u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7b89fb2e1dab064b.jpg",
+    "saitama (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9a29c963c6e0a37a.jpg",
+    "saitama k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9a29c963c6e0a37a.jpg",
+    "hong kong u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/20adf3ac3b8cae96.jpg",
+    "tokyo verdy beleza (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f79de9b2c3caae99.png",
+    "tokyo verdy beleza k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f79de9b2c3caae99.png",
+    "hannover 96": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e23498f04ba84162.png",
+    "standard liege (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b6698e636e01cd43.png",
+    "standard liege k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b6698e636e01cd43.png"
   }
 }
