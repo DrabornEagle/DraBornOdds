@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-20T04:52:23.058Z",
+  "dkd_generatedAt": "2026-09-20T13:03:03.756Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 318,
-  "dkd_logoCount": 1805,
+  "dkd_resolvedTeams": 422,
+  "dkd_logoCount": 1815,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -1808,6 +1808,16 @@
     "tokyo verdy beleza k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f79de9b2c3caae99.png",
     "hannover 96": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e23498f04ba84162.png",
     "standard liege (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b6698e636e01cd43.png",
-    "standard liege k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b6698e636e01cd43.png"
+    "standard liege k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b6698e636e01cd43.png",
+    "c glogow": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c002f5540a28e439.jpg",
+    "fc basel ıı": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9f545f58403371e8.png",
+    "basel ii": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9f545f58403371e8.png",
+    "al khaleej khor fakkan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a5461018730774e2.png",
+    "ofk malzenice": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/93d8c6c7ab6a033c.jpg",
+    "ofk banik lehota pod vtacnikom": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/887072f616fd0c59.jpg",
+    "al ıttihad kalba": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6807feb5099f51a.jpg",
+    "al ittihad kalba": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6807feb5099f51a.jpg",
+    "fenerbahçe": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/250945e6b9901915.png",
+    "dinamo tiflis": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/067619f5611dc91c.jpg"
   }
 }
