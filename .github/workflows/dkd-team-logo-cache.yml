@@ -23,8 +23,14 @@ jobs:
         with:
           node-version: '24'
       - name: Resolve and cache original club crests
+        id: dkd_crests
+        continue-on-error: ${{ github.event_name == 'schedule' }}
         run: node scripts/dkd-refresh-team-logos.mjs
+      - name: Keep previous crest cache on transient scheduled source failure
+        if: steps.dkd_crests.outcome == 'failure'
+        run: echo "::warning::Club crest source refresh failed; keeping the previous verified cache."
       - name: Commit refreshed crest cache
+        if: steps.dkd_crests.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
