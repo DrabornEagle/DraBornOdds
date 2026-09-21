@@ -25,9 +25,14 @@ jobs:
       - name: Scrape public TFF fixture into validated JSON
         env:
           DKD_FIXTURE_CACHE_PATH: /tmp/dkd-fixtures.json
+          DKD_FIXTURE_SOFT_FAIL: '1'
         run: node scripts/dkd-fixture-cache.mjs
-      - name: Publish tiny cache branch
+      - name: Publish tiny cache branch only when a fresh payload exists
         run: |
+          if [ ! -s /tmp/dkd-fixtures.json ]; then
+            echo "No fresh TFF payload. Keeping the previous verified dkd-live-cache branch unchanged."
+            exit 0
+          fi
           git config user.name "DraBornOdds Fixture Bot"
           git config user.email "actions@users.noreply.github.com"
           git checkout --orphan dkd-live-cache-next
