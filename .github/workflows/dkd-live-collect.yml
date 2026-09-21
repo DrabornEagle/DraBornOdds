@@ -55,9 +55,9 @@ jobs:
           for dkd_chunk in dkd-ingest-chunks/*.json; do
             dkd_source="$(jq -r '.results[0].source_id' "$dkd_chunk")"
             echo "Ingesting $(basename "$dkd_chunk") · $dkd_source · $(jq '.results[0].candidates|length' "$dkd_chunk")/$(jq '.results[0].source_total' "$dkd_chunk") matches · $(jq '[.results[0].candidates[]?.markets[]?]|length' "$dkd_chunk") odds"
-            DBO_TOKEN_JSON="$(curl --fail --silent --show-error -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=drabornodds-supabase-ingest")"
+            DBO_TOKEN_JSON="$(curl --retry 5 --retry-delay 2 --retry-all-errors --fail --silent --show-error -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=drabornodds-supabase-ingest")"
             DBO_OIDC_TOKEN="$(printf '%s' "$DBO_TOKEN_JSON" | jq -r .value)"
-            DBO_RESULT="$(curl --max-time 120 --fail-with-body --silent --show-error -X POST 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/dbo-ingest-odds' -H "Authorization: Bearer $DBO_OIDC_TOKEN" -H 'Content-Type: application/json' --data-binary @"$dkd_chunk")"
+            DBO_RESULT="$(curl --retry 6 --retry-delay 4 --retry-all-errors --retry-max-time 90 --max-time 120 --fail-with-body --silent --show-error -X POST 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/dbo-ingest-odds' -H "Authorization: Bearer $DBO_OIDC_TOKEN" -H 'Content-Type: application/json' --data-binary @"$dkd_chunk")"
             printf '%s\n' "$DBO_RESULT" | jq .
             if [ "$dkd_source" = "iddaa_public" ] && printf '%s\n' "$DBO_RESULT" | jq -e '.results[] | select(.status=="error")' >/dev/null; then
               echo "Public bulletin ingestion returned an error status"
