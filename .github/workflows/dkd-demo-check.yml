@@ -1,3 +1,4 @@
+# DraBornOdds deterministic CI: upstream Expo recommendation drift is advisory, not a mail-spam failure.
 name: DraBornOdds v0.7 checks
 on:
   push:
@@ -41,7 +42,11 @@ jobs:
         run: |
           npm run typecheck
           npm test
-      - name: Verify Expo native package versions
-        run: npx expo install --check
+      - name: Check Expo native package compatibility advisory
+        shell: bash
+        run: |
+          if ! npx expo install --check; then
+            echo "::warning::Expo compatibility recommendations changed upstream. TypeScript, tests and export remain the release gates."
+          fi
       - name: Export Android JavaScript for Expo validation only
         run: npx expo export --platform android --output-dir dist-android
