@@ -1,4 +1,4 @@
-# DraBornOdds canonical APK synchronization: release-driven, no periodic polling.
+# DraBornOdds canonical APK synchronization: release-driven, cache-safe, final SDK58-aligned checkpoint.
 name: DraBornOdds canonical APK mirror
 
 on:
