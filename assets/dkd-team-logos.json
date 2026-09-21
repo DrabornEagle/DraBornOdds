@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-20T22:26:52.602Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 71,
-  "dkd_logoCount": 1844,
+  "dkd_generatedAt": "2026-09-21T04:53:53.718Z",
+  "dkd_teamCount": 818,
+  "dkd_resolvedTeams": 48,
+  "dkd_logoCount": 1853,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -1847,6 +1847,15 @@
     "monterey bay fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/03786e934f23f5d8.png",
     "monterey bay": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/03786e934f23f5d8.png",
     "cd tapatio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e131dd86211f56db.png",
-    "taiwan power company": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/320dba77525e332f.png"
+    "taiwan power company": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/320dba77525e332f.png",
+    "wofoo se": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d179ff3daaa89072.jpg",
+    "central & western": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/be8965900d396db3.png",
+    "central western": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/be8965900d396db3.png",
+    "tung sing": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/622ecf38040c0767.jpg",
+    "sham shui po sa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3fa5ec6696fa657e.jpg",
+    "supreme fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/433204fb4a0cb0d1.jpg",
+    "supreme": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/433204fb4a0cb0d1.jpg",
+    "ıf eker orebro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0edca6fdcfb2c7d9.jpg",
+    "if eker orebro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0edca6fdcfb2c7d9.jpg"
   }
 }
