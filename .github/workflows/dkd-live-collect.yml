@@ -24,10 +24,17 @@ jobs:
         with:
           node-version: '24'
       - name: Collect public structured match data
+        id: dkd_collect_source
+        continue-on-error: ${{ github.event_name == 'schedule' }}
         run: node collectors/dkd_collect.mjs > dkd-collector-output.json
+      - name: Preserve verified data when a scheduled source refresh fails
+        if: steps.dkd_collect_source.outcome == 'failure'
+        run: echo "::warning::Scheduled public source refresh failed after collector retries; keeping the last verified Supabase data. The next 5-minute run will retry."
       - name: Show source health without exposing secrets
+        if: steps.dkd_collect_source.outcome == 'success'
         run: jq '[.results[] | {source_id,status,http_status,matches:(.candidates|length),odds:([.candidates[]?.markets[]?]|length),error}]' dkd-collector-output.json
       - name: Split large feeds into safe ingestion batches
+        if: steps.dkd_collect_source.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
@@ -49,6 +56,7 @@ jobs:
           done < <(jq -c '.results[]' dkd-collector-output.json)
           echo "Prepared $dkd_i ingestion batches · $dkd_version"
       - name: Ingest batches into isolated dbo_ Supabase tables
+        if: steps.dkd_collect_source.outcome == 'success'
         shell: bash
         run: |
           set -u -o pipefail
