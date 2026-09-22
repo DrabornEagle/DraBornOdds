@@ -32,17 +32,16 @@ export function dkd_marketInsight(dkd_match:dkd_Match,dkd_market:dkd_Market,dkd_
   const dkd_probability=Math.max(0,Math.min(1,dkd_market.dkd_probability));
   const dkd_implied=Math.min(1,1/Math.max(1.001,dkd_market.dkd_odds));
   const dkd_score=Math.round(dkd_analysisScore(dkd_match,dkd_market,dkd_context)*100);
-  const dkd_group=dkd_market.dkd_group||'Piyasa';
   const dkd_sameGroup=dkd_ranked.filter(dkd_item=>dkd_item.dkd_group===dkd_market.dkd_group);
   const dkd_groupBest=[...dkd_sameGroup].sort((dkd_left,dkd_right)=>dkd_right.dkd_probability-dkd_left.dkd_probability)[0];
   const dkd_marketSentence=dkd_groupBest&&dkd_groupBest.dkd_key!==dkd_market.dkd_key
-    ?`Aynı türdeki seçenekler içinde ${dkd_groupBest.dkd_short} daha yüksek ihtimale sahip görünse de ${dkd_market.dkd_short}, ${dkd_decimal(dkd_market.dkd_odds)} oranıyla seçilen risk profiline daha uygun kaldığı için üst sıralara çıktı.`
-    :`${dkd_market.dkd_short} için oranlardan hesaplanan yaklaşık ihtimal ${dkd_percent(dkd_probability)}, güncel oran ise ${dkd_decimal(dkd_market.dkd_odds)}. Bu ikisi birlikte değerlendirildiğinde seçim güçlü adaylardan biri oldu.`;
+    ?`Aynı türdeki seçeneklerde ${dkd_groupBest.dkd_short} daha yüksek gerçekleşme yüzdesine sahip. Buna rağmen ${dkd_market.dkd_short}, ${dkd_decimal(dkd_market.dkd_odds)} oranı nedeniyle seçilen risk düzeyinde daha dengeli bulundu.`
+    :`${dkd_market.dkd_short} için hesaplanan yaklaşık gerçekleşme yüzdesi ${dkd_percent(dkd_probability)}, güncel oran ${dkd_decimal(dkd_market.dkd_odds)}. Bu iki değer birlikte değerlendirildiğinde seçim öne çıkan adaylardan biri oldu.`;
   const dkd_points=[
     dkd_friendlyReason(dkd_match,dkd_market,dkd_context),
-    dkd_marketSentence,
-    `Bu maçta analiz edilebilen ${dkd_ranked.length} seçenek birbiriyle karşılaştırıldı. “${dkd_market.dkd_label}” bu karşılaştırmada ${dkd_rank}. sıraya yerleşti; karşılaştırma puanı ${dkd_score}/100 oldu.`,
-    `Kısa özet: ${dkd_market.dkd_label} · güncel oran ${dkd_decimal(dkd_market.dkd_odds)} · oranlardan hesaplanan yaklaşık ihtimal ${dkd_percent(dkd_probability)}. Bu değerler tek başına kesin sonuç anlamına gelmez.`
+    `Oran değerlendirmesi: ${dkd_marketSentence}`,
+    `Karşılaştırma: Bu maçta analiz edilebilen ${dkd_ranked.length} seçenek karşılaştırıldı. “${dkd_market.dkd_label}” ${dkd_rank}. sırada yer aldı ve seçim puanı ${dkd_score}/100 oldu.`,
+    `Kısa özet: ${dkd_market.dkd_label} · güncel oran ${dkd_decimal(dkd_market.dkd_odds)} · yaklaşık gerçekleşme ${dkd_percent(dkd_probability)}. Bu değerler kesin sonuç anlamına gelmez.`
   ];
-  return{dkd_rank,dkd_total:dkd_ranked.length,dkd_score,dkd_implied,dkd_probability,dkd_summary:`${dkd_market.dkd_label}: yaklaşık ihtimal ${dkd_percent(dkd_probability)} · oran ${dkd_decimal(dkd_market.dkd_odds)} · karşılaştırma puanı ${dkd_score}/100.`,dkd_points};
+  return{dkd_rank,dkd_total:dkd_ranked.length,dkd_score,dkd_implied,dkd_probability,dkd_summary:`${dkd_market.dkd_label}: yaklaşık gerçekleşme ${dkd_percent(dkd_probability)} · oran ${dkd_decimal(dkd_market.dkd_odds)} · seçim puanı ${dkd_score}/100.`,dkd_points};
 }
