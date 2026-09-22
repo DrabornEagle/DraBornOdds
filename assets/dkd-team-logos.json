@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-22T13:24:20.335Z",
-  "dkd_teamCount": 320,
-  "dkd_resolvedTeams": 231,
-  "dkd_logoCount": 2368,
+  "dkd_generatedAt": "2026-09-22T19:44:06.258Z",
+  "dkd_teamCount": 84,
+  "dkd_resolvedTeams": 58,
+  "dkd_logoCount": 2377,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -2371,6 +2371,15 @@
     "birmingham legion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/22b15ae9af1d9ded.png",
     "navalcarnero": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0a41a38e8114c536.png",
     "ue sant andreu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/48f61a118106e550.png",
-    "real madrid castilla": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d0a6da9187809cbc.png"
+    "real madrid castilla": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d0a6da9187809cbc.png",
+    "club leon (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/483937af739e3c3a.png",
+    "club leon k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/483937af739e3c3a.png",
+    "2 de mayo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c614a01b1364a18e.png",
+    "fc juarez (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7fe6bb8860a1651c.jpg",
+    "juarez k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7fe6bb8860a1651c.jpg",
+    "deportes puerto montt": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a8b02a24a61eda19.jpg",
+    "audax ıtaliano": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6f399926b43df4db.png",
+    "audax italiano": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6f399926b43df4db.png",
+    "cd cortulua": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9e2e18596be1d9af.jpg"
   }
 }
