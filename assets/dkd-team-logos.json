@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-22T22:56:03.311Z",
-  "dkd_teamCount": 256,
-  "dkd_resolvedTeams": 200,
-  "dkd_logoCount": 2401,
+  "dkd_generatedAt": "2026-09-23T04:42:55.261Z",
+  "dkd_teamCount": 242,
+  "dkd_resolvedTeams": 191,
+  "dkd_logoCount": 2405,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -2404,6 +2404,10 @@
     "aston villa u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f96a60362cb18b14.jpg",
     "nottingham forest u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5cd289d553a4ffe4.jpg",
     "liverpool u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fb8d6c625f7f6c5c.jpg",
-    "newcastle united u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/68c3862786b37f26.jpg"
+    "newcastle united u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/68c3862786b37f26.jpg",
+    "özbekistan u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/80ca2d976384864b.jpg",
+    "ozbekistan u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/80ca2d976384864b.jpg",
+    "kuveyt u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cb514aad88438043.jpg",
+    "kuzey kore u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3820e9fe56e5d351.jpg"
   }
 }
