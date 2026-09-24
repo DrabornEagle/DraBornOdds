@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-24T19:59:18.520Z",
-  "dkd_teamCount": 152,
-  "dkd_resolvedTeams": 87,
-  "dkd_logoCount": 2517,
+  "dkd_generatedAt": "2026-09-24T23:12:42.943Z",
+  "dkd_teamCount": 156,
+  "dkd_resolvedTeams": 89,
+  "dkd_logoCount": 2531,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -2520,6 +2520,20 @@
     "curacao": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/79bc890fea1f58f3.png",
     "fransa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/57d80db03ddee033.png",
     "türkiye": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c46b5a1dfa22b6b1.png",
-    "turkiye": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c46b5a1dfa22b6b1.png"
+    "turkiye": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c46b5a1dfa22b6b1.png",
+    "atl. nacional medellin": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0bf1c76ab18d4ff3.jpg",
+    "atl nacional medellin": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0bf1c76ab18d4ff3.jpg",
+    "dominika": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3d127af6c24e8da2.jpg",
+    "trinidad ve tobago": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fed76fb02e8bdd6b.jpg",
+    "nikaragua": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b09abcb2f773589b.jpg",
+    "cayman adaları": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1decba6ce045f862.jpg",
+    "cayman adalari": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1decba6ce045f862.jpg",
+    "laos": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ef8362e6bfe3b239.png",
+    "brunei": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2de36011119b07ff.png",
+    "myanmar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/04aaf49312db7ba0.png",
+    "fc maan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8ebe3350e55654d5.png",
+    "maan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8ebe3350e55654d5.png",
+    "guyana": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fbd1930a40daed6b.png",
+    "ca tembetary": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/82b8a1ece91464ee.png"
   }
 }
