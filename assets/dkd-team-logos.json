@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-24T23:12:42.943Z",
-  "dkd_teamCount": 156,
-  "dkd_resolvedTeams": 89,
-  "dkd_logoCount": 2531,
+  "dkd_generatedAt": "2026-09-25T04:54:54.789Z",
+  "dkd_teamCount": 140,
+  "dkd_resolvedTeams": 82,
+  "dkd_logoCount": 2539,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -2534,6 +2534,14 @@
     "fc maan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8ebe3350e55654d5.png",
     "maan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8ebe3350e55654d5.png",
     "guyana": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fbd1930a40daed6b.png",
-    "ca tembetary": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/82b8a1ece91464ee.png"
+    "ca tembetary": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/82b8a1ece91464ee.png",
+    "güney kore": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5e868193d9c8c47e.png",
+    "guney kore": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5e868193d9c8c47e.png",
+    "filistin": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/da5c2fd7e0cd6296.png",
+    "ekvador": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8550d3acf90ecd0b.jpg",
+    "japonya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8d9a5570fddcabde.png",
+    "doğu timor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8f4b7a87d0366575.png",
+    "dogu timor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8f4b7a87d0366575.png",
+    "namibya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/971c20030cd050cc.png"
   }
 }
