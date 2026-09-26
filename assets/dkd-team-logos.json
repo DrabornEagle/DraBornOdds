@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-25T23:18:03.712Z",
-  "dkd_teamCount": 788,
-  "dkd_resolvedTeams": 564,
-  "dkd_logoCount": 2780,
+  "dkd_generatedAt": "2026-09-26T04:55:25.290Z",
+  "dkd_teamCount": 768,
+  "dkd_resolvedTeams": 547,
+  "dkd_logoCount": 2781,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -2783,6 +2783,7 @@
     "bosna hersek": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/36f95df7db646b18.png",
     "hırvatistan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f0a52019a1fc7c05.jpg",
     "hirvatistan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f0a52019a1fc7c05.jpg",
-    "colon de santa fe": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c836b65dddf2dd03.jpg"
+    "colon de santa fe": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c836b65dddf2dd03.jpg",
+    "suudi arabistan u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0af066738b8bf960.jpg"
   }
 }
