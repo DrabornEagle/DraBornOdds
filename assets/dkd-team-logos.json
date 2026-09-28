@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-27T23:02:27.159Z",
-  "dkd_teamCount": 757,
-  "dkd_resolvedTeams": 502,
-  "dkd_logoCount": 3288,
+  "dkd_generatedAt": "2026-09-28T05:21:05.286Z",
+  "dkd_teamCount": 684,
+  "dkd_resolvedTeams": 443,
+  "dkd_logoCount": 3298,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3291,6 +3291,16 @@
     "oberhausen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9effe779f177db52.png",
     "harstad": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fc672e636506b02e.png",
     "stallion fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd8680b7823e21ae.png",
-    "stallion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd8680b7823e21ae.png"
+    "stallion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd8680b7823e21ae.png",
+    "slovan bratislava b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7f92660d399b8d3f.png",
+    "sanfrecce hiroshima (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a7ed921058a52b84.jpg",
+    "sanfrecce hiroshima k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a7ed921058a52b84.jpg",
+    "us albinoleffe": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/570c2d5c4d38e14d.jpg",
+    "yunanistan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2d8645a3c5dc957d.png",
+    "macaristan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a836255c8d3fbc2f.png",
+    "polonya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f5a48d33d457d6a0.png",
+    "tunus": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4fdef2a8c99efa44.jpg",
+    "0 gençlerbirliği": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/43960ad7dec02d38.png",
+    "0 genclerbirligi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/43960ad7dec02d38.png"
   }
 }
