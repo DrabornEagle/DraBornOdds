@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-28T16:44:39.183Z",
-  "dkd_teamCount": 244,
-  "dkd_resolvedTeams": 167,
-  "dkd_logoCount": 3311,
+  "dkd_generatedAt": "2026-09-29T00:21:48.918Z",
+  "dkd_teamCount": 110,
+  "dkd_resolvedTeams": 66,
+  "dkd_logoCount": 3323,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3314,6 +3314,18 @@
     "club fernando de la mora": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1d829d846767d872.png",
     "albion fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/de999bc16b6d7e79.png",
     "albion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/de999bc16b6d7e79.png",
-    "juventude": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/09802e4aee9e2d61.png"
+    "juventude": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/09802e4aee9e2d61.png",
+    "endonezya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0a4e196730a97144.jpg",
+    "gimnasia y esgrima la plata (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e45a1fa6db75924b.jpg",
+    "gimnasia y esgrima la plata k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e45a1fa6db75924b.jpg",
+    "msk zilina b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8275189f877ae229.jpg",
+    "social atletico (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7d83e1fd042b580c.jpg",
+    "social atletico k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7d83e1fd042b580c.jpg",
+    "malezya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f13a332976a4234e.jpg",
+    "al arabi (uae)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a006cb6088d5c8d0.jpg",
+    "al arabi uae": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a006cb6088d5c8d0.jpg",
+    "al-dhaid": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/667bc51aaafb8d6e.png",
+    "al dhaid": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/667bc51aaafb8d6e.png",
+    "al wakrah": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7750172757a76439.png"
   }
 }
