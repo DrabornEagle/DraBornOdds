@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-29T10:40:13.757Z",
-  "dkd_teamCount": 332,
-  "dkd_resolvedTeams": 227,
-  "dkd_logoCount": 3369,
+  "dkd_generatedAt": "2026-09-29T18:04:29.699Z",
+  "dkd_teamCount": 206,
+  "dkd_resolvedTeams": 169,
+  "dkd_logoCount": 3381,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3372,6 +3372,18 @@
     "ponte preta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/941d64deb2e22d53.png",
     "afc whyteleafe": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2866934e42828968.png",
     "plaza colonia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/97330016bed1f03d.png",
-    "cd los chankas": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/32aeeebb01744b2f.png"
+    "cd los chankas": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/32aeeebb01744b2f.png",
+    "romanya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/093ec472287cd474.png",
+    "isveç": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5af0e15411b131ae.jpg",
+    "isvec": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5af0e15411b131ae.jpg",
+    "kazakistan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fd3a60f7257f85f4.jpg",
+    "kuzey makedonya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/71f3c2a5afa586b0.png",
+    "italya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/047f692bd7fcd3d7.jpg",
+    "ingiltere": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c9af99caf5a5d8a0.jpg",
+    "slovenya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/212f5f2f4845c406.jpg",
+    "belçika": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/df9e9bc5a15e595a.jpg",
+    "belcika": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/df9e9bc5a15e595a.jpg",
+    "isviçre": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ce2b2367c33acedc.jpg",
+    "isvicre": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ce2b2367c33acedc.jpg"
   }
 }
