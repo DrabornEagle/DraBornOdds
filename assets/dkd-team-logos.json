@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-30T14:54:40.142Z",
-  "dkd_teamCount": 330,
-  "dkd_resolvedTeams": 223,
-  "dkd_logoCount": 3408,
+  "dkd_generatedAt": "2026-09-30T20:48:25.027Z",
+  "dkd_teamCount": 138,
+  "dkd_resolvedTeams": 96,
+  "dkd_logoCount": 3412,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3411,6 +3411,10 @@
     "rubio nu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b500ac15beb5c1af.png",
     "cerro porteno": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5af1591cdbf0937d.png",
     "las vegas li": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5c94e2b200dd7140.png",
-    "saint martin": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7552663c0298a60a.png"
+    "saint martin": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7552663c0298a60a.png",
+    "penarol uru": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/673d1958cf1d0121.png",
+    "atl. junior": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bd8e4713c58bd1b8.jpg",
+    "atl junior": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bd8e4713c58bd1b8.jpg",
+    "yeni zelanda": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0cb117fd36e75e14.jpg"
   }
 }
