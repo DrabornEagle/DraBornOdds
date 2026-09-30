@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-30T05:29:56.854Z",
-  "dkd_teamCount": 288,
-  "dkd_resolvedTeams": 212,
-  "dkd_logoCount": 3394,
+  "dkd_generatedAt": "2026-09-30T14:54:40.142Z",
+  "dkd_teamCount": 330,
+  "dkd_resolvedTeams": 223,
+  "dkd_logoCount": 3408,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3397,6 +3397,20 @@
     "matsumoto y": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/91b60ba86f2c0877.png",
     "isviçre u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34633ab8a830d899.jpg",
     "isvicre u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34633ab8a830d899.jpg",
-    "portekiz u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81b7e0e767c98897.jpg"
+    "portekiz u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81b7e0e767c98897.jpg",
+    "cff caceres (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bfc209896863ef02.jpg",
+    "cff caceres k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bfc209896863ef02.jpg",
+    "almanya u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/20b8c10deec5f2d5.jpg",
+    "burgos cf (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/18cddf56a023ceb5.jpg",
+    "burgos cf k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/18cddf56a023ceb5.jpg",
+    "italya u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a58efafb0aa194fc.jpg",
+    "rc celta de vigo (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a88f53fb7653afe1.jpg",
+    "rc celta de vigo k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a88f53fb7653afe1.jpg",
+    "fc kreuzlingen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/75bbe3048520905d.png",
+    "kreuzlingen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/75bbe3048520905d.png",
+    "rubio nu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b500ac15beb5c1af.png",
+    "cerro porteno": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5af1591cdbf0937d.png",
+    "las vegas li": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5c94e2b200dd7140.png",
+    "saint martin": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7552663c0298a60a.png"
   }
 }
