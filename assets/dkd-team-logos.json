@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-09-29T23:41:57.879Z",
-  "dkd_teamCount": 296,
-  "dkd_resolvedTeams": 216,
-  "dkd_logoCount": 3389,
+  "dkd_generatedAt": "2026-09-30T05:29:56.854Z",
+  "dkd_teamCount": 288,
+  "dkd_resolvedTeams": 212,
+  "dkd_logoCount": 3394,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3392,6 +3392,11 @@
     "kambocya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f34ba3f9074d59af.jpg",
     "m hollyhock": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/789b5041a3e7f9e1.png",
     "ingiltere u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e5cecc1c9717c423.jpg",
-    "fransa u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/91182305bf78c692.jpg"
+    "fransa u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/91182305bf78c692.jpg",
+    "brezilya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b2bad414024a2ac9.jpg",
+    "matsumoto y": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/91b60ba86f2c0877.png",
+    "isviçre u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34633ab8a830d899.jpg",
+    "isvicre u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34633ab8a830d899.jpg",
+    "portekiz u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81b7e0e767c98897.jpg"
   }
 }
