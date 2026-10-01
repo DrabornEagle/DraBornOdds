@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-01T05:48:50.027Z",
-  "dkd_teamCount": 152,
-  "dkd_resolvedTeams": 94,
-  "dkd_logoCount": 3416,
+  "dkd_generatedAt": "2026-10-01T15:26:23.646Z",
+  "dkd_teamCount": 210,
+  "dkd_resolvedTeams": 139,
+  "dkd_logoCount": 3431,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3419,6 +3419,21 @@
     "el mansurah": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/668acc8d2cec5fde.jpg",
     "oviedo moderno (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7b790f56c2f59d1c.png",
     "oviedo moderno k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7b790f56c2f59d1c.png",
-    "japonya u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4aa8394c034478b7.jpg"
+    "japonya u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4aa8394c034478b7.jpg",
+    "levante (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/15586d7548378f91.png",
+    "levante k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/15586d7548378f91.png",
+    "çekya u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fcf396b1b5667671.jpg",
+    "cekya u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fcf396b1b5667671.jpg",
+    "cordoba cf (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9dde3b812f36187f.jpg",
+    "cordoba cf k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9dde3b812f36187f.jpg",
+    "s. huelva (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e14f26eef5db2cf8.jpg",
+    "huelva k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e14f26eef5db2cf8.jpg",
+    "karadağ u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6551e48f8c66a4fc.jpg",
+    "karadag u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6551e48f8c66a4fc.jpg",
+    "al bidda sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a08036be432ebde2.png",
+    "al bidda": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a08036be432ebde2.png",
+    "al-shamal": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7beb5db8e894fa2f.png",
+    "al shamal": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7beb5db8e894fa2f.png",
+    "club olimpia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2b612ca5cd1a796b.png"
   }
 }
