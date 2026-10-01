@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-01T15:26:23.646Z",
-  "dkd_teamCount": 210,
-  "dkd_resolvedTeams": 139,
-  "dkd_logoCount": 3431,
+  "dkd_generatedAt": "2026-10-01T21:01:09.739Z",
+  "dkd_teamCount": 118,
+  "dkd_resolvedTeams": 87,
+  "dkd_logoCount": 3434,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3434,6 +3434,9 @@
     "al bidda": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a08036be432ebde2.png",
     "al-shamal": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7beb5db8e894fa2f.png",
     "al shamal": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7beb5db8e894fa2f.png",
-    "club olimpia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2b612ca5cd1a796b.png"
+    "club olimpia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2b612ca5cd1a796b.png",
+    "goias go": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e73477b5f892f256.png",
+    "sportivo luqueno": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4dd8ac95c735aba5.png",
+    "athletic club mg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/85697759ab4e5530.png"
   }
 }
