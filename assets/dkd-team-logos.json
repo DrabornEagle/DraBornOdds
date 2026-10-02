@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-02T14:44:04.649Z",
-  "dkd_teamCount": 816,
-  "dkd_resolvedTeams": 634,
-  "dkd_logoCount": 3535,
+  "dkd_generatedAt": "2026-10-02T20:43:19.185Z",
+  "dkd_teamCount": 740,
+  "dkd_resolvedTeams": 607,
+  "dkd_logoCount": 3541,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3538,6 +3538,12 @@
     "eintracht frankfurt (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5c8650d4248f5179.jpg",
     "eintracht frankfurt k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5c8650d4248f5179.jpg",
     "mas maghrib a fes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a1d4cdceca507232.png",
-    "mas maghrib fes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a1d4cdceca507232.png"
+    "mas maghrib fes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a1d4cdceca507232.png",
+    "crb al": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e1d212760d0e001c.jpg",
+    "deportivo madryn": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ee346a4414b1979f.jpg",
+    "sao paulo sp": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/39df3ded223f0eb9.png",
+    "deportivo capiata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ea57c1bf397fd62.jpg",
+    "puebla fc (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/083ac52a926857af.jpg",
+    "puebla k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/083ac52a926857af.jpg"
   }
 }
