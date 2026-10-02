@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-01T21:01:09.739Z",
-  "dkd_teamCount": 118,
-  "dkd_resolvedTeams": 87,
-  "dkd_logoCount": 3434,
+  "dkd_generatedAt": "2026-10-02T05:33:57.462Z",
+  "dkd_teamCount": 152,
+  "dkd_resolvedTeams": 108,
+  "dkd_logoCount": 3440,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3437,6 +3437,12 @@
     "club olimpia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2b612ca5cd1a796b.png",
     "goias go": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e73477b5f892f256.png",
     "sportivo luqueno": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4dd8ac95c735aba5.png",
-    "athletic club mg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/85697759ab4e5530.png"
+    "athletic club mg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/85697759ab4e5530.png",
+    "isviçre u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e5189a9ef87598a9.jpg",
+    "isvicre u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e5189a9ef87598a9.jpg",
+    "dubai united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fe6cc7a76b6f8dc2.png",
+    "polonya u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0b15744a505137f1.jpg",
+    "sharjah fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6e51f70796cd378b.png",
+    "sharjah": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6e51f70796cd378b.png"
   }
 }
