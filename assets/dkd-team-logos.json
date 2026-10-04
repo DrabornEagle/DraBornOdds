@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-03T23:02:21.974Z",
+  "dkd_generatedAt": "2026-10-04T05:49:54.263Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 636,
-  "dkd_logoCount": 3655,
+  "dkd_resolvedTeams": 624,
+  "dkd_logoCount": 3660,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3658,6 +3658,11 @@
     "greuther furth ii": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e41c782327fd34a3.png",
     "valenciennes fc u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cb3cf6fa85b5c03c.png",
     "valenciennes u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cb3cf6fa85b5c03c.png",
-    "usl dunkerque u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d32b43134e588c8.png"
+    "usl dunkerque u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d32b43134e588c8.png",
+    "budapest honved mfa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/92f54b6a142c32ff.jpg",
+    "bss monor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f5d64dc1659832f5.jpg",
+    "club deportiva minera": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dbd260b0ab7f3ab0.jpg",
+    "ııı keruleti tve": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/51da7204ff1724e0.jpg",
+    "iii keruleti tve": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/51da7204ff1724e0.jpg"
   }
 }
