@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-05T05:35:57.428Z",
-  "dkd_teamCount": 669,
-  "dkd_resolvedTeams": 432,
-  "dkd_logoCount": 3759,
+  "dkd_generatedAt": "2026-10-05T17:07:44.838Z",
+  "dkd_teamCount": 225,
+  "dkd_resolvedTeams": 172,
+  "dkd_logoCount": 3767,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3762,6 +3762,14 @@
     "cartagena b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a0b6068951cf523.jpg",
     "cd leganes b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7eed3595d93a0a8e.jpg",
     "real murcia b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2b525d0831eb0a70.jpg",
-    "davao aguilas": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aa6043d3dfdee5d5.png"
+    "davao aguilas": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aa6043d3dfdee5d5.png",
+    "valencia (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fc5459558712e627.jpg",
+    "valencia k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fc5459558712e627.jpg",
+    "csd flandria": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8bec8427dfe4599a.png",
+    "mısır": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/406817b419363f5d.jpg",
+    "misir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/406817b419363f5d.jpg",
+    "leones negros udeg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6545fbeb8d329916.jpg",
+    "güney afrika": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8b61abce112c8450.png",
+    "guney afrika": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8b61abce112c8450.png"
   }
 }
