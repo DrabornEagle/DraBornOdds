@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-04T23:08:02.717Z",
-  "dkd_teamCount": 733,
-  "dkd_resolvedTeams": 488,
-  "dkd_logoCount": 3754,
+  "dkd_generatedAt": "2026-10-05T05:35:57.428Z",
+  "dkd_teamCount": 669,
+  "dkd_resolvedTeams": 432,
+  "dkd_logoCount": 3759,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3757,6 +3757,11 @@
     "sd noja": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/914394cd9f18e19e.png",
     "ribadesella cf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cd3d6a4caae3e154.png",
     "0 tümosan konyaspor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/45d0ed981d2711ec.jpg",
-    "0 konyaspor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/45d0ed981d2711ec.jpg"
+    "0 konyaspor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/45d0ed981d2711ec.jpg",
+    "fc cartagena b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a0b6068951cf523.jpg",
+    "cartagena b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a0b6068951cf523.jpg",
+    "cd leganes b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7eed3595d93a0a8e.jpg",
+    "real murcia b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2b525d0831eb0a70.jpg",
+    "davao aguilas": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aa6043d3dfdee5d5.png"
   }
 }
