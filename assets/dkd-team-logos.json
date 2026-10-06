@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-06T18:20:13.560Z",
-  "dkd_teamCount": 184,
-  "dkd_resolvedTeams": 157,
-  "dkd_logoCount": 3806,
+  "dkd_generatedAt": "2026-10-06T23:47:38.321Z",
+  "dkd_teamCount": 288,
+  "dkd_resolvedTeams": 207,
+  "dkd_logoCount": 3811,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3809,6 +3809,11 @@
     "finlandiya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e2d0b3ed87609764.jpg",
     "izlanda": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/46be09ab16b05bfc.jpg",
     "lihtenştayn": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81be918de3b829ce.jpg",
-    "lihtenstayn": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81be918de3b829ce.jpg"
+    "lihtenstayn": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81be918de3b829ce.jpg",
+    "beijing tech": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a4ea47878a57860d.png",
+    "chengdu rongcheng b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a7f922ce1e1287ee.jpg",
+    "wuhan three towns b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81c6d62533b574ea.jpg",
+    "qingdao red": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a448a01724b21365.jpg",
+    "song lam": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4d46b4af56b1ed28.png"
   }
 }
