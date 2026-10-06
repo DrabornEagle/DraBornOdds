@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-06T01:17:42.478Z",
-  "dkd_teamCount": 72,
-  "dkd_resolvedTeams": 68,
-  "dkd_logoCount": 3777,
+  "dkd_generatedAt": "2026-10-06T11:15:27.089Z",
+  "dkd_teamCount": 348,
+  "dkd_resolvedTeams": 260,
+  "dkd_logoCount": 3798,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3780,6 +3780,27 @@
     "isveç u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/56a0eac4afa3bd39.jpg",
     "isvec u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/56a0eac4afa3bd39.jpg",
     "karadağ": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bdeb4f71b92296c5.jpg",
-    "karadag": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bdeb4f71b92296c5.jpg"
+    "karadag": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bdeb4f71b92296c5.jpg",
+    "dalian yingbo b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2c8445f688998b4a.jpg",
+    "shanghai port b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c775e58e9b418537.jpg",
+    "shandong taishan b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a68e4f762606f443.jpg",
+    "kariobangi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/705c981d89ce9db2.png",
+    "mjallby": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/72ba209482e33c0d.png",
+    "raufoss": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1ef64a99e0121b1e.png",
+    "ık start": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c343af44bf55fc08.png",
+    "ik start": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c343af44bf55fc08.png",
+    "trollhattan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/72b1e13b3a2b8613.png",
+    "stanway rovers": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/84fe75b24462ee55.png",
+    "buriram united fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0db04a6fffaaef0c.png",
+    "buriram united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0db04a6fffaaef0c.png",
+    "ratchaburi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cbd1dc2fcfdf1d94.png",
+    "tp ho chi minh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7552bb776db6615b.png",
+    "san marcos fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/17389d1df7b44eaa.png",
+    "san marcos": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/17389d1df7b44eaa.png",
+    "diriangen fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/411f2cff57c73cb7.png",
+    "diriangen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/411f2cff57c73cb7.png",
+    "cs constantine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0f859f19ec2baf51.png",
+    "avro fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f630a8ed2b10dbd5.png",
+    "avro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f630a8ed2b10dbd5.png"
   }
 }
