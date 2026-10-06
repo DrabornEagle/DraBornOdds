@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-06T11:15:27.089Z",
-  "dkd_teamCount": 348,
-  "dkd_resolvedTeams": 260,
-  "dkd_logoCount": 3798,
+  "dkd_generatedAt": "2026-10-06T18:20:13.560Z",
+  "dkd_teamCount": 184,
+  "dkd_resolvedTeams": 157,
+  "dkd_logoCount": 3806,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3801,6 +3801,14 @@
     "diriangen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/411f2cff57c73cb7.png",
     "cs constantine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0f859f19ec2baf51.png",
     "avro fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f630a8ed2b10dbd5.png",
-    "avro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f630a8ed2b10dbd5.png"
+    "avro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f630a8ed2b10dbd5.png",
+    "estonya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/15fb77d22723a649.jpg",
+    "pontypridd town": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/335f7c42a52e3e0a.jpg",
+    "belarus": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/edb4b58b5c91ca9e.png",
+    "ispanya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/996074dbace0c236.jpg",
+    "finlandiya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e2d0b3ed87609764.jpg",
+    "izlanda": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/46be09ab16b05bfc.jpg",
+    "lihtenştayn": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81be918de3b829ce.jpg",
+    "lihtenstayn": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81be918de3b829ce.jpg"
   }
 }
