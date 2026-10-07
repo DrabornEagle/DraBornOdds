@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-07T15:32:35.143Z",
-  "dkd_teamCount": 360,
-  "dkd_resolvedTeams": 276,
-  "dkd_logoCount": 3871,
+  "dkd_generatedAt": "2026-10-07T21:17:19.854Z",
+  "dkd_teamCount": 182,
+  "dkd_resolvedTeams": 146,
+  "dkd_logoCount": 3875,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3874,6 +3874,10 @@
     "national bank of egypt": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2702b9264d697cd9.png",
     "safa sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d8cbacb47050dcf8.png",
     "safa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d8cbacb47050dcf8.png",
-    "es setif": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f2d91f9e288157fc.png"
+    "es setif": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f2d91f9e288157fc.png",
+    "vitoria ba": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5920d1b977fe66f4.png",
+    "ca juventud de las piedras": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bc4099862804dd34.png",
+    "botafogo rj": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fc611295e8be7bb3.png",
+    "cruzeiro mg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3cc9eab967b2ba6e.png"
   }
 }
