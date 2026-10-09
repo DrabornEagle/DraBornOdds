@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-08T21:18:21.902Z",
-  "dkd_teamCount": 154,
-  "dkd_resolvedTeams": 137,
-  "dkd_logoCount": 3916,
+  "dkd_generatedAt": "2026-10-09T06:05:48.158Z",
+  "dkd_teamCount": 140,
+  "dkd_resolvedTeams": 127,
+  "dkd_logoCount": 3921,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -3919,6 +3919,11 @@
     "palmeiras sp": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e0df146d8d221dd8.png",
     "mladost dg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ca83aff2d9cc820e.jpg",
     "al nasr cairo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dac86078abeb806c.jpg",
-    "al tadamon sour": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b46576af4edf33ce.jpg"
+    "al tadamon sour": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b46576af4edf33ce.jpg",
+    "al hikma": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b139150ca186fdd0.png",
+    "hjk helsinki": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e0dbbf1a6dfd8e9f.jpg",
+    "al zawraa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d9b8f5f981431658.jpg",
+    "al-baqaa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d667f0fee1bfbe63.png",
+    "al baqaa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d667f0fee1bfbe63.png"
   }
 }
