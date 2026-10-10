@@ -1,0 +1,31 @@
+{
+  "dkd_updatedAt": "2026-10-10T19:29:14.711Z",
+  "dkd_source": "TFF public HTML pageID=198",
+  "dkd_fixtures": [
+    {
+      "dkd_startAt": "2026-10-10T16:00:00.000Z",
+      "dkd_home": "ÇAYKUR RİZESPOR A.Ş. 0",
+      "dkd_away": "3 FENERBAHÇE A.Ş."
+    },
+    {
+      "dkd_startAt": "2026-10-11T10:30:00.000Z",
+      "dkd_home": "TÜMOSAN KONYASPOR",
+      "dkd_away": "İSTANBUL BAŞAKŞEHİR FK"
+    },
+    {
+      "dkd_startAt": "2026-10-11T13:00:00.000Z",
+      "dkd_home": "GAZİANTEP FUTBOL KULÜBÜ A.Ş.",
+      "dkd_away": "ARCA ÇORUM FK"
+    },
+    {
+      "dkd_startAt": "2026-10-11T16:00:00.000Z",
+      "dkd_home": "BEŞİKTAŞ A.Ş.",
+      "dkd_away": "KOCAELİSPOR"
+    },
+    {
+      "dkd_startAt": "2026-10-12T17:00:00.000Z",
+      "dkd_home": "EYÜPSPOR",
+      "dkd_away": "GÖZTEPE A.Ş."
+    }
+  ]
+}
