@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-11T20:14:48.075Z",
-  "dkd_teamCount": 244,
-  "dkd_resolvedTeams": 187,
-  "dkd_logoCount": 4238,
+  "dkd_generatedAt": "2026-10-11T23:39:34.105Z",
+  "dkd_teamCount": 176,
+  "dkd_resolvedTeams": 126,
+  "dkd_logoCount": 4243,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4241,6 +4241,11 @@
     "mladost lucani": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4f53f9940e7b04f1.png",
     "metz": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fb742cb62bea4b48.png",
     "esteghlal fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e811535e282dd26b.png",
-    "esteghlal": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e811535e282dd26b.png"
+    "esteghlal": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e811535e282dd26b.png",
+    "fk baskimi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a93951bb9bf575a7.jpg",
+    "baskimi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a93951bb9bf575a7.jpg",
+    "pumas unam": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eec6e386545de722.jpg",
+    "fc pakhtakor tashkent": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae1c48705877017.jpg",
+    "pakhtakor tashkent": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae1c48705877017.jpg"
   }
 }
