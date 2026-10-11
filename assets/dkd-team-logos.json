@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-10T14:27:59.841Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 673,
-  "dkd_logoCount": 4190,
+  "dkd_generatedAt": "2026-10-11T14:54:38.975Z",
+  "dkd_teamCount": 777,
+  "dkd_resolvedTeams": 555,
+  "dkd_logoCount": 4200,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4193,6 +4193,16 @@
     "tusker fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/16704f0e870dad95.png",
     "tusker": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/16704f0e870dad95.png",
     "uttaradit fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad04693ea90ba17c.png",
-    "uttaradit": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad04693ea90ba17c.png"
+    "uttaradit": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad04693ea90ba17c.png",
+    "lask": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2eaeb77348c3ba06.png",
+    "qviding f": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bb1e23f29ef414eb.jpg",
+    "hamkam": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd1fb64b62137528.jpg",
+    "elche b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9f0ef78394fcf793.jpg",
+    "hodd ıl": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f567227debb0ad40.jpg",
+    "hodd il": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f567227debb0ad40.jpg",
+    "helsingborg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6633401e95ae2622.jpg",
+    "sogndal ıl": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78351d9ce6a994d9.jpg",
+    "sogndal il": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78351d9ce6a994d9.jpg",
+    "al faisaly fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fd209851a8eb0cea.png"
   }
 }
