@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-12T05:53:26.107Z",
-  "dkd_teamCount": 176,
-  "dkd_resolvedTeams": 127,
-  "dkd_logoCount": 4244,
+  "dkd_generatedAt": "2026-10-12T17:52:42.786Z",
+  "dkd_teamCount": 230,
+  "dkd_resolvedTeams": 174,
+  "dkd_logoCount": 4249,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4247,6 +4247,11 @@
     "pumas unam": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eec6e386545de722.jpg",
     "fc pakhtakor tashkent": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae1c48705877017.jpg",
     "pakhtakor tashkent": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae1c48705877017.jpg",
-    "atk mohun bagan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4f16897ad6545a8a.jpg"
+    "atk mohun bagan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4f16897ad6545a8a.jpg",
+    "u. cluj": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a61403192b75cee2.png",
+    "u cluj": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a61403192b75cee2.png",
+    "juventud unida san miguel": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/da9287a2aa395103.png",
+    "ofk belgrad": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8af2362268516581.png",
+    "plymouth argyle u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2ebe4292fc865029.png"
   }
 }
