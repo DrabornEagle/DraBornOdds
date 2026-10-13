@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-13T19:15:07.174Z",
-  "dkd_teamCount": 190,
-  "dkd_resolvedTeams": 166,
-  "dkd_logoCount": 4356,
+  "dkd_generatedAt": "2026-10-13T23:43:20.392Z",
+  "dkd_teamCount": 166,
+  "dkd_resolvedTeams": 149,
+  "dkd_logoCount": 4367,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4359,6 +4359,17 @@
     "mombasa elite": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6b3a70953143641.png",
     "clb viettel": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b4691c40c6e79c63.jpg",
     "fus rabat": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8fb704f832350a1f.jpg",
-    "trans narva": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b859ce73f35b4301.jpg"
+    "trans narva": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b859ce73f35b4301.jpg",
+    "bate borisov": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8cb9bc8b85ced329.jpg",
+    "fc dynamo-makhachkala": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7af98ec3cdf0e40e.jpg",
+    "dynamo makhachkala": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7af98ec3cdf0e40e.jpg",
+    "bohemians prag": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1616a2adeb682da9.png",
+    "al orubah fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e7c80f6701d2cced.png",
+    "al orubah": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e7c80f6701d2cced.png",
+    "al kuveyt sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/08e5cd36127e3120.jpg",
+    "al kuveyt": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/08e5cd36127e3120.jpg",
+    "tallinna fc levadia u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae665a1aed3f405.jpg",
+    "tallinna levadia u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae665a1aed3f405.jpg",
+    "paide flora": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7c99dc9b1db5cd88.png"
   }
 }
