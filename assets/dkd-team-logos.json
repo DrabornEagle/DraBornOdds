@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-13T11:45:17.237Z",
-  "dkd_teamCount": 665,
-  "dkd_resolvedTeams": 533,
-  "dkd_logoCount": 4342,
+  "dkd_generatedAt": "2026-10-13T19:15:07.174Z",
+  "dkd_teamCount": 190,
+  "dkd_resolvedTeams": 166,
+  "dkd_logoCount": 4356,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4345,6 +4345,20 @@
     "liverpool": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/068942c83f0e6994.png",
     "al nahda": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4131f93efb08ba50.png",
     "shakhtar donetsk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/011ada708cd1b700.png",
-    "manchester city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d2ac61210752e4ca.png"
+    "manchester city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d2ac61210752e4ca.png",
+    "brezilya (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bb0dc53c06d1decb.jpg",
+    "brezilya k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bb0dc53c06d1decb.jpg",
+    "arjantin (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9663c526bf5ca35f.jpg",
+    "arjantin k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9663c526bf5ca35f.jpg",
+    "ispanya (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dbda36b6f97eb541.jpg",
+    "ispanya k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dbda36b6f97eb541.jpg",
+    "ı pavlodar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1465035069b5a22b.jpg",
+    "i pavlodar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1465035069b5a22b.jpg",
+    "abd (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/900e8514d9d0394b.jpg",
+    "abd k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/900e8514d9d0394b.jpg",
+    "mombasa elite": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6b3a70953143641.png",
+    "clb viettel": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b4691c40c6e79c63.jpg",
+    "fus rabat": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8fb704f832350a1f.jpg",
+    "trans narva": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b859ce73f35b4301.jpg"
   }
 }
