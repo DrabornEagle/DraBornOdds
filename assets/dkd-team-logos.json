@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-12T17:52:42.786Z",
+  "dkd_generatedAt": "2026-10-13T02:00:29.972Z",
   "dkd_teamCount": 230,
-  "dkd_resolvedTeams": 174,
-  "dkd_logoCount": 4249,
+  "dkd_resolvedTeams": 183,
+  "dkd_logoCount": 4255,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4252,6 +4252,12 @@
     "u cluj": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a61403192b75cee2.png",
     "juventud unida san miguel": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/da9287a2aa395103.png",
     "ofk belgrad": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8af2362268516581.png",
-    "plymouth argyle u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2ebe4292fc865029.png"
+    "plymouth argyle u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2ebe4292fc865029.png",
+    "jiangxi beidamen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3fe0eabd20be5de7.jpg",
+    "balestier": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/08e57fee77c11bc2.png",
+    "ac monza u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f07d44f9aa0c1be8.png",
+    "braga u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/16e05d0c497f7fa0.png",
+    "strindheim": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/794f1ef3efd7e956.png",
+    "lubeck": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7be876dadd784449.png"
   }
 }
