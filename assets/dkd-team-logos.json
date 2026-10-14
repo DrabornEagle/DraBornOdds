@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-14T04:50:26.329Z",
-  "dkd_teamCount": 499,
-  "dkd_resolvedTeams": 414,
-  "dkd_logoCount": 4375,
+  "dkd_generatedAt": "2026-10-14T13:42:37.552Z",
+  "dkd_teamCount": 716,
+  "dkd_resolvedTeams": 572,
+  "dkd_logoCount": 4381,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4378,6 +4378,12 @@
     "muang thong united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78573e70883c2ac1.jpg",
     "johor darul": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b044238b22413a66.jpg",
     "newcastle united jets": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/135925e7b06939c8.jpg",
-    "shanghai port": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2886a4277c60ba49.jpg"
+    "shanghai port": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2886a4277c60ba49.jpg",
+    "al shorta baghdad": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5f6348c2e79f8107.jpg",
+    "talaea gaish": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/12f6b4fbc3b9e555.jpg",
+    "juventus u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/899a0c87d41b74a1.png",
+    "atletico madrid u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0fd1eb2db578b7b7.jpg",
+    "ac lumezzane": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/77a227da5cf8ca6b.jpg",
+    "mc magra": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/97f6d5cb3386f8c3.jpg"
   }
 }
