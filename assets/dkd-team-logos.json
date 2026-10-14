@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-13T23:43:20.392Z",
-  "dkd_teamCount": 166,
-  "dkd_resolvedTeams": 149,
-  "dkd_logoCount": 4367,
+  "dkd_generatedAt": "2026-10-14T04:50:26.329Z",
+  "dkd_teamCount": 499,
+  "dkd_resolvedTeams": 414,
+  "dkd_logoCount": 4375,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4370,6 +4370,14 @@
     "al kuveyt": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/08e5cd36127e3120.jpg",
     "tallinna fc levadia u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae665a1aed3f405.jpg",
     "tallinna levadia u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3ae665a1aed3f405.jpg",
-    "paide flora": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7c99dc9b1db5cd88.png"
+    "paide flora": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7c99dc9b1db5cd88.png",
+    "portimonense u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e0eb4567c672f475.jpg",
+    "sporting lizbon u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3a70ddcdc58921cf.jpg",
+    "daejeon citizen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/96665bba43dcea8c.jpg",
+    "pohang steelers": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/33cdfd8dc9f23c4c.jpg",
+    "muang thong united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78573e70883c2ac1.jpg",
+    "johor darul": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b044238b22413a66.jpg",
+    "newcastle united jets": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/135925e7b06939c8.jpg",
+    "shanghai port": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2886a4277c60ba49.jpg"
   }
 }
