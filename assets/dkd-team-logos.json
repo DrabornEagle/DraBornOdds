@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-15T04:34:50.544Z",
-  "dkd_teamCount": 467,
-  "dkd_resolvedTeams": 391,
-  "dkd_logoCount": 4435,
+  "dkd_generatedAt": "2026-10-15T13:23:48.739Z",
+  "dkd_teamCount": 447,
+  "dkd_resolvedTeams": 368,
+  "dkd_logoCount": 4445,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4438,6 +4438,16 @@
     "feyenoord u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4c9fddcce773fc51.jpg",
     "mahasarakham united fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/563eba4472411fc8.jpg",
     "mahasarakham united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/563eba4472411fc8.jpg",
-    "real madrid u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eb3d797fb830ac77.jpg"
+    "real madrid u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eb3d797fb830ac77.jpg",
+    "psg u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bf7521606a3073ba.png",
+    "manchester city u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d1795b24293d311e.jpg",
+    "pfk mashal mubarek": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4deb69b827e880f8.jpg",
+    "fk agmk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b0937644a85516f5.png",
+    "agmk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b0937644a85516f5.png",
+    "fc andijon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/86680f6a41c01886.png",
+    "andijon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/86680f6a41c01886.png",
+    "al shamal future": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/decf15e1295e7e8d.jpg",
+    "al markhiya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e62241f67533d9fc.jpg",
+    "rc arbaa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/83279f1529e42b9c.png"
   }
 }
