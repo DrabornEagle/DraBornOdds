@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-14T23:12:30.424Z",
-  "dkd_teamCount": 475,
-  "dkd_resolvedTeams": 395,
-  "dkd_logoCount": 4430,
+  "dkd_generatedAt": "2026-10-15T04:34:50.544Z",
+  "dkd_teamCount": 467,
+  "dkd_resolvedTeams": 391,
+  "dkd_logoCount": 4435,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4433,6 +4433,11 @@
     "asker": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3b7252b4e9e6e19.png",
     "atletico el vigia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4e7b188f4bf8e11b.png",
     "real frontera fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/af58b1e83932f2cc.png",
-    "real frontera": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/af58b1e83932f2cc.png"
+    "real frontera": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/af58b1e83932f2cc.png",
+    "roma u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/00150d59c673016e.jpg",
+    "feyenoord u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4c9fddcce773fc51.jpg",
+    "mahasarakham united fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/563eba4472411fc8.jpg",
+    "mahasarakham united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/563eba4472411fc8.jpg",
+    "real madrid u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eb3d797fb830ac77.jpg"
   }
 }
