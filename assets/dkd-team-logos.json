@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-17T18:29:15.672Z",
+  "dkd_generatedAt": "2026-10-17T22:16:53.712Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 660,
-  "dkd_logoCount": 4662,
+  "dkd_resolvedTeams": 650,
+  "dkd_logoCount": 4670,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4665,6 +4665,14 @@
     "ımisli fk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f93a6633f40b7d0c.png",
     "imisli": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f93a6633f40b7d0c.png",
     "mechelen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e8c7585d2fac049a.png",
-    "arminia bielefeld": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b9a154188a081d92.png"
+    "arminia bielefeld": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b9a154188a081d92.png",
+    "pittsburgh r": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3a69abe47a7a7a36.png",
+    "wellington phoenix (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d5477208d7bb8df5.jpg",
+    "wellington phoenix k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d5477208d7bb8df5.jpg",
+    "rosario c": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cae0faece615514b.png",
+    "gimnasia y": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ea0d563d011918ff.png",
+    "melbourne city fc (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c943d4736806162e.jpg",
+    "melbourne city k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c943d4736806162e.jpg",
+    "wolfsberg": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d3801db3d76668d8.png"
   }
 }
