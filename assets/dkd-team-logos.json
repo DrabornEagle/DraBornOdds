@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-20T13:32:58.561Z",
-  "dkd_teamCount": 545,
-  "dkd_resolvedTeams": 485,
-  "dkd_logoCount": 4904,
+  "dkd_generatedAt": "2026-10-20T19:59:13.588Z",
+  "dkd_teamCount": 204,
+  "dkd_resolvedTeams": 192,
+  "dkd_logoCount": 4909,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4907,6 +4907,11 @@
     "rio ave u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8582fb0964e2cc2c.jpg",
     "torpedo belaz zhodino": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4716b04f7c9531c7.jpg",
     "naftan novopolotsk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e4eca120cfe3e216.jpg",
-    "al riyadh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/43bb34026283cb33.png"
+    "al riyadh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/43bb34026283cb33.png",
+    "tacuary asuncion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/32981dbf0ef47113.png",
+    "birzebbuga st. peters f.c.": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bf22978fbbce1e8c.jpg",
+    "birzebbuga st peters f c": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bf22978fbbce1e8c.jpg",
+    "hamrun spartans fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/84a9c5b6aa6be615.jpg",
+    "hamrun spartans": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/84a9c5b6aa6be615.jpg"
   }
 }
