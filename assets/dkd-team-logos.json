@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-20T19:59:13.588Z",
-  "dkd_teamCount": 204,
-  "dkd_resolvedTeams": 192,
-  "dkd_logoCount": 4909,
+  "dkd_generatedAt": "2026-10-20T23:10:15.078Z",
+  "dkd_teamCount": 402,
+  "dkd_resolvedTeams": 372,
+  "dkd_logoCount": 4915,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4912,6 +4912,12 @@
     "birzebbuga st. peters f.c.": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bf22978fbbce1e8c.jpg",
     "birzebbuga st peters f c": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bf22978fbbce1e8c.jpg",
     "hamrun spartans fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/84a9c5b6aa6be615.jpg",
-    "hamrun spartans": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/84a9c5b6aa6be615.jpg"
+    "hamrun spartans": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/84a9c5b6aa6be615.jpg",
+    "ethiopia electricity": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/08a94fcc63bca97a.png",
+    "dewa united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9b3cb1c73a4e22a8.png",
+    "administration police": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bbeec273cd0b4cbf.png",
+    "fasil kenema fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b501c0582f4e68d0.png",
+    "fasil kenema": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b501c0582f4e68d0.png",
+    "barcelona u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26eee32e8e9fd9f6.png"
   }
 }
