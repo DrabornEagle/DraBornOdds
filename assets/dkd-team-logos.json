@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-21T04:42:37.555Z",
-  "dkd_teamCount": 637,
-  "dkd_resolvedTeams": 545,
-  "dkd_logoCount": 4924,
+  "dkd_generatedAt": "2026-10-21T13:45:47.088Z",
+  "dkd_teamCount": 571,
+  "dkd_resolvedTeams": 494,
+  "dkd_logoCount": 4929,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4927,6 +4927,11 @@
     "viking u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/567c2b094afa23a5.png",
     "jerez cf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c4c52980c5c69a60.png",
     "up plasencia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b5625bf19f998ff4.png",
-    "cd manacor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1fb68a976900c413.png"
+    "cd manacor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1fb68a976900c413.png",
+    "girona fc b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6bd9736022df18c.jpg",
+    "girona b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6bd9736022df18c.jpg",
+    "ud villa santa brigida": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fd920c02f8bcfca2.jpg",
+    "bayern münih u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a7ef32e2b6d955e.jpg",
+    "bayern munih u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a7ef32e2b6d955e.jpg"
   }
 }
