@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-20T23:10:15.078Z",
-  "dkd_teamCount": 402,
-  "dkd_resolvedTeams": 372,
-  "dkd_logoCount": 4915,
+  "dkd_generatedAt": "2026-10-21T04:42:37.555Z",
+  "dkd_teamCount": 637,
+  "dkd_resolvedTeams": 545,
+  "dkd_logoCount": 4924,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4918,6 +4918,15 @@
     "administration police": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bbeec273cd0b4cbf.png",
     "fasil kenema fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b501c0582f4e68d0.png",
     "fasil kenema": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b501c0582f4e68d0.png",
-    "barcelona u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26eee32e8e9fd9f6.png"
+    "barcelona u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26eee32e8e9fd9f6.png",
+    "kanagawa sagamihara (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/87ba7f4dd24fb801.png",
+    "kanagawa sagamihara k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/87ba7f4dd24fb801.png",
+    "r yamaguchi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1fa63d7d16be9fbe.png",
+    "fleetwood town u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0185223ca12988f0.jpg",
+    "viking fk u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/567c2b094afa23a5.png",
+    "viking u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/567c2b094afa23a5.png",
+    "jerez cf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c4c52980c5c69a60.png",
+    "up plasencia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b5625bf19f998ff4.png",
+    "cd manacor": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1fb68a976900c413.png"
   }
 }
