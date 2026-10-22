@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-22T20:06:01.292Z",
-  "dkd_teamCount": 183,
-  "dkd_resolvedTeams": 169,
-  "dkd_logoCount": 4973,
+  "dkd_generatedAt": "2026-10-22T23:21:35.060Z",
+  "dkd_teamCount": 233,
+  "dkd_resolvedTeams": 205,
+  "dkd_logoCount": 4981,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4976,6 +4976,14 @@
     "lillestrom": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cc806f17f93c0e24.png",
     "olympiacos": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c22c04a30885a111.jpg",
     "hapoel beer sheva": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d67b04675110e926.jpg",
-    "levski sofya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/078dfe83ec8a4eba.jpg"
+    "levski sofya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/078dfe83ec8a4eba.jpg",
+    "adama city fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/af966267be2297f1.jpg",
+    "adama city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/af966267be2297f1.jpg",
+    "hawassa kenema sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d505cdd7267c82a9.png",
+    "hawassa kenema": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d505cdd7267c82a9.png",
+    "wolaita dicha sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/816c6bf99068f54e.png",
+    "wolaita dicha": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/816c6bf99068f54e.png",
+    "queensland lions fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/30910979ebb9e01a.jpg",
+    "queensland lions": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/30910979ebb9e01a.jpg"
   }
 }
