@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-22T04:40:13.520Z",
-  "dkd_teamCount": 357,
-  "dkd_resolvedTeams": 297,
-  "dkd_logoCount": 4946,
+  "dkd_generatedAt": "2026-10-22T13:45:53.979Z",
+  "dkd_teamCount": 327,
+  "dkd_resolvedTeams": 264,
+  "dkd_logoCount": 4955,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -4949,6 +4949,15 @@
     "celtic lfc (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/39e85cbe1af7396a.jpg",
     "celtic lfc k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/39e85cbe1af7396a.jpg",
     "albirex niigata (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3d079d9790c5a402.jpg",
-    "albirex niigata k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3d079d9790c5a402.jpg"
+    "albirex niigata k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3d079d9790c5a402.jpg",
+    "doqarah fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b907b6e2976a3b18.png",
+    "doqarah": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b907b6e2976a3b18.png",
+    "al-garaf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/08b6e2338328358c.png",
+    "al garaf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/08b6e2338328358c.png",
+    "al shabab fc (ksa)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f649cc2f91c1e32d.png",
+    "al shabab ksa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f649cc2f91c1e32d.png",
+    "cd tenerife c": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5bea4c72ae7388ae.jpg",
+    "zakho fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b62f41a20ab8c6ba.png",
+    "zakho": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b62f41a20ab8c6ba.png"
   }
 }
