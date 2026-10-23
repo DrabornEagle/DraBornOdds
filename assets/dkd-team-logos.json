@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-23T19:57:16.815Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 691,
-  "dkd_logoCount": 5017,
+  "dkd_generatedAt": "2026-10-23T23:07:40.514Z",
+  "dkd_teamCount": 819,
+  "dkd_resolvedTeams": 684,
+  "dkd_logoCount": 5024,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5020,6 +5020,13 @@
     "bootle": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3d6d8850f833568f.png",
     "bourne town": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/10d812694c2258f6.png",
     "cf estrela": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/98ed2eb928bafa56.png",
-    "bridlington town": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/31d44103138dc89d.png"
+    "bridlington town": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/31d44103138dc89d.png",
+    "canberra united fc (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0e8d1a01347f9a9a.png",
+    "canberra united k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0e8d1a01347f9a9a.png",
+    "western sydney w. (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b705af8f5a5c6a6d.jpg",
+    "western sydney w k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b705af8f5a5c6a6d.jpg",
+    "cashmere technical": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d86c9a4789b2e738.png",
+    "ferrymead bays": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/686eb0d5d07c9743.png",
+    "brisbane roar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/256ae88bd7d3c8a8.png"
   }
 }
