@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-23T23:07:40.514Z",
-  "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 684,
-  "dkd_logoCount": 5024,
+  "dkd_generatedAt": "2026-10-24T04:33:15.696Z",
+  "dkd_teamCount": 818,
+  "dkd_resolvedTeams": 633,
+  "dkd_logoCount": 5040,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5027,6 +5027,22 @@
     "western sydney w k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b705af8f5a5c6a6d.jpg",
     "cashmere technical": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d86c9a4789b2e738.png",
     "ferrymead bays": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/686eb0d5d07c9743.png",
-    "brisbane roar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/256ae88bd7d3c8a8.png"
+    "brisbane roar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/256ae88bd7d3c8a8.png",
+    "perth glory (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/da12e75be1ea2f88.jpg",
+    "perth glory k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/da12e75be1ea2f88.jpg",
+    "wuhan three towns": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c4f9deb07fe2b55a.jpg",
+    "qingdao youth ısland": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c6af0e1fe949c52b.png",
+    "qingdao youth island": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c6af0e1fe949c52b.png",
+    "alaves ıı": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21d8bc4a1f38bac1.jpg",
+    "alaves ii": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21d8bc4a1f38bac1.jpg",
+    "ternana (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3d203d96226fb39.png",
+    "ternana k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3d203d96226fb39.png",
+    "ucam murcia ıı": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cf89952b421c7fa8.jpg",
+    "ucam murcia ii": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cf89952b421c7fa8.jpg",
+    "alcantarilla fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ae576fa599069993.jpg",
+    "alcantarilla": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ae576fa599069993.jpg",
+    "kazincbarcikai sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d04cde7adf36ff64.jpg",
+    "kazincbarcikai": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d04cde7adf36ff64.jpg",
+    "nürnberg (a)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4af0fdf2798f59ac.png"
   }
 }
