@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-25T19:01:46.759Z",
+  "dkd_generatedAt": "2026-10-25T22:32:12.612Z",
   "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 685,
-  "dkd_logoCount": 5141,
+  "dkd_resolvedTeams": 672,
+  "dkd_logoCount": 5150,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5144,6 +5144,15 @@
     "mitre santia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/736bede6ecbe136b.png",
     "central norte salta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2949edee62f4cfb3.jpg",
     "vitoria sernache": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/605e493180522b24.png",
-    "sporting lizbon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/93aa71c35e048084.jpg"
+    "sporting lizbon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/93aa71c35e048084.jpg",
+    "u.concepcion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9ddbaaebfd9628d9.jpg",
+    "u concepcion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9ddbaaebfd9628d9.jpg",
+    "c mariners": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/124abf2cb2ea22be.png",
+    "deportes limache": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a00db9bac87570d9.jpg",
+    "ud las palmas atletico": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1b69b5df5c12870b.png",
+    "lazio (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ac356bf0548968b5.jpg",
+    "lazio k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ac356bf0548968b5.jpg",
+    "fcf como (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3d37f1f3b6b26b5.png",
+    "fcf como k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3d37f1f3b6b26b5.png"
   }
 }
