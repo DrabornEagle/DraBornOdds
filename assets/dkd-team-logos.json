@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-25T13:10:54.579Z",
-  "dkd_teamCount": 818,
-  "dkd_resolvedTeams": 667,
-  "dkd_logoCount": 5136,
+  "dkd_generatedAt": "2026-10-25T19:01:46.759Z",
+  "dkd_teamCount": 819,
+  "dkd_resolvedTeams": 685,
+  "dkd_logoCount": 5141,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5139,6 +5139,11 @@
     "cd binefar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dbe815925a082f3b.png",
     "al safa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/853170ce9e4120e7.png",
     "es zarzis": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/56ce10020a8a315f.png",
-    "vaduz": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3b65ba43c520310.png"
+    "vaduz": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3b65ba43c520310.png",
+    "12 de junio de villa hayes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/430f063fce268ac8.jpg",
+    "mitre santia": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/736bede6ecbe136b.png",
+    "central norte salta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2949edee62f4cfb3.jpg",
+    "vitoria sernache": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/605e493180522b24.png",
+    "sporting lizbon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/93aa71c35e048084.jpg"
   }
 }
