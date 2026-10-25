@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-24T22:28:06.462Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 652,
-  "dkd_logoCount": 5113,
+  "dkd_generatedAt": "2026-10-25T04:37:51.875Z",
+  "dkd_teamCount": 819,
+  "dkd_resolvedTeams": 639,
+  "dkd_logoCount": 5116,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5116,6 +5116,9 @@
     "al nojoom fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c57a259c8b60ae6e.png",
     "al nojoom": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c57a259c8b60ae6e.png",
     "gaziantep futbol kulübü a.ş. 1": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78cd2c4224471f8b.png",
-    "gaziantep 1": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78cd2c4224471f8b.png"
+    "gaziantep 1": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78cd2c4224471f8b.png",
+    "beijing bg phoenix (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2465527bcc2029d4.png",
+    "beijing bg phoenix k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2465527bcc2029d4.png",
+    "green eagles": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4e76f1e6fd496838.png"
   }
 }
