@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-26T15:10:26.548Z",
-  "dkd_teamCount": 522,
-  "dkd_resolvedTeams": 434,
-  "dkd_logoCount": 5189,
+  "dkd_generatedAt": "2026-10-26T21:00:17.901Z",
+  "dkd_teamCount": 182,
+  "dkd_resolvedTeams": 155,
+  "dkd_logoCount": 5193,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5192,6 +5192,10 @@
     "twente k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/71e387108a565365.jpg",
     "preussen 06 munster": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c9ab3c8164751d6b.jpg",
     "qalali club": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f5f92f09a8eddee0.jpg",
-    "santa coloma": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b2b75b2126a0a13.png"
+    "santa coloma": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b2b75b2126a0a13.png",
+    "nk jadran lp": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/172ae73cca905da3.png",
+    "fa siauliai b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ee6d53335e966c4e.jpg",
+    "fk transinvest b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e251d748aed8a790.png",
+    "transinvest b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e251d748aed8a790.png"
   }
 }
