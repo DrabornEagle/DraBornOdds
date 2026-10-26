@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-26T04:43:20.914Z",
-  "dkd_teamCount": 817,
-  "dkd_resolvedTeams": 601,
-  "dkd_logoCount": 5175,
+  "dkd_generatedAt": "2026-10-26T15:10:26.548Z",
+  "dkd_teamCount": 522,
+  "dkd_resolvedTeams": 434,
+  "dkd_logoCount": 5189,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5178,6 +5178,20 @@
     "fc nouadhibou": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ddeb290e8fde9056.png",
     "nouadhibou": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ddeb290e8fde9056.png",
     "fc san pedro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/251cdcb1eed1604d.png",
-    "san pedro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/251cdcb1eed1604d.png"
+    "san pedro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/251cdcb1eed1604d.png",
+    "sd huesca b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3820a4599b2b4a5f.png",
+    "fc utrecht (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d39739d3d14731b3.jpg",
+    "utrecht k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d39739d3d14731b3.jpg",
+    "ado den haag (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/12854bc3c7f5484c.jpg",
+    "ado den haag k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/12854bc3c7f5484c.jpg",
+    "uniao leiria": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/07f12918036bd478.jpg",
+    "pec zwolle (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f712fc833429994b.jpg",
+    "pec zwolle k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f712fc833429994b.jpg",
+    "l entregu cf": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3520a06b885f65da.jpg",
+    "twente (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/71e387108a565365.jpg",
+    "twente k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/71e387108a565365.jpg",
+    "preussen 06 munster": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c9ab3c8164751d6b.jpg",
+    "qalali club": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f5f92f09a8eddee0.jpg",
+    "santa coloma": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b2b75b2126a0a13.png"
   }
 }
