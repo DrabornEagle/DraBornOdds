@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-27T14:28:50.440Z",
-  "dkd_teamCount": 715,
-  "dkd_resolvedTeams": 641,
-  "dkd_logoCount": 5216,
+  "dkd_generatedAt": "2026-10-27T20:41:15.238Z",
+  "dkd_teamCount": 293,
+  "dkd_resolvedTeams": 256,
+  "dkd_logoCount": 5222,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5219,6 +5219,12 @@
     "cs sporting liesti": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eb9577e6b55418af.png",
     "csm corona brasov": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/150af88c5fe24dec.png",
     "nestos chrysoupoli fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/232c73c5e3cbc0de.png",
-    "nestos chrysoupoli": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/232c73c5e3cbc0de.png"
+    "nestos chrysoupoli": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/232c73c5e3cbc0de.png",
+    "1.sk prostej": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b190830199bd1ec3.jpg",
+    "1 prostej": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b190830199bd1ec3.jpg",
+    "libertad asuncion": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34189d6755588291.jpg",
+    "ısloch": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f70ea356d5c405fd.png",
+    "isloch": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f70ea356d5c405fd.png",
+    "argentinos j": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/855c26d707b6f610.png"
   }
 }
