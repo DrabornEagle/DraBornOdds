@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-27T05:00:01.844Z",
-  "dkd_teamCount": 182,
-  "dkd_resolvedTeams": 170,
-  "dkd_logoCount": 5207,
+  "dkd_generatedAt": "2026-10-27T14:28:50.440Z",
+  "dkd_teamCount": 715,
+  "dkd_resolvedTeams": 641,
+  "dkd_logoCount": 5216,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5210,6 +5210,15 @@
     "un. craiova": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dac683a299451f22.jpg",
     "un craiova": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dac683a299451f22.jpg",
     "blackburn rovers u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd354e93e7b622a9.png",
-    "west bromwich albion u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e8309abd68e47d0e.png"
+    "west bromwich albion u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e8309abd68e47d0e.png",
+    "sporting u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d90e2ddc3590d451.png",
+    "fk napredak krusevac": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7d5468a9a55e8a3e.png",
+    "napredak krusevac": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7d5468a9a55e8a3e.png",
+    "grossaspach": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/913ce55b7f0b0ec8.jpg",
+    "lks lodz": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/425dc26e32a41ccf.jpg",
+    "cs sporting liesti": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eb9577e6b55418af.png",
+    "csm corona brasov": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/150af88c5fe24dec.png",
+    "nestos chrysoupoli fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/232c73c5e3cbc0de.png",
+    "nestos chrysoupoli": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/232c73c5e3cbc0de.png"
   }
 }
