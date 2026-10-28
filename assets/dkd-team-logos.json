@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-28T15:05:23.859Z",
-  "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 730,
-  "dkd_logoCount": 5241,
+  "dkd_generatedAt": "2026-10-28T21:02:20.867Z",
+  "dkd_teamCount": 441,
+  "dkd_resolvedTeams": 386,
+  "dkd_logoCount": 5242,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5244,6 +5244,7 @@
     "fratria varna": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/909e58e30574cda1.png",
     "musanze": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/313436814918bac9.png",
     "jwaneng galaxy": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7e60b5d3bac80928.png",
-    "polonia sroda wielkopolska": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6225851d7710686a.png"
+    "polonia sroda wielkopolska": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6225851d7710686a.png",
+    "oleksandriya": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9da7741e58d19eb9.png"
   }
 }
