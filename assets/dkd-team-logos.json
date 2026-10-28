@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-28T05:38:28.117Z",
-  "dkd_teamCount": 667,
-  "dkd_resolvedTeams": 592,
-  "dkd_logoCount": 5232,
+  "dkd_generatedAt": "2026-10-28T15:05:23.859Z",
+  "dkd_teamCount": 819,
+  "dkd_resolvedTeams": 730,
+  "dkd_logoCount": 5241,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5235,6 +5235,15 @@
     "al batin fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fcb81f6bb6862452.png",
     "al batin": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fcb81f6bb6862452.png",
     "olympique du kef": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/721c631a16ebdfa9.png",
-    "pars jonoubi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7d1f3121625150f3.png"
+    "pars jonoubi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7d1f3121625150f3.png",
+    "fk loznica": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ca533ab71cc1ea64.png",
+    "loznica": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ca533ab71cc1ea64.png",
+    "vozdovac": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7f4e3211b4e8a4be.png",
+    "borac cacak": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d26d28b74f16e38.jpg",
+    "fc fratria varna": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/909e58e30574cda1.png",
+    "fratria varna": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/909e58e30574cda1.png",
+    "musanze": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/313436814918bac9.png",
+    "jwaneng galaxy": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7e60b5d3bac80928.png",
+    "polonia sroda wielkopolska": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6225851d7710686a.png"
   }
 }
