@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-29T05:44:19.766Z",
-  "dkd_teamCount": 636,
-  "dkd_resolvedTeams": 547,
-  "dkd_logoCount": 5264,
+  "dkd_generatedAt": "2026-10-29T15:12:53.909Z",
+  "dkd_teamCount": 746,
+  "dkd_resolvedTeams": 656,
+  "dkd_logoCount": 5270,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5267,6 +5267,12 @@
     "mudhar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a0a3ece66ed5e850.png",
     "marko": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9efe9a5a1da5f41a.png",
     "ferroviario de lichinga": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2fa0883f12c0b02a.png",
-    "roan united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21a3f147f86eb739.png"
+    "roan united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21a3f147f86eb739.png",
+    "cska moskova": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ec51f37f36ec252d.jpg",
+    "yantra gabrovo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/acf118e3553a03ae.jpg",
+    "namungo fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8fa9a4118a2696c9.png",
+    "namungo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8fa9a4118a2696c9.png",
+    "al kawkab": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7691cec8f8220bce.png",
+    "noordwijk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9844bd048d1f8277.png"
   }
 }
