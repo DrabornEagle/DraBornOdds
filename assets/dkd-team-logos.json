@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-29T15:12:53.909Z",
-  "dkd_teamCount": 746,
-  "dkd_resolvedTeams": 656,
-  "dkd_logoCount": 5270,
+  "dkd_generatedAt": "2026-10-29T21:06:35.331Z",
+  "dkd_teamCount": 417,
+  "dkd_resolvedTeams": 373,
+  "dkd_logoCount": 5271,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5273,6 +5273,7 @@
     "namungo fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8fa9a4118a2696c9.png",
     "namungo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8fa9a4118a2696c9.png",
     "al kawkab": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7691cec8f8220bce.png",
-    "noordwijk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9844bd048d1f8277.png"
+    "noordwijk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9844bd048d1f8277.png",
+    "pfc rilski sportist samokov": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6ee7cff45e86ac94.jpg"
   }
 }
