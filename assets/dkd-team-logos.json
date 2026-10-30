@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-30T05:43:42.673Z",
-  "dkd_teamCount": 433,
-  "dkd_resolvedTeams": 382,
-  "dkd_logoCount": 5282,
+  "dkd_generatedAt": "2026-10-30T15:02:05.680Z",
+  "dkd_teamCount": 817,
+  "dkd_resolvedTeams": 685,
+  "dkd_logoCount": 5292,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5285,6 +5285,16 @@
     "al arabi sa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/61c4cf62f2e6d20f.png",
     "jerash club": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd5f224e4c78005a.png",
     "caps united fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8159d361d58ba976.png",
-    "caps united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8159d361d58ba976.png"
+    "caps united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8159d361d58ba976.png",
+    "lokomotiv moskova": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/154d8972b622d024.jpg",
+    "s&b vlasim": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0c0c927f2fece5f7.jpg",
+    "b vlasim": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0c0c927f2fece5f7.jpg",
+    "al-jabil": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4213393551d78492.jpg",
+    "al jabil": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4213393551d78492.jpg",
+    "tsg hoffenheim (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2440dd4b7f0fdbb4.jpg",
+    "tsg hoffenheim k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2440dd4b7f0fdbb4.jpg",
+    "aus lustenau": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/62398668856de362.jpg",
+    "nizwa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cd09ac7f50a62103.png",
+    "terengganu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/88f080634e41e258.png"
   }
 }
