@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-30T15:02:05.680Z",
-  "dkd_teamCount": 817,
-  "dkd_resolvedTeams": 685,
-  "dkd_logoCount": 5292,
+  "dkd_generatedAt": "2026-10-30T20:46:49.120Z",
+  "dkd_teamCount": 818,
+  "dkd_resolvedTeams": 699,
+  "dkd_logoCount": 5294,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5295,6 +5295,8 @@
     "tsg hoffenheim k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2440dd4b7f0fdbb4.jpg",
     "aus lustenau": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/62398668856de362.jpg",
     "nizwa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cd09ac7f50a62103.png",
-    "terengganu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/88f080634e41e258.png"
+    "terengganu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/88f080634e41e258.png",
+    "gangneung city fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1c8d6ec7a4ff0632.jpg",
+    "gangneung city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1c8d6ec7a4ff0632.jpg"
   }
 }
