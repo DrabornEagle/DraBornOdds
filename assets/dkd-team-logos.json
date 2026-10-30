@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-29T21:06:35.331Z",
-  "dkd_teamCount": 417,
-  "dkd_resolvedTeams": 373,
-  "dkd_logoCount": 5271,
+  "dkd_generatedAt": "2026-10-30T05:43:42.673Z",
+  "dkd_teamCount": 433,
+  "dkd_resolvedTeams": 382,
+  "dkd_logoCount": 5282,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5274,6 +5274,17 @@
     "namungo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8fa9a4118a2696c9.png",
     "al kawkab": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7691cec8f8220bce.png",
     "noordwijk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9844bd048d1f8277.png",
-    "pfc rilski sportist samokov": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6ee7cff45e86ac94.jpg"
+    "pfc rilski sportist samokov": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6ee7cff45e86ac94.jpg",
+    "al washm fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/18e321a5414b7b39.jpg",
+    "al washm": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/18e321a5414b7b39.jpg",
+    "al sharq (sa)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eaabe3f03bbd8b78.png",
+    "al sharq sa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eaabe3f03bbd8b78.png",
+    "najran sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fb536b1a7d00bad6.png",
+    "najran": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fb536b1a7d00bad6.png",
+    "al arabi (sa)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/61c4cf62f2e6d20f.png",
+    "al arabi sa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/61c4cf62f2e6d20f.png",
+    "jerash club": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd5f224e4c78005a.png",
+    "caps united fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8159d361d58ba976.png",
+    "caps united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8159d361d58ba976.png"
   }
 }
