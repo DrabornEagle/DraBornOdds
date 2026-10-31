@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-30T20:46:49.120Z",
+  "dkd_generatedAt": "2026-10-31T05:36:40.771Z",
   "dkd_teamCount": 818,
-  "dkd_resolvedTeams": 699,
-  "dkd_logoCount": 5294,
+  "dkd_resolvedTeams": 671,
+  "dkd_logoCount": 5298,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5297,6 +5297,10 @@
     "nizwa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cd09ac7f50a62103.png",
     "terengganu": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/88f080634e41e258.png",
     "gangneung city fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1c8d6ec7a4ff0632.jpg",
-    "gangneung city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1c8d6ec7a4ff0632.jpg"
+    "gangneung city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1c8d6ec7a4ff0632.jpg",
+    "brunei dpmm fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/314fb11d70d335d2.jpg",
+    "brunei dpmm": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/314fb11d70d335d2.jpg",
+    "as kigali": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26bd1cb31d98e130.png",
+    "kigali": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26bd1cb31d98e130.png"
   }
 }
