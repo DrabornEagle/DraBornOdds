@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-01T05:59:22.532Z",
-  "dkd_teamCount": 817,
-  "dkd_resolvedTeams": 638,
-  "dkd_logoCount": 5326,
+  "dkd_generatedAt": "2026-11-01T15:05:37.657Z",
+  "dkd_teamCount": 810,
+  "dkd_resolvedTeams": 670,
+  "dkd_logoCount": 5334,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5329,6 +5329,14 @@
     "nkana": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6ceeeed22f9c57f6.png",
     "bonner": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7cd94e39866630b8.png",
     "fc saint lo manche u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9c602bd5446f4f04.png",
-    "saint lo manche u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9c602bd5446f4f04.png"
+    "saint lo manche u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9c602bd5446f4f04.png",
+    "n. madeira": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e0aa87886b9f757e.jpg",
+    "n madeira": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e0aa87886b9f757e.jpg",
+    "gran pena fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7a19f94da9c94134.jpg",
+    "gran pena": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7a19f94da9c94134.jpg",
+    "sporting lisbon b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7c03450797f3de9c.jpg",
+    "racing club villalbes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/605be06af2a0d3e1.jpg",
+    "sporting farense": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/77b0f93f02f11050.png",
+    "ca river ebro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a949f72bce8b870.png"
   }
 }
