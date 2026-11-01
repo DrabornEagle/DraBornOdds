@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-10-31T23:22:08.567Z",
+  "dkd_generatedAt": "2026-11-01T05:59:22.532Z",
   "dkd_teamCount": 817,
-  "dkd_resolvedTeams": 656,
-  "dkd_logoCount": 5324,
+  "dkd_resolvedTeams": 638,
+  "dkd_logoCount": 5326,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5327,6 +5327,8 @@
     "wellington p": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f6d0417e27140bbc.jpg",
     "nkana fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6ceeeed22f9c57f6.png",
     "nkana": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6ceeeed22f9c57f6.png",
-    "bonner": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7cd94e39866630b8.png"
+    "bonner": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7cd94e39866630b8.png",
+    "fc saint lo manche u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9c602bd5446f4f04.png",
+    "saint lo manche u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9c602bd5446f4f04.png"
   }
 }
