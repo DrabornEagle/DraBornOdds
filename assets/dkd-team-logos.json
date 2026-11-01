@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-01T15:05:37.657Z",
-  "dkd_teamCount": 810,
-  "dkd_resolvedTeams": 670,
-  "dkd_logoCount": 5334,
+  "dkd_generatedAt": "2026-11-01T20:29:35.903Z",
+  "dkd_teamCount": 820,
+  "dkd_resolvedTeams": 700,
+  "dkd_logoCount": 5338,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5337,6 +5337,10 @@
     "sporting lisbon b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7c03450797f3de9c.jpg",
     "racing club villalbes": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/605be06af2a0d3e1.jpg",
     "sporting farense": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/77b0f93f02f11050.png",
-    "ca river ebro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a949f72bce8b870.png"
+    "ca river ebro": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8a949f72bce8b870.png",
+    "newcastle jets (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f3bfaadacb567219.jpg",
+    "newcastle jets k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f3bfaadacb567219.jpg",
+    "magesi fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4c78f29d60b61905.png",
+    "magesi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4c78f29d60b61905.png"
   }
 }
