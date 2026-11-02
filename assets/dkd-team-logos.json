@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-02T05:58:07.353Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 642,
-  "dkd_logoCount": 5372,
+  "dkd_generatedAt": "2026-11-02T18:19:37.917Z",
+  "dkd_teamCount": 336,
+  "dkd_resolvedTeams": 292,
+  "dkd_logoCount": 5379,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5375,6 +5375,13 @@
     "warri wolves fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ff5e50dd75be6208.png",
     "warri wolves": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ff5e50dd75be6208.png",
     "cf atletico de monzon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c2d8703e3ef2ee43.png",
-    "ud montecarlo u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/783d512ec184fee6.jpg"
+    "ud montecarlo u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/783d512ec184fee6.jpg",
+    "jong utrecht": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eae72e0eb8d5b7dd.png",
+    "lr vicenza virtus": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c58c30c414197cea.png",
+    "preston u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ee172c4c1e847247.png",
+    "derby county u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/96bd5c96500697a6.jpg",
+    "d. bükreş": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/49dab9099204ee62.jpg",
+    "d bukres": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/49dab9099204ee62.jpg",
+    "cardiff city u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f602ef71261a2121.jpg"
   }
 }
