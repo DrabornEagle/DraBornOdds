@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-03T11:54:28.824Z",
-  "dkd_teamCount": 572,
-  "dkd_resolvedTeams": 505,
-  "dkd_logoCount": 5393,
+  "dkd_generatedAt": "2026-11-03T19:29:35.498Z",
+  "dkd_teamCount": 262,
+  "dkd_resolvedTeams": 244,
+  "dkd_logoCount": 5406,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5396,6 +5396,19 @@
     "baish": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e90992f71d12a71f.png",
     "al hada": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b8b14108d82ffe37.png",
     "ferroviario de maputo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/10d6d5865a589006.png",
-    "ca san carlos": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7f0cef59a1d28ec4.png"
+    "ca san carlos": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7f0cef59a1d28ec4.png",
+    "fiorentina fc (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3bb49f8debdde0bf.png",
+    "fiorentina k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3bb49f8debdde0bf.png",
+    "ashton utd": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cd9c9e90d65167f7.jpg",
+    "chelmsford c": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6a7bc327339c5a44.jpg",
+    "juventus (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/df0e377460c783e3.png",
+    "juventus k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/df0e377460c783e3.png",
+    "warrington t": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2f50eeb59f30fbc3.jpg",
+    "fc everton u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d612494b3ee5923.jpg",
+    "everton u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d612494b3ee5923.jpg",
+    "birmingham city u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c974d2a6ac8f485c.jpg",
+    "aberdeen fc b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dc423097b1b0214c.jpg",
+    "aberdeen b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dc423097b1b0214c.jpg",
+    "edinburgh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1b4e9835735b0fb2.png"
   }
 }
