@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-03T02:16:08.148Z",
-  "dkd_teamCount": 290,
-  "dkd_resolvedTeams": 261,
-  "dkd_logoCount": 5385,
+  "dkd_generatedAt": "2026-11-03T11:54:28.824Z",
+  "dkd_teamCount": 572,
+  "dkd_resolvedTeams": 505,
+  "dkd_logoCount": 5393,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5388,6 +5388,14 @@
     "al rayan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b022eaf8134291f6.jpg",
     "ario eslamshahr": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3a0c7b8dbf45665c.jpg",
     "hetten fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a09775e4186458c4.png",
-    "hetten": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a09775e4186458c4.png"
+    "hetten": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a09775e4186458c4.png",
+    "czarni sosnowiec (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/23fd46d2e6f9f7a8.png",
+    "czarni sosnowiec k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/23fd46d2e6f9f7a8.png",
+    "gornik leczna (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d1422bb92a13391b.jpg",
+    "gornik leczna k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d1422bb92a13391b.jpg",
+    "baish": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e90992f71d12a71f.png",
+    "al hada": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/b8b14108d82ffe37.png",
+    "ferroviario de maputo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/10d6d5865a589006.png",
+    "ca san carlos": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7f0cef59a1d28ec4.png"
   }
 }
