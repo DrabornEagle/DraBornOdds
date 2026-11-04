@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-04T12:05:08.100Z",
-  "dkd_teamCount": 535,
-  "dkd_resolvedTeams": 481,
-  "dkd_logoCount": 5421,
+  "dkd_generatedAt": "2026-11-04T19:43:17.214Z",
+  "dkd_teamCount": 355,
+  "dkd_resolvedTeams": 329,
+  "dkd_logoCount": 5431,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5424,6 +5424,16 @@
     "etihad al gharafa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a90aaac7ea39af13.png",
     "ferro carril fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f1c1f8669e630bff.png",
     "ferro carril": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f1c1f8669e630bff.png",
-    "ca lito": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/978619579fbdbff1.png"
+    "ca lito": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/978619579fbdbff1.png",
+    "spartans (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/98c444907fafe35a.png",
+    "spartans k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/98c444907fafe35a.png",
+    "p. thistle": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/553077d4f9799142.jpg",
+    "p thistle": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/553077d4f9799142.jpg",
+    "spartans edinburgh fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/88f2651a92a6a7e7.jpg",
+    "spartans edinburgh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/88f2651a92a6a7e7.jpg",
+    "g. morton": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/42c41bc964052c56.jpg",
+    "g morton": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/42c41bc964052c56.jpg",
+    "aberdeen (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ea9375a60dc0e145.jpg",
+    "aberdeen k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ea9375a60dc0e145.jpg"
   }
 }
