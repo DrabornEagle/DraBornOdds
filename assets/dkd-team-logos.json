@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-04T00:36:09.303Z",
-  "dkd_teamCount": 376,
-  "dkd_resolvedTeams": 338,
-  "dkd_logoCount": 5406,
+  "dkd_generatedAt": "2026-11-04T12:05:08.100Z",
+  "dkd_teamCount": 535,
+  "dkd_resolvedTeams": 481,
+  "dkd_logoCount": 5421,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5409,6 +5409,21 @@
     "birmingham city u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c974d2a6ac8f485c.jpg",
     "aberdeen fc b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dc423097b1b0214c.jpg",
     "aberdeen b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dc423097b1b0214c.jpg",
-    "edinburgh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1b4e9835735b0fb2.png"
+    "edinburgh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1b4e9835735b0fb2.png",
+    "d sofala league": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0aa9fd946eb1044d.jpg",
+    "baia de pemba fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c0f84468526fc59f.png",
+    "baia de pemba": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c0f84468526fc59f.png",
+    "kiyovu sport": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/47f08bdd2ab9cc30.jpg",
+    "vilankulo fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/061c395748dec5c9.png",
+    "vilankulo": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/061c395748dec5c9.png",
+    "kampala capital city authority fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81be688a38eecbbb.jpg",
+    "kampala capital city authority": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81be688a38eecbbb.jpg",
+    "club brugge u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fa5794bf876ec01a.jpg",
+    "fc muza": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4e92b42858a3305d.png",
+    "muza": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4e92b42858a3305d.png",
+    "etihad al gharafa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a90aaac7ea39af13.png",
+    "ferro carril fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f1c1f8669e630bff.png",
+    "ferro carril": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f1c1f8669e630bff.png",
+    "ca lito": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/978619579fbdbff1.png"
   }
 }
