@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-05T19:59:40.335Z",
-  "dkd_teamCount": 213,
-  "dkd_resolvedTeams": 208,
-  "dkd_logoCount": 5463,
+  "dkd_generatedAt": "2026-11-06T00:57:15.793Z",
+  "dkd_teamCount": 201,
+  "dkd_resolvedTeams": 194,
+  "dkd_logoCount": 5464,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5466,6 +5466,7 @@
     "far rabat": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/490f09473709c545.png",
     "st. truidense": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3807c31c57e5baf7.jpg",
     "st truidense": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3807c31c57e5baf7.jpg",
-    "al rayyan nextgen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/17cdd90c371fa8d2.png"
+    "al rayyan nextgen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/17cdd90c371fa8d2.png",
+    "kharitiyat": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ec1b64219a60d29b.jpg"
   }
 }
