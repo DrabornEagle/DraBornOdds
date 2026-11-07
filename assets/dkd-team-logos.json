@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-07T14:53:27.955Z",
+  "dkd_generatedAt": "2026-11-07T20:13:42.374Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 683,
-  "dkd_logoCount": 5496,
+  "dkd_resolvedTeams": 674,
+  "dkd_logoCount": 5498,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5499,6 +5499,8 @@
     "essamaye fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/faaeb8bc16819728.png",
     "essamaye": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/faaeb8bc16819728.png",
     "as pikine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/798531f6cca2a141.png",
-    "pikine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/798531f6cca2a141.png"
+    "pikine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/798531f6cca2a141.png",
+    "delphi sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7e89d4929fff1c24.png",
+    "delphi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7e89d4929fff1c24.png"
   }
 }
