@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-07T05:55:50.585Z",
-  "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 686,
-  "dkd_logoCount": 5488,
+  "dkd_generatedAt": "2026-11-07T14:53:27.955Z",
+  "dkd_teamCount": 820,
+  "dkd_resolvedTeams": 683,
+  "dkd_logoCount": 5496,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5491,6 +5491,14 @@
     "1. fc nürnberg (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d9384f756004ec04.png",
     "1 nurnberg k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d9384f756004ec04.png",
     "sc freiburg (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/59cf292b4ae3015a.jpg",
-    "freiburg k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/59cf292b4ae3015a.jpg"
+    "freiburg k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/59cf292b4ae3015a.jpg",
+    "ballymena u": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/96addd19579b3c26.jpg",
+    "al bahrain": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/444f380b84e30f38.png",
+    "al hala": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2726e193f84aee42.png",
+    "us goree": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/276ade90b4e22efe.png",
+    "essamaye fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/faaeb8bc16819728.png",
+    "essamaye": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/faaeb8bc16819728.png",
+    "as pikine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/798531f6cca2a141.png",
+    "pikine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/798531f6cca2a141.png"
   }
 }
