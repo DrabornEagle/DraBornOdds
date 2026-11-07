@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-07T20:13:42.374Z",
+  "dkd_generatedAt": "2026-11-07T23:38:14.107Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 674,
-  "dkd_logoCount": 5498,
+  "dkd_resolvedTeams": 657,
+  "dkd_logoCount": 5504,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5501,6 +5501,12 @@
     "as pikine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/798531f6cca2a141.png",
     "pikine": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/798531f6cca2a141.png",
     "delphi sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7e89d4929fff1c24.png",
-    "delphi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7e89d4929fff1c24.png"
+    "delphi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7e89d4929fff1c24.png",
+    "eastern sports club": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21709f1367ca0d12.png",
+    "shenzhen peng city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d8f29d9a3e5785be.jpg",
+    "qingdao jonoon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2ebd019cce02dff9.jpg",
+    "rezeknes fa/bjss": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3b5e01cf6ad04a0f.png",
+    "rezeknes fa bjss": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3b5e01cf6ad04a0f.png",
+    "cf union viera u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5a269680b3c3ab15.png"
   }
 }
