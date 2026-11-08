@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-07T23:38:14.107Z",
+  "dkd_generatedAt": "2026-11-08T05:57:35.672Z",
   "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 657,
-  "dkd_logoCount": 5504,
+  "dkd_resolvedTeams": 627,
+  "dkd_logoCount": 5506,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5507,6 +5507,8 @@
     "qingdao jonoon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2ebd019cce02dff9.jpg",
     "rezeknes fa/bjss": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3b5e01cf6ad04a0f.png",
     "rezeknes fa bjss": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3b5e01cf6ad04a0f.png",
-    "cf union viera u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5a269680b3c3ab15.png"
+    "cf union viera u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5a269680b3c3ab15.png",
+    "bayreuth": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ee5559e3b7c7f695.png",
+    "greifswalder": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/39739a82bed79780.png"
   }
 }
