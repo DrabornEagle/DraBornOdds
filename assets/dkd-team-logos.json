@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-09T06:21:15.599Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 664,
-  "dkd_logoCount": 5524,
+  "dkd_generatedAt": "2026-11-09T18:45:29.808Z",
+  "dkd_teamCount": 164,
+  "dkd_resolvedTeams": 136,
+  "dkd_logoCount": 5528,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5527,6 +5527,10 @@
     "brondby": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/30a652857e99c47b.jpg",
     "rekord bielsko-biala": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34c7585a9958c9ec.jpg",
     "rekord bielsko biala": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/34c7585a9958c9ec.jpg",
-    "rasisalai united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/436f4957c932212e.jpg"
+    "rasisalai united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/436f4957c932212e.jpg",
+    "barletta calcio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/71074ec1916a5946.png",
+    "redditch utd": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9875c3107f2c724a.jpg",
+    "deportivo la coruna (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/863a46e2c0ae49ed.jpg",
+    "deportivo la coruna k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/863a46e2c0ae49ed.jpg"
   }
 }
