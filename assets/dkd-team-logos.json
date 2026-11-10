@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-09T18:45:29.808Z",
-  "dkd_teamCount": 164,
-  "dkd_resolvedTeams": 136,
-  "dkd_logoCount": 5528,
+  "dkd_generatedAt": "2026-11-10T02:43:26.211Z",
+  "dkd_teamCount": 92,
+  "dkd_resolvedTeams": 88,
+  "dkd_logoCount": 5534,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5531,6 +5531,12 @@
     "barletta calcio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/71074ec1916a5946.png",
     "redditch utd": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9875c3107f2c724a.jpg",
     "deportivo la coruna (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/863a46e2c0ae49ed.jpg",
-    "deportivo la coruna k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/863a46e2c0ae49ed.jpg"
+    "deportivo la coruna k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/863a46e2c0ae49ed.jpg",
+    "rb leipzig (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/df65bf934836e001.png",
+    "rb leipzig k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/df65bf934836e001.png",
+    "fc köln (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7f92b8cba9f407ff.jpg",
+    "koln k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7f92b8cba9f407ff.jpg",
+    "ssd vis pesaro 1898": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/41eb2ec9a2d0e385.jpg",
+    "asd pineto calcio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ee43344215baa85a.png"
   }
 }
