@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-11T06:10:31.607Z",
-  "dkd_teamCount": 48,
-  "dkd_resolvedTeams": 45,
-  "dkd_logoCount": 5548,
+  "dkd_generatedAt": "2026-11-11T16:08:23.422Z",
+  "dkd_teamCount": 125,
+  "dkd_resolvedTeams": 100,
+  "dkd_logoCount": 5549,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5551,6 +5551,7 @@
     "austria wien k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/dd93be8dbe52f7c0.jpg",
     "sl benfica (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/824d580f45237e5b.jpg",
     "sl benfica k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/824d580f45237e5b.jpg",
-    "maldivler": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/04871a4ad1369bec.jpg"
+    "maldivler": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/04871a4ad1369bec.jpg",
+    "cd castellon b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/62957af0baf6d0a4.jpg"
   }
 }
