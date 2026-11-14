@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-14T11:26:50.605Z",
-  "dkd_teamCount": 817,
-  "dkd_resolvedTeams": 677,
-  "dkd_logoCount": 5596,
+  "dkd_generatedAt": "2026-11-14T17:58:30.602Z",
+  "dkd_teamCount": 819,
+  "dkd_resolvedTeams": 698,
+  "dkd_logoCount": 5603,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5599,6 +5599,13 @@
     "stade poitevin u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8f1e9e1b81f47545.png",
     "as agareb": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f784ee28aa18d0b9.png",
     "agareb": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f784ee28aa18d0b9.png",
-    "cd villa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/129db08d1afb87c6.png"
+    "cd villa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/129db08d1afb87c6.png",
+    "cezayir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9d876a5b27c0aebc.jpg",
+    "estudiantes caseros": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/314e80ade8ea52ae.png",
+    "dep. armenio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/25062627edd3d522.jpg",
+    "dep armenio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/25062627edd3d522.jpg",
+    "club brugge (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d6395b4405bc466e.png",
+    "club brugge k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d6395b4405bc466e.png",
+    "eskilsminne": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c6d33c7d45727189.png"
   }
 }
