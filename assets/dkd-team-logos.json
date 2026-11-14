@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-14T17:58:30.602Z",
-  "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 698,
-  "dkd_logoCount": 5603,
+  "dkd_generatedAt": "2026-11-14T23:54:08.452Z",
+  "dkd_teamCount": 820,
+  "dkd_resolvedTeams": 659,
+  "dkd_logoCount": 5612,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5606,6 +5606,15 @@
     "dep armenio": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/25062627edd3d522.jpg",
     "club brugge (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d6395b4405bc466e.png",
     "club brugge k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d6395b4405bc466e.png",
-    "eskilsminne": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c6d33c7d45727189.png"
+    "eskilsminne": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c6d33c7d45727189.png",
+    "changchun dazhong zhu.(k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/24997460c1b8ca1f.png",
+    "changchun dazhong zhu k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/24997460c1b8ca1f.png",
+    "hallescher fc u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/740789b3f533df56.png",
+    "hallescher u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/740789b3f533df56.png",
+    "andorra u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/512c4dba8e22860f.png",
+    "energie cottbus u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/66a832415cdc2989.png",
+    "aston villa (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d2c59398c7d0c30.jpg",
+    "aston villa k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d2c59398c7d0c30.jpg",
+    "club jeunesse ben guerir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6a2b2af432d4f2bf.png"
   }
 }
