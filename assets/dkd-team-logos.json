@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-14T23:54:08.452Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 659,
-  "dkd_logoCount": 5612,
+  "dkd_generatedAt": "2026-11-15T06:24:20.951Z",
+  "dkd_teamCount": 818,
+  "dkd_resolvedTeams": 642,
+  "dkd_logoCount": 5619,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5615,6 +5615,13 @@
     "energie cottbus u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/66a832415cdc2989.png",
     "aston villa (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d2c59398c7d0c30.jpg",
     "aston villa k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d2c59398c7d0c30.jpg",
-    "club jeunesse ben guerir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6a2b2af432d4f2bf.png"
+    "club jeunesse ben guerir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6a2b2af432d4f2bf.png",
+    "gürcistan u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4e65c979165c5b31.jpg",
+    "gurcistan u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4e65c979165c5b31.jpg",
+    "bosna hersek u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/69ca04d9b2fd788c.jpg",
+    "chemnitzer u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9e1144dab0ac9915.jpg",
+    "faroe adaları u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d074029389ead15c.jpg",
+    "faroe adalari u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d074029389ead15c.jpg",
+    "singapur u23": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6a0fd2e06ff0f484.jpg"
   }
 }
