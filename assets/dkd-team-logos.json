@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-16T06:23:40.489Z",
-  "dkd_teamCount": 612,
-  "dkd_resolvedTeams": 451,
-  "dkd_logoCount": 5639,
+  "dkd_generatedAt": "2026-11-16T18:29:36.097Z",
+  "dkd_teamCount": 134,
+  "dkd_resolvedTeams": 108,
+  "dkd_logoCount": 5648,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5642,6 +5642,15 @@
     "moralo cp": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/67dbd17832f8cf64.png",
     "jendouba sport": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/596b83400aca0ab3.png",
     "boldmere st michaels women": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1fa8b2eb40a56d6f.png",
-    "bastia u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1bb0b4189f279171.png"
+    "bastia u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1bb0b4189f279171.png",
+    "exeter city u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6b29f4119de1e73c.jpg",
+    "ingiltere u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/de6d81ca538ab029.jpg",
+    "leicester city u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f87e1ab9748cf51e.jpg",
+    "belgrano de cordoba (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7534b98be0b8104c.jpg",
+    "belgrano de cordoba k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7534b98be0b8104c.jpg",
+    "fransa u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/df612cf4a931c3d6.png",
+    "t. suarez": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d1cc018979cce2d6.png",
+    "t suarez": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d1cc018979cce2d6.png",
+    "celta vigo b": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/636fc726d0f90791.jpg"
   }
 }
