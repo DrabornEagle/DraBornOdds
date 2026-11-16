@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-15T21:01:46.121Z",
-  "dkd_teamCount": 502,
-  "dkd_resolvedTeams": 403,
-  "dkd_logoCount": 5633,
+  "dkd_generatedAt": "2026-11-16T06:23:40.489Z",
+  "dkd_teamCount": 612,
+  "dkd_resolvedTeams": 451,
+  "dkd_logoCount": 5639,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5636,6 +5636,12 @@
     "heerenveen k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78014ded8f9f3850.jpg",
     "az alkmaar (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2f443a327f017528.jpg",
     "az alkmaar k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/2f443a327f017528.jpg",
-    "us ouakam": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/45d9d3941f6c7c4e.png"
+    "us ouakam": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/45d9d3941f6c7c4e.png",
+    "clermont foot u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/42482d05f104b773.jpg",
+    "cf pozuelo de alarcon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d649bb1155e9c40a.png",
+    "moralo cp": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/67dbd17832f8cf64.png",
+    "jendouba sport": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/596b83400aca0ab3.png",
+    "boldmere st michaels women": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1fa8b2eb40a56d6f.png",
+    "bastia u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1bb0b4189f279171.png"
   }
 }
