@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-17T13:20:10.267Z",
-  "dkd_teamCount": 290,
-  "dkd_resolvedTeams": 233,
-  "dkd_logoCount": 5660,
+  "dkd_generatedAt": "2026-11-17T23:29:31.827Z",
+  "dkd_teamCount": 72,
+  "dkd_resolvedTeams": 66,
+  "dkd_logoCount": 5663,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5663,6 +5663,9 @@
     "çekya u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4d7b562220cce82b.jpg",
     "cekya u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4d7b562220cce82b.jpg",
     "norveç u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/524a463f252f2f51.jpg",
-    "norvec u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/524a463f252f2f51.jpg"
+    "norvec u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/524a463f252f2f51.jpg",
+    "valencia u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/eb5146f0e847bbd9.jpg",
+    "manchester city (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3c96f261e384ca8d.jpg",
+    "manchester city k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3c96f261e384ca8d.jpg"
   }
 }
