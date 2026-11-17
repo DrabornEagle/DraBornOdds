@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-17T02:55:08.116Z",
-  "dkd_teamCount": 114,
-  "dkd_resolvedTeams": 101,
-  "dkd_logoCount": 5652,
+  "dkd_generatedAt": "2026-11-17T13:20:10.267Z",
+  "dkd_teamCount": 290,
+  "dkd_resolvedTeams": 233,
+  "dkd_logoCount": 5660,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5655,6 +5655,14 @@
     "kamerun": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/365ce2a932cedfe0.jpg",
     "palayesh naft bandar abbas fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e0dd9890ddca2852.jpg",
     "palayesh naft bandar abbas": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e0dd9890ddca2852.jpg",
-    "ekvator ginesi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d4dc6b6aa782a53.jpg"
+    "ekvator ginesi": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6d4dc6b6aa782a53.jpg",
+    "irlanda u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8cb3c4da37983754.jpg",
+    "yunanistan u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7331a9d3d6181ae0.jpg",
+    "fransa u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d0d9aacb71518b6c.jpg",
+    "huddersfield town u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/371e0c8c4e93b49e.jpg",
+    "çekya u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4d7b562220cce82b.jpg",
+    "cekya u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4d7b562220cce82b.jpg",
+    "norveç u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/524a463f252f2f51.jpg",
+    "norvec u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/524a463f252f2f51.jpg"
   }
 }
