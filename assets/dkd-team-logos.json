@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-18T07:23:21.230Z",
-  "dkd_teamCount": 394,
-  "dkd_resolvedTeams": 299,
-  "dkd_logoCount": 5679,
+  "dkd_generatedAt": "2026-11-18T17:14:01.044Z",
+  "dkd_teamCount": 244,
+  "dkd_resolvedTeams": 205,
+  "dkd_logoCount": 5687,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5682,6 +5682,14 @@
     "belarus u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/d8d6cfe0b19d303d.png",
     "gfk dubocica": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/64c043847f54bebd.png",
     "nk race": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4dccd11bf01d3dc0.png",
-    "nk fuzinar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bc630aa2ad29b969.png"
+    "nk fuzinar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/bc630aa2ad29b969.png",
+    "danimarka u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/57f4f3e7a8b02629.png",
+    "norveç u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/94e5cfd7ee8cf89d.jpg",
+    "norvec u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/94e5cfd7ee8cf89d.jpg",
+    "z belgrade": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9b3524bd143a6ea7.png",
+    "deportivo alaves (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/529130dfec7d9d1e.jpg",
+    "deportivo alaves k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/529130dfec7d9d1e.jpg",
+    "hollanda u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/960eea670b6f19cb.jpg",
+    "arnavutluk u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/17db5c53014cc710.jpg"
   }
 }
