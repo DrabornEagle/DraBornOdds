@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-19T01:52:18.948Z",
-  "dkd_teamCount": 106,
-  "dkd_resolvedTeams": 93,
-  "dkd_logoCount": 5688,
+  "dkd_generatedAt": "2026-11-19T12:59:45.660Z",
+  "dkd_teamCount": 456,
+  "dkd_resolvedTeams": 403,
+  "dkd_logoCount": 5694,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5691,6 +5691,12 @@
     "deportivo alaves k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/529130dfec7d9d1e.jpg",
     "hollanda u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/960eea670b6f19cb.jpg",
     "arnavutluk u21": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/17db5c53014cc710.jpg",
-    "athletic torrellano": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/925020d0e6a9c1fc.jpg"
+    "athletic torrellano": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/925020d0e6a9c1fc.jpg",
+    "fc rosengard (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/200adabaf1773f62.jpg",
+    "rosengard k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/200adabaf1773f62.jpg",
+    "sveikata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/842837273b4ee272.png",
+    "kabwe warriors": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f7cfbbc4f332d3cd.png",
+    "kıf orebro dff (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/19e5b4a3a4183198.jpg",
+    "kif orebro dff k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/19e5b4a3a4183198.jpg"
   }
 }
