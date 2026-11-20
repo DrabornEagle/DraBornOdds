@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-19T23:02:07.259Z",
-  "dkd_teamCount": 374,
-  "dkd_resolvedTeams": 329,
-  "dkd_logoCount": 5694,
+  "dkd_generatedAt": "2026-11-20T07:10:23.582Z",
+  "dkd_teamCount": 396,
+  "dkd_resolvedTeams": 349,
+  "dkd_logoCount": 5696,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5697,6 +5697,8 @@
     "sveikata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/842837273b4ee272.png",
     "kabwe warriors": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f7cfbbc4f332d3cd.png",
     "kıf orebro dff (k)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/19e5b4a3a4183198.jpg",
-    "kif orebro dff k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/19e5b4a3a4183198.jpg"
+    "kif orebro dff k": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/19e5b4a3a4183198.jpg",
+    "golik north district": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6ea1ea6552aa02cf.jpg",
+    "roltek dob": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/96dc6909d3e8c687.png"
   }
 }
