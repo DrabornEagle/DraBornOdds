@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-21T12:36:37.837Z",
-  "dkd_teamCount": 817,
-  "dkd_resolvedTeams": 719,
-  "dkd_logoCount": 5727,
+  "dkd_generatedAt": "2026-11-21T21:38:28.339Z",
+  "dkd_teamCount": 819,
+  "dkd_resolvedTeams": 694,
+  "dkd_logoCount": 5732,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5730,6 +5730,11 @@
     "costa do sol": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a18d6cd9c9df100b.png",
     "upington city fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5d8fd73c7a062145.png",
     "upington city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5d8fd73c7a062145.png",
-    "stade brestois 29 u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a35e2698cda52d19.png"
+    "stade brestois 29 u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a35e2698cda52d19.png",
+    "dagon fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/25be8956763a7017.png",
+    "dagon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/25be8956763a7017.png",
+    "lazio u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0dc6fd2441093915.png",
+    "sandorfalvi ske": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0eb1dc1e128aa08a.png",
+    "milan u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9548ef307750459a.png"
   }
 }
