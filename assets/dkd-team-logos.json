@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-20T16:56:33.910Z",
+  "dkd_generatedAt": "2026-11-21T01:29:55.992Z",
   "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 722,
-  "dkd_logoCount": 5714,
+  "dkd_resolvedTeams": 719,
+  "dkd_logoCount": 5718,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5717,6 +5717,10 @@
     "enkopings sk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/adb763e288161f19.png",
     "enkopings": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/adb763e288161f19.png",
     "arminia bielefeld u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f7262ab3b4781e03.png",
-    "hannover 96 u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/895ed5c075df4b7f.png"
+    "hannover 96 u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/895ed5c075df4b7f.png",
+    "hadiya hossana fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0516f78b2ed4d9d8.png",
+    "hadiya hossana": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0516f78b2ed4d9d8.png",
+    "ferroviario da beira": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/8882bad8d0fd4dd6.png",
+    "lunds bk": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/cf1fe04cceee43d6.png"
   }
 }
