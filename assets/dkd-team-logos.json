@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-21T21:38:28.339Z",
-  "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 694,
-  "dkd_logoCount": 5732,
+  "dkd_generatedAt": "2026-11-22T06:43:06.024Z",
+  "dkd_teamCount": 820,
+  "dkd_resolvedTeams": 674,
+  "dkd_logoCount": 5742,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5735,6 +5735,16 @@
     "dagon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/25be8956763a7017.png",
     "lazio u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0dc6fd2441093915.png",
     "sandorfalvi ske": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0eb1dc1e128aa08a.png",
-    "milan u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9548ef307750459a.png"
+    "milan u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9548ef307750459a.png",
+    "hang yuen fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ca040e59c5458ac7.png",
+    "hang yuen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ca040e59c5458ac7.png",
+    "paju citizen fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/535a17d17e2d682b.jpg",
+    "paju citizen": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/535a17d17e2d682b.jpg",
+    "greuther fürth u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81a71723a0bddee2.png",
+    "greuther furth u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/81a71723a0bddee2.png",
+    "nk svoboda ljubljana": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5c6de82d38de4c14.png",
+    "nk sencur": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/047a4eaff6cf0623.png",
+    "cd maxaquene": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/028cbc34cee78c02.png",
+    "ea guingamp u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/68cde0a05f9fc405.jpg"
   }
 }
