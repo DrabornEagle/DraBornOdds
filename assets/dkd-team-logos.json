@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-23T07:32:09.298Z",
-  "dkd_teamCount": 820,
-  "dkd_resolvedTeams": 655,
-  "dkd_logoCount": 5776,
+  "dkd_generatedAt": "2026-11-23T20:11:18.952Z",
+  "dkd_teamCount": 161,
+  "dkd_resolvedTeams": 134,
+  "dkd_logoCount": 5782,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5779,6 +5779,12 @@
     "js massira": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3100acce615cea63.jpg",
     "as beziers u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/56c5f4b1e3eeec69.png",
     "beziers u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/56c5f4b1e3eeec69.png",
-    "ad almudevar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/344b294076464419.png"
+    "ad almudevar": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/344b294076464419.png",
+    "bahla club": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/e34ad75d07917979.png",
+    "el ahly (mısır)": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad3ef5de4540af4b.png",
+    "el ahly misir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad3ef5de4540af4b.png",
+    "p. bielsko": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26aee6730b08b2e9.jpg",
+    "p bielsko": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26aee6730b08b2e9.jpg",
+    "al gharafa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/507dee4876f858a7.png"
   }
 }
