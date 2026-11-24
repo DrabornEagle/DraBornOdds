@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-23T20:11:18.952Z",
-  "dkd_teamCount": 161,
-  "dkd_resolvedTeams": 134,
-  "dkd_logoCount": 5782,
+  "dkd_generatedAt": "2026-11-24T04:46:22.301Z",
+  "dkd_teamCount": 171,
+  "dkd_resolvedTeams": 152,
+  "dkd_logoCount": 5785,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5785,6 +5785,9 @@
     "el ahly misir": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad3ef5de4540af4b.png",
     "p. bielsko": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26aee6730b08b2e9.jpg",
     "p bielsko": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/26aee6730b08b2e9.jpg",
-    "al gharafa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/507dee4876f858a7.png"
+    "al gharafa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/507dee4876f858a7.png",
+    "croissant sportif de msaken": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1d5398edd90abf6e.jpg",
+    "croissant de msaken": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1d5398edd90abf6e.jpg",
+    "genoa u20": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/94fd686ccdfe9648.jpg"
   }
 }
