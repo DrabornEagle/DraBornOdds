@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-25T03:31:36.528Z",
-  "dkd_teamCount": 424,
-  "dkd_resolvedTeams": 401,
-  "dkd_logoCount": 5796,
+  "dkd_generatedAt": "2026-11-25T14:17:49.716Z",
+  "dkd_teamCount": 551,
+  "dkd_resolvedTeams": 521,
+  "dkd_logoCount": 5799,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5799,6 +5799,9 @@
     "al raed": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fdc9a902629ce80b.png",
     "bodo/glimt u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ed9f280cc8142999.jpg",
     "bodo glimt u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ed9f280cc8142999.jpg",
-    "union ksour essef": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/50ea798ad7e58499.jpg"
+    "union ksour essef": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/50ea798ad7e58499.jpg",
+    "nico united": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/6dcd0313908bd91c.png",
+    "durban city fc 2024": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f021323361060902.jpg",
+    "durban city 2024": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f021323361060902.jpg"
   }
 }
