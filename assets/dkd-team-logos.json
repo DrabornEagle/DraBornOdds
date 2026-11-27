@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-27T00:33:49.600Z",
-  "dkd_teamCount": 409,
-  "dkd_resolvedTeams": 364,
-  "dkd_logoCount": 5801,
+  "dkd_generatedAt": "2026-11-27T13:49:33.472Z",
+  "dkd_teamCount": 804,
+  "dkd_resolvedTeams": 713,
+  "dkd_logoCount": 5807,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5804,6 +5804,12 @@
     "durban city fc 2024": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f021323361060902.jpg",
     "durban city 2024": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/f021323361060902.jpg",
     "khaitan sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21aeb3be83dc1bce.png",
-    "khaitan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21aeb3be83dc1bce.png"
+    "khaitan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21aeb3be83dc1bce.png",
+    "al tadhamon": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4340e2a89a204e77.jpg",
+    "arabi doha": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/738ff4614c93cf6a.jpg",
+    "saint omer": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fd2bd746e1014fe2.png",
+    "us le pays du valois": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/52477228686aa2ea.png",
+    "largs thistle fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a76ff3d3f221da92.png",
+    "largs thistle": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a76ff3d3f221da92.png"
   }
 }
