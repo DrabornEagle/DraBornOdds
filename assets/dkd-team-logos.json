@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-27T13:49:33.472Z",
-  "dkd_teamCount": 804,
-  "dkd_resolvedTeams": 713,
-  "dkd_logoCount": 5807,
+  "dkd_generatedAt": "2026-11-28T00:01:55.507Z",
+  "dkd_teamCount": 819,
+  "dkd_resolvedTeams": 728,
+  "dkd_logoCount": 5821,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5810,6 +5810,20 @@
     "saint omer": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/fd2bd746e1014fe2.png",
     "us le pays du valois": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/52477228686aa2ea.png",
     "largs thistle fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a76ff3d3f221da92.png",
-    "largs thistle": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a76ff3d3f221da92.png"
+    "largs thistle": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a76ff3d3f221da92.png",
+    "n. sembilan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/60df9adc6d94c8f2.jpg",
+    "n sembilan": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/60df9adc6d94c8f2.jpg",
+    "selangor fa": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/a58da766ad794af2.jpg",
+    "threave rovers": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0f06fe0db9381cd4.png",
+    "cumnock": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/21137256a12eae34.png",
+    "musselburgh athletic fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0a7a8c37ea2e0f5f.png",
+    "musselburgh athletic": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0a7a8c37ea2e0f5f.png",
+    "johnstone burgh fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3d09520db4f09ef2.png",
+    "johnstone burgh": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3d09520db4f09ef2.png",
+    "brechin city": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/40820a8c940a6e59.png",
+    "renfrew fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9a879fa432f8f0fe.png",
+    "renfrew": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9a879fa432f8f0fe.png",
+    "wiliete sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3f09b95098cfd22.png",
+    "wiliete": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3f09b95098cfd22.png"
   }
 }
