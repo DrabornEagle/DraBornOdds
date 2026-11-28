@@ -1,8 +1,8 @@
 {
-  "dkd_generatedAt": "2026-11-28T00:01:55.507Z",
+  "dkd_generatedAt": "2026-11-28T07:43:54.686Z",
   "dkd_teamCount": 819,
-  "dkd_resolvedTeams": 728,
-  "dkd_logoCount": 5821,
+  "dkd_resolvedTeams": 718,
+  "dkd_logoCount": 5834,
   "dkd_logos": {
     "tanta": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/ad65d9fb49d4b4e4.png",
     "kalamata": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/aecff4e1c5b08b94.png",
@@ -5824,6 +5824,19 @@
     "renfrew fc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9a879fa432f8f0fe.png",
     "renfrew": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/9a879fa432f8f0fe.png",
     "wiliete sc": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3f09b95098cfd22.png",
-    "wiliete": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3f09b95098cfd22.png"
+    "wiliete": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/c3f09b95098cfd22.png",
+    "sv babelsberg u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3f917cdecf844e3d.jpg",
+    "vfl wolfsburg u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/4effb9c2d25d2a96.png",
+    "werder bremen u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1d8d511ce63c02ce.png",
+    "fc erzgebirge aue u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3bc9517b7a1af2cf.png",
+    "erzgebirge aue u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3bc9517b7a1af2cf.png",
+    "majees": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/5805d78921fdc124.png",
+    "sv bergisch gladbach 09": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/538bca837e7063ba.png",
+    "wattenscheid": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/7223527ee935d8d7.png",
+    "chateaubriant": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/78b7d3b1ed5c4cbd.png",
+    "atlas delme": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/3c1e4c12d0b3d183.png",
+    "epinal": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/019947b16ac4b131.png",
+    "rc celta de vigo u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/1742c28e2c5b3930.png",
+    "olympique rovenain u19": "https://raw.githubusercontent.com/DrabornEagle/DraBornOdds/main/assets/dkd-team-logos/0c172964f0bf03fa.png"
   }
 }
